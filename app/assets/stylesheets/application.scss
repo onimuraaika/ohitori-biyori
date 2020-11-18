@@ -61,3 +61,27 @@ header > :first-child {
   border-bottom: 5px solid #CCC;
   margin: 0 auto;
 }
+
+//フッター
+footer {
+  height: 250px;
+  background-color: #dcdcdc;
+}
+
+.footer-title {
+  padding-top: 40px ;
+  text-align: center;
+
+}
+
+.footer-description {
+  font-size: 15px;
+  padding-top: 15px ;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 13px;
+  padding-top: 20px ;
+  text-align: center;
+}
