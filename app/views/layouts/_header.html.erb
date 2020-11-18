@@ -1,0 +1,60 @@
+<!--ヘッダーの部分テンプレート-->
+
+<div class="container-fluid">
+
+  <% if user_signed_in? %>
+    <header>
+      <div class="header-logo">
+        <%= link_to articles_path do %>
+          <%= image_tag 'logo.jpg', class: "logo_image", :alt => 'ロゴ画像、投稿一覧ページに飛べます。' %>
+        <% end %>
+      </div>
+      <div class="header-button">
+        <button type="button" class="btn btn-default btn-lg header-button-my_page">
+          <%= link_to "マイページ", user_path(current_user) %>
+        </button>
+      </div>
+      <div class="header-button">
+        <button type="button" class="btn btn-default btn-lg header-button-post">
+          <%= link_to "投稿する", new_article_path %>
+        </button>
+      </div>
+      <div class="header-button">
+        <button type="button" class="btn btn-default btn-lg header-button-favorite">
+          <%= link_to "お気に入り", article_favorites_path %>
+        </button>
+      </div>
+      <div class="header-button">
+        <button type="button" class="btn btn-default btn-lg header-button-logout">
+          <%= link_to "ログアウト", destroy_user_session_path %>
+        </button>
+      </div>
+    </header>
+  <% else %>
+    <header>
+      <div class="header-logo">
+        <%= link_to root_path do %>
+          <%= image_tag 'logo.jpg', class: "logo_image", :alt => 'ロゴ画像、トップページに飛べます。' %>
+        <% end %>
+      </div>
+      <div class="header-button">
+        <button type="button" class="btn btn-default btn-lg header-button-my_page">
+          <%= link_to "About", homes_about_path %>
+        </button>
+      </div>
+      <div class="header-button">
+        <button type="button" class="btn btn-default btn-lg header-button-post">
+          <%= link_to "ログイン", user_session_path %>
+        </button>
+      </div>
+      <div class="header-button">
+        <button type="button" class="btn btn-default btn-lg header-button-favorite">
+          <%= link_to "新規登録", new_user_registration_path %>
+        </button>
+      </div>
+    </header>
+  <% end %>
+
+  <div class="header-border"></div>
+
+</div>
