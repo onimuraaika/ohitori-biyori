@@ -1,2 +1,57 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<!--トップページ-->
+
+<div class="container top">
+
+  <!--サイトの説明-->
+  <div class="row top-message">
+    <h1 class="top-message-title"><strong>おひとり日和</strong></h1>
+    <h3 class="top-message-subtitle">ひとり暮らしを楽しく素敵に。</h3>
+    <p class="top-message-description-title">
+      "女性のひとり暮らしを楽しく素敵に"をテーマにしたライフスタイル投稿サイトです。
+    </p>
+    <p class="top-message-description">
+      お出かけ、雑貨、グルメ、レシピ、ファッション、節約術など</br>
+      ひとり暮らしを素敵にする情報が見つかります。
+    </p>
+    <p class="top-message-title_description">
+      "おひとり日和"＝おひとり生活を楽しむのにちょうどよいよい天気。
+    </p>
+  </div>
+
+  <!--新規登録・ログインボタン-->
+  <%= render 'homes/signin_signup_button' %>
+
+  <!--矢印のアイコン-->
+  <div class="row top-next-icon">
+    <i class="fa fa-chevron-circle-down top-next-icon" aria-hidden="true"></i>
+  </div>
+
+  <!--楽しみ方-->
+  <div class="row top-how_to_enjoy">
+    <h1 class="top-how_to_enjoy-title">おひとり日和の楽しみかた</h1>
+    <div>
+      <h3 class="top-how_to_enjoy-subtitle">① ひとり暮らしに役立つヒントが見つかります</h3>
+      <p class="top-how_to_enjoy-description">ひとり暮らしの先輩が、生活の知恵を発信しています</p>
+      <div class="top-how_to_enjoy-image">！写真が入ります！</div>
+    </div>
+    <div>
+      <h3 class="top-how_to_enjoy-subtitle">② あなたの「楽しい！」を共有できます</h3>
+      <p class="top-how_to_enjoy-description">自由に投稿できます</p>
+      <div class="top-how_to_enjoy-image">！写真が入ります！</div>
+    </div>
+    <div>
+      <h3 class="top-how_to_enjoy-subtitle">③ あなたの「素敵！」を保存できます</h3>
+      <p class="top-how_to_enjoy-description">いいねした投稿はいつでも見返すことができます</p>
+      <div class="top-how_to_enjoy-image">！写真が入ります！</div>
+    </div>
+    <div>
+      <h3 class="top-how_to_enjoy-subtitle">④ あこがれの人を応援できます</h3>
+      <p class="top-how_to_enjoy-description">あこがれの人をフォローすることができます</p>
+      <div class="top-how_to_enjoy-image">！写真が入ります！</div>
+    </div>
+  </div>
+
+  <!--新規登録・ログインボタン-->
+  <%= render 'homes/signin_signup_button' %>
+
+</div>
