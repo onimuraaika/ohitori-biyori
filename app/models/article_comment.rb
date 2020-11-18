@@ -2,5 +2,7 @@ class ArticleComment < ApplicationRecord
   
     belongs_to :user
     belongs_to :article
+    
+    validates :comment, presence: true, length: { maximum: 50 }
   
 end

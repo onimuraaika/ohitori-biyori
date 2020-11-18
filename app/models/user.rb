@@ -12,5 +12,9 @@ class User < ApplicationRecord
     #自分がフォローしている人
     has_many :followings, through: :active_relationships, source: :followers
     
+    validates :nickname, presence: true, length: { minimum: 2, maximum: 20 }, uniqueness: true
+    validates :living_alone_month, presence: true
+    validates :email, presence: true
+    validates :introduction, length: { maximum: 100 }
   
 end
