@@ -35,14 +35,14 @@
 * ひとり暮らしの楽しみ方を見つける
 
 ## 設計書
-* ER図  
-https://drive.google.com/file/d/18ER-G7WOfVFgUU6X1QZ9oN1S0ppUVlBr/view?usp=sharing  
-* ワイヤーフレーム  
-https://drive.google.com/file/d/1jwf6lZcaLfpGa3BxTL0IXYvhEEMryO19/view?usp=sharing  
-* テーブル定義書  
-https://docs.google.com/spreadsheets/d/1StMi5XKPNnyye3H8NMhQqE0h1OcpVp31BAV7Q6KhIsc/edit?usp=sharing 
-* アプリケーション詳細設計  
-https://docs.google.com/spreadsheets/d/1fFdHXg-D27azZRg0GS8lUH4ksh0eg07RF1wfQJPRcYk/edit?usp=sharing  
+* ER図
+https://drive.google.com/file/d/18ER-G7WOfVFgUU6X1QZ9oN1S0ppUVlBr/view?usp=sharing
+* ワイヤーフレーム
+https://drive.google.com/file/d/1jwf6lZcaLfpGa3BxTL0IXYvhEEMryO19/view?usp=sharing
+* テーブル定義書
+https://docs.google.com/spreadsheets/d/1StMi5XKPNnyye3H8NMhQqE0h1OcpVp31BAV7Q6KhIsc/edit?usp=sharing
+* アプリケーション詳細設計
+https://docs.google.com/spreadsheets/d/1fFdHXg-D27azZRg0GS8lUH4ksh0eg07RF1wfQJPRcYk/edit?usp=sharing
 ### 機能一覧
 https://docs.google.com/spreadsheets/d/1RF2XLkZoFw_vR4MrM4Nd46LtIvuf8_I7OLgZrszj4zQ/edit?usp=sharing
 
