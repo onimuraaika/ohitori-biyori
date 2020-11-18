@@ -1,3 +1,76 @@
 // Place all the styles related to the Homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//トップページ
+.top {
+  padding-top: 100px;
+}
+
+.top-message {
+  text-align: center;
+  align-items: center;
+}
+
+.top-message-subtitle {
+  padding-top: 50px;
+}
+
+.top-message-description-title {
+  padding-top: 30px;
+  font-size: 16px;
+}
+
+.top-message-description {
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+.top-message-title_description {
+  padding-top: 60px;
+  font-size: 16px;
+}
+
+.top-access {
+  text-align: center;
+  padding: 50px;
+}
+
+.top-access-button {
+  margin: 10px;
+}
+
+.top-next-icon {
+  padding: 40px;
+  font-size: 4em;
+  color: #CCC;
+  text-align: center;
+}
+
+.top-how_to_enjoy {
+  text-align: center;
+}
+
+.top-how_to_enjoy-subtitle {
+  padding-top: 50px;
+}
+
+.top-how_to_enjoy-description {
+  padding-top: 20px;
+  font-size: 16px;
+}
+
+//ここは写真を入れたら削除する
+.top-how_to_enjoy-image {
+  padding-top: 10px;
+  width: 400px;
+  height: 250px;
+  background-color: #CCC;
+  margin: 0 auto;
+}
