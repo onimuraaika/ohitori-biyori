@@ -29,3 +29,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#環境変数の書かれたファイルをGit管理から除外する
+/.env
