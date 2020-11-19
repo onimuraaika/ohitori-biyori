@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   	    get 'following' => 'relationships#following', as: 'following'
     end
     
-    get '/users/unsubscribe/:id' => 'users#unsubscribe'
+    get '/users/unsubscribe/:id' => 'users#unsubscribe', as: "unsubscribe"
     patch '/users/withdraw' => 'users#withdraw'
     
     resources :articles do
