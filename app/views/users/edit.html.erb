@@ -1,2 +1,55 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<!--会員情報編集画面-->
+
+<div class="container user-edit">
+
+  <h2 class="user-edit-title">プロフィールを編集する</h2>
+
+  <%= form_with model:@user, local:true do |f| %>
+    <!--<form class="form-horizontal">-->
+
+      <div class="row user-edit-form">
+        <div class="form-group">
+          <p class="user-edit-form-label">プロフィール画像</p></br>
+          <%= attachment_image_tag @user, :profile_image, fallback: "noimage.png", size: "200x200", class: "user-edit-form-image" %>
+          <%= f.attachment_field :profile_image %>
+        </div>
+      </div>
+      <div class="row user-edit-form">
+        <div class="form-group">
+          <p class="user-edit-form-label">ニックネーム(必須)</p>
+          <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "form-control input-lg" %>
+        </div>
+      </div>
+      <div class="row user-edit-form">
+        <div class="form-group">
+          <p class="user-edit-form-label">自己紹介文</p>
+          <%= f.text_area :introduction, autofocus: true, autocomplete: "introduction", class: "form-control input-lg" %>
+        </div>
+      </div>
+      <div class="row user-edit-form">
+        <div class="form-group">
+          <p class="user-edit-form-label">おひとり暮らし歴○○ヶ月目(必須)</p>
+          <%= f.text_field :living_alone_month, autofocus: true, autocomplete: "living_alone_month", class: "form-control input-lg" %>
+        </div>
+      </div>
+       <div class="row user-edit-form user-edit-form-button">
+        <%= f.submit "　　　　　　　　更新する　　　　　　　　", class: "btn btn-default btn-lg" %>
+      </div>
+
+    <!--</form>-->
+  <% end %>
+  
+  <div class="row header-border"></div>
+  
+  <div class="row user-edit-password">
+    <button type="button" class="btn btn-default btn-lg top-access-button">
+      <%= link_to "　　　　　パスワードを変更する　　　　　", edit_user_registration_path %>
+    </button>
+  </div>
+  <div class="row user-edit-unsubscribe">
+    <button type="button" class="btn btn-default btn-lg top-access-button">
+      <%= link_to "　　　　　　　　退会する　　　　　　　　", unsubscribe_path %>
+    </button>
+  </div>
+  
+</div>

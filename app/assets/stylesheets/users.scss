@@ -67,3 +67,49 @@
 .user-show-article-body {
   font-size: 20px;
 }
+
+//会員情報編集画面
+.user-edit-title {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.user-edit-form {
+  justify-content: center;
+  padding-right: 20%;
+  padding-left: 20%;
+  margin: 20px;
+}
+
+.user-edit-form-label {
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.user-edit-form-image {
+  margin: 10px;
+}
+
+.user-edit-form-button {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header-border {
+  width: 50%;
+  height: 1px;
+  border-bottom: 5px solid #CCC;
+  margin: 0  auto;
+}
+
+.user-edit-password {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.user-edit-unsubscribe {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
