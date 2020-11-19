@@ -1,0 +1,22 @@
+<!--ユーザー表示の部分テンプレート-->
+
+<div class="row user-show-info">
+  <div class="col-sm-4 user-show-info-image">
+    <%= attachment_image_tag @user, :profile_image, :fill, 120, 120, format: 'jpeg', fallback: "noimage.jpg", size: '120x120' %>
+  </div>
+  <div class="col-sm-4 user-show-info-name_living_alone_month">
+    <div class="user-show-info-name">
+      <%= @user.nickname %>
+    </div>
+    </br>
+    <div class="user-show-info-living_alone_month">
+      ひとり暮らし歴：<%= @user.living_alone_month %>ヶ月
+    </div>
+    <div class="user-show-info-living_alone_month">
+      <%= @user.introduction %>
+    </div>
+  </div>
+  <div class="col-sm-4 user-show-info-follow_button">
+    <!--フォローボタンを設置予定-->
+  </div>
+</div>
