@@ -1,9 +1,10 @@
 <div class="container login">
   <div class="row login-row">
-      
+
     <h1 class="login-title">ログイン</h1>
-    
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+
       <form class="form-horizontal">
         <div class="form-group">
           <label class="control-label login-label"><%= f.label "ニックネーム(必須)" %></label></br>
@@ -19,6 +20,7 @@
            </div>
         </div>
       </form>
+
     <% end %>
 
   </div>

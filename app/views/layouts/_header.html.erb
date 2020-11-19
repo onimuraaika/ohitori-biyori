@@ -26,7 +26,7 @@
       </div>
       <div class="header-button">
         <button type="button" class="btn btn-default btn-lg header-button-logout">
-          <%= link_to "ログアウト", destroy_user_session_path %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         </button>
       </div>
     </header>
