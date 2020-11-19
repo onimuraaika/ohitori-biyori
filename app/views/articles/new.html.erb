@@ -1,2 +1,47 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<!--新規投稿画面-->
+
+<div class="container new-article">
+    
+  <!--新規投稿-->
+  <h1 class="new-article-title">投稿する</h1>
+    
+  <%= form_with model:@article, local:true do |f| %>
+    
+    <!--エラーメッセージ -->
+      
+    <div class="row new-article-row">
+      <div class="col-sm-6">
+        <h3 class="new-article-subtitle">① 写真の選択</h3>
+        <%= f.attachment_field :image, size: "200x200" %>
+      </div>
+    </div>
+    <br>
+    <div class="row new-article-row">
+      <div class="col-sm-6">
+        <h3 class="new-article-subtitle">② タイトル</h3>
+        <div class="form-group">
+          <%= f.text_field :title, class:"form-control", placeholder:"例：わたしの休日のすごしかた" %>
+        </div>
+      </div>
+    </div>
+    <div class="row new-article-row">
+      <div class="col-sm-6">
+        <h3 class="new-article-subtitle">③ ジャンル</h3>
+        <div class="form-group">
+          <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: "ジャンルを選択してください"  %>
+        </div>
+      </div>
+    </div>
+    <div class="row new-article-row">
+      <div class="col-sm-6">
+        <h3 class="new-article-subtitle">④ 伝えたいこと</h3>
+        <div class="form-group">
+          <%= f.text_area :body, class:"form-control", placeholder:"例：○○公園の中にある○○カフェでゆっくりするのが日課です。" %>
+        </div>
+      </div>
+    </div>
+    <%= f.submit "　　　　投稿する　　　　", class:"btn btn-lg btn-default" %>
+    
+  <% end %>
+
+</div>
