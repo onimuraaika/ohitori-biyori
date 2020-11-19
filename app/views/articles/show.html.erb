@@ -1,0 +1,22 @@
+<!--投稿詳細画面-->
+
+<div class="container article-show">
+
+  <div class="row article-show-user-show">
+    <!--ユーザー表示の部分テンプレート-->
+    <%= render 'users/show', user: @user %>
+  </div>
+
+  <!--投稿内容-->
+  <div class="row article-show-article">
+    <div class="article-show-article-image">
+      <%= attachment_image_tag @article, :image, size: "250x250", format: 'jpeg' %>
+    </div>
+    <div class="article-show-article-title_body">
+      <p class="article-show-article-title"><%= @article.title %></p>
+    </br>
+      <p class="article-show-article-body"><%= @article.body %></p>
+    </div>
+  </div>
+  
+</div>
