@@ -15,8 +15,8 @@ class ArticlesController < ApplicationController
 
     end
 
-    def index#投稿一覧画面
-
+    def index #投稿一覧画面
+        @articles = Article.all
     end
 
     def show #投稿詳細画面
