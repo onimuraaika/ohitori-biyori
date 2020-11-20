@@ -7,3 +7,42 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+//投稿詳細画面
+.article-show-user-show {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.article-show-article {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.article-show-article-title_body {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.article-show-article-title {
+  font-size: 25px;
+}
+
+.article-show-button {
+  display: flex;
+  justify-content: center;
+}
+
+.article-show-button-return,
+.article-show-button-edit,
+.article-show-button-delete,
+.article-show-button-favorite
+{
+  margin: 30px;
+}
+
+.article-show-comment_form {
+  padding: 50px;
+  text-align: center;
+}
