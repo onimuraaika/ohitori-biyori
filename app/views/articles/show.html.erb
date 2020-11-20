@@ -48,8 +48,8 @@
   <!--コメント投稿フォーム-->
   <div class="row article-show-comment_form">
     <%= form_with model:[@article,@comment], local: true do |f| %>
-      <%= f.text_area :comment, rows: '3', class: "textbox", placeholder: "50文字まで" %>
-      <%= f.submit "　送信　", class: "form_submit, btn btn-lg btn-default" %>
+      <%= f.text_area :comment, rows: '4', class: "textbox", placeholder: "50文字まで" %>
+      <%= f.submit "　送信　", class: "form_submit, btn btn-md btn-default" %>
     <% end %>
   </div>
   
@@ -76,5 +76,4 @@
     <% end %>
   </div>
 
-  
 </div>
