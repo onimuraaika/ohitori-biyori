@@ -16,11 +16,13 @@ class ArticlesController < ApplicationController
     end
 
     def index#投稿一覧画面
+
     end
 
     def show #投稿詳細画面
-        @user = User.find(params[:id]) # 部分テンプレート用
-        @article = Article.find_by(params[:id])
+        @article = Article.find(params[:id])
+        @user = @article.user # 部分テンプレート用
+        @comment = ArticleComment.new
     end
 
     def edit#投稿編集画面

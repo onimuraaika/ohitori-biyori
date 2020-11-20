@@ -2,8 +2,8 @@
 
 <div class="container article-show">
 
+  <!--ユーザー表示の部分テンプレート-->
   <div class="row article-show-user-show">
-    <!--ユーザー表示の部分テンプレート-->
     <%= render 'users/show', user: @user %>
   </div>
 
@@ -18,5 +18,63 @@
       <p class="article-show-article-body"><%= @article.body %></p>
     </div>
   </div>
+  
+  <!--ボタン-->
+  <% if user_signed_in? && current_user.id == @article.user_id %>
+    <!--ログインしている人の投稿の場合-->
+    <div class="row article-show-button">
+      <%= link_to :back do %>
+          <button type="button" class="btn btn-default btn-lg article-show-button-return">　　戻る　　</button>
+        <% end %>
+      <%= link_to edit_article_path(@article.id) do %>
+        <button type="button" class="btn btn-default btn-lg article-show-button-edit">　編集する　</button>
+      <% end %>
+      <%= link_to article_path(@article), method: :delete, data: {confirm: "本当に削除しますか？"} do %>
+        <button type="button" class="btn btn-default btn-lg article-show-button-delete">　削除する　</button>
+      <% end %>
+    </div>
+  <% else %>
+    <!--ログインしている人以外の投稿の場合-->
+    <div class="row article-show-button">
+      <%= link_to :back do %>
+        <button type="button" class="btn btn-default btn-lg article-show-button-return">　　戻る　　</button>
+      <% end %>
+      <button type="button" class="btn btn-default btn-lg article-show-button-favorite">
+        <%= link_to "お気に入り" %>
+      </button>
+    </div>
+  <% end %>
+  
+  <!--コメント投稿フォーム-->
+  <div class="row article-show-comment_form">
+    <%= form_with model:[@article,@comment], local: true do |f| %>
+      <%= f.text_area :comment, rows: '3', class: "textbox", placeholder: "50文字まで" %>
+      <%= f.submit "　送信　", class: "form_submit, btn btn-lg btn-default" %>
+    <% end %>
+  </div>
+  
+  <!--コメント表示-->
+  <div class="row article-show-comment">
+    <% @article.article_comments.each do |article_comment| %>
+      <div class="col-sm-4 article-show-comment-image">
+        <%= link_to user_path(article_comment_user) do %>
+          <%= attachment_image_tag article_comment_user, :profile_image, :fill, 70, 70, fallback: "noimage.jpg", size: "70x70" %>
+        <% end %>
+      </div>
+      <div class="col-sm-4 article-show-comment-nickname">
+        <div class="user-show-info-name">
+          <%= article_comment_user.nickname %>
+        </div>
+        </br>
+        <div class="article-show-comment-buttom">
+          <%= article_comment.comment %>
+          <% if current_user == article_comment_user %>
+            <%= link_to '削除する', article_article_comment_path(article_comment.article_id, article_comment.id), class: 'btn-sm btn-danger', method: :delete, local: true %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
   
 </div>
