@@ -18,9 +18,9 @@ class ArticlesController < ApplicationController
         @genres = Genre.all
         # ジャンル検索
         if @genre = Genre.find_by(name: params[:name])
-           @articles = @genre.articles
+           @articles = @genre.articles.page(params[:page]).per(10)
         else
-            @articles = Article.all
+            @articles = Article.all.page(params[:page]).per(10)
         end
     end
 
