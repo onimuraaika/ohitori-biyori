@@ -12,11 +12,16 @@ class ArticlesController < ApplicationController
         else
            render "new"
         end
-
     end
 
     def index #投稿一覧画面
-        @articles = Article.all
+        @genres = Genre.all
+        # ジャンル検索
+        if @genre = Genre.find_by(name: params[:name])
+           @articles = @genre.articles
+        else
+            @articles = Article.all
+        end
     end
 
     def show #投稿詳細画面

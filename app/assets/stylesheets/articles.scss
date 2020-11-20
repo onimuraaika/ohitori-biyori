@@ -8,6 +8,46 @@
   box-sizing: border-box;
 }
 
+//投稿一覧画面
+.article-index-top_message {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.article-index-title {
+  padding: 50px;
+  text-align: center;
+}
+
+.article-index-genre {
+  margin: 50px 20px;
+  text-align: center;
+}
+
+.article-index-articles {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.article-index-articles-image {
+  margin-right: 20px;
+  text-align: right;
+}
+
+.article-index-articles-title {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.article-index-articles-body {
+  font-size: 20px;
+  text-align: left;
+  padding-left: 20px;
+}
+
 //投稿詳細画面
 .article-show-user-show {
   padding-top: 50px;

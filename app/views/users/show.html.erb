@@ -36,27 +36,9 @@
   <% end %>
 
   <!--投稿一覧表示-->
-  <% @articles.each do |article| %>
-    <div class="user-show-article-row">
-      <div class="user-show-article-image">
-        <%= link_to article_path(article.user.id) do %>
-          <%= attachment_image_tag article, :image, size: '150x150', format: 'jpeg' %>
-        <% end %>
-      </div>
-      <div class="user-show-article-title_body">
-        <div class="user-show-article-title">
-          <%= link_to article_path(article.user.id) do %>
-            <%= article.title %>
-          <% end %>
-        </div>
-        </br>
-        <div class="user-show-article-body">
-          <%= article.body %>
-        </div>
-        <!--マイページを見ている時は、編集・削除ボタンを表示する-->
-      </div>
-    </div>
-  <% end %>
+  <%= render 'articles/article_index', articles: @articles %>
+  
+  <!--ページング-->
   <%= paginate @articles %>
 
 </div>

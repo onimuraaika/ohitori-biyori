@@ -1,0 +1,22 @@
+<!--投稿一覧表示の部分テンプレート articles: @articles-->
+
+<% articles.each do |article| %>
+  <div class="row article-index-articles">
+    <div class="col-sm-4 article-index-articles-image">
+      <%= link_to article_path(article) do %>
+        <%= attachment_image_tag article, :image, size: "150x150", format: 'jpeg' %>
+      <% end %>
+    </div>
+    <div class="col-sm-8 article-index-articles-title_body">
+      <div class="article-index-articles-title">
+        <%= link_to article_path(article) do %>
+          <%= article.title %>
+        <% end %>
+      </div>
+      </br>
+      <div class="article-index-articles-body">
+        <%= article.body %>
+      </div>
+    </div>
+  </div>
+<% end %>
