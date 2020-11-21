@@ -1,2 +1,29 @@
-<h1>Relationships#following</h1>
-<p>Find me in app/views/relationships/following.html.erb</p>
+<!--フォロー一覧表示画面-->
+
+<div class="container follow-index">
+
+  <div class="row follow-index-user">
+    <!--ログインユーザー表示-->
+    <%= render 'users/current_user_show', user: @user %>
+  </div>
+  <h2 class="row follow-index-title">フォローしている人</h2>
+  <div class="row follow-index-users">
+    <% @user.followings_user.each do |user| %>
+      <div class="row follow-index-user">
+        <div class="col-sm-4 follow-index-user-image">
+          <%= attachment_image_tag user, :profile_image, :fill, 120, 120, format: 'jpeg', fallback: "noimage.jpg", size: '120x120' %>
+        </div>
+        <div class="col-sm-4 follow-index-user-details">
+          <div class="follow-index-user-nickname">
+            <%= user.nickname %>
+          </div>
+          </br>
+          <div class="follow-index-user-living_alone_month">
+            ひとり暮らし歴：<%= user.living_alone_month %>ヶ月
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>

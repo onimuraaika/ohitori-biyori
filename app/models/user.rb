@@ -15,7 +15,7 @@ class User < ApplicationRecord
     # 自分がフォローしている関係性
     has_many :active_relationships, class_name: "Relationship", foreign_key: "following_id", dependent: :destroy
     #自分がフォローしている人
-    has_many :followings, through: :active_relationships, source: :follower
+    has_many :following, through: :active_relationships, source: :follower
 
     validates :nickname, presence: true, length: { minimum: 2, maximum: 20 }, uniqueness: true
     validates :living_alone_month, presence: true
