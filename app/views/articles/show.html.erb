@@ -59,7 +59,7 @@
 
   <!--コメント投稿フォーム-->
   <div class="row article-show-comment_form">
-    <%= form_with model:[@article,@comment], local: true do |f| %>
+    <%= form_with model:[@article, @comment], local: true do |f| %>
       <%= f.text_area :comment, rows: '4', class: "textbox", placeholder: "50文字まで" %>
       <%= f.submit "　送信　", class: "form_submit, btn btn-md btn-default" %>
     <% end %>
@@ -69,18 +69,18 @@
   <div class="row article-show-comment">
     <% @article.article_comments.each do |article_comment| %>
       <div class="col-sm-4 article-show-comment-image">
-        <%= link_to user_path(article_comment_user) do %>
-          <%= attachment_image_tag article_comment_user, :profile_image, :fill, 70, 70, fallback: "noimage.jpg", size: "70x70" %>
+        <%= link_to user_path(article_comment.user) do %>
+          <%= attachment_image_tag article_comment.user, :profile_image, :fill, 70, 70, fallback: "noimage.jpg", size: "70x70" %>
         <% end %>
       </div>
       <div class="col-sm-4 article-show-comment-nickname">
         <div class="user-show-info-name">
-          <%= article_comment_user.nickname %>
+          <%= article_comment.user.nickname %>
         </div>
         </br>
         <div class="article-show-comment-buttom">
           <%= article_comment.comment %>
-          <% if current_user == article_comment_user %>
+          <% if current_user == article_comment.user %>
             <%= link_to '削除する', article_article_comment_path(article_comment.article_id, article_comment.id), class: 'btn-sm btn-danger', method: :delete, local: true %>
           <% end %>
         </div>
