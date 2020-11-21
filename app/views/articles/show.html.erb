@@ -18,7 +18,7 @@
       <p class="article-show-article-body"><%= @article.body %></p>
     </div>
   </div>
-  
+
   <!--ボタン-->
   <% if user_signed_in? && current_user.id == @article.user_id %>
     <!--ログインしている人の投稿の場合-->
@@ -39,12 +39,24 @@
       <%= link_to :back do %>
         <button type="button" class="btn btn-default btn-lg article-show-button-return">　　戻る　　</button>
       <% end %>
-      <button type="button" class="btn btn-default btn-lg article-show-button-favorite">
-        <%= link_to "お気に入り" %>
-      </button>
+      <% if @article.favorited_by?(current_user) %>
+        <%= link_to article_favorite_path(@article), method: :delete do %>
+          <button type="button" class="btn btn-default btn-lg article-show-button-favorite">
+            <i class="fa fa-heart" aria-hidden="true" style="color: ;"></i>
+            お気に入り解除
+          </button>
+        <% end %>
+      <% else %>
+        <%= link_to article_favorites_path(@article), method: :post do %>
+          <button type="button" class="btn btn-default btn-lg article-show-button-favorite">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            お気に入り登録
+          </button>
+        <% end %>
+      <% end %>
     </div>
   <% end %>
-  
+
   <!--コメント投稿フォーム-->
   <div class="row article-show-comment_form">
     <%= form_with model:[@article,@comment], local: true do |f| %>
@@ -52,7 +64,7 @@
       <%= f.submit "　送信　", class: "form_submit, btn btn-md btn-default" %>
     <% end %>
   </div>
-  
+
   <!--コメント表示-->
   <div class="row article-show-comment">
     <% @article.article_comments.each do |article_comment| %>

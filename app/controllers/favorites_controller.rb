@@ -1,12 +1,20 @@
 class FavoritesController < ApplicationController
-  
-  def create#お気に入り登録
-  end
 
-  def destroy#お気に入り解除
-  end
+    def create # お気に入り登録
+        @article = Article.find(params[:article_id])
+        favorite = @article.favorites.new(user_id: current_user.id)
+        favorite.save
+        redirect_to request.referer
+    end
 
-  def index#お気に入り投稿一覧画面
-  end
-  
+    def destroy # お気に入り解除
+        @article = Article.find(params[:article_id])
+        favorite = @article.favorites.find_by(user_id: current_user.id)
+        favorite.destroy
+        redirect_to request.referer
+    end
+
+    def index#お気に入り投稿一覧画面
+    end
+    
 end
