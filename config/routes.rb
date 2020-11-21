@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     
     resources :users, only: [:show, :edit, :update] do
         resource :relationships, only: [:create, :destroy]
-  	    get 'following' => 'relationships#following', as: 'following'
+  	    get 'following' => 'relationships#following', as: 'followings'
     end
     
     get '/users/unsubscribe/:id' => 'users#unsubscribe', as: "unsubscribe"
