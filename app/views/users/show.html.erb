@@ -4,32 +4,7 @@
 
   <% if @user == current_user %>
     <!--マイページとして見ている時のview-->
-    <div class="row user-show-info">
-      <div class="col-sm-4 user-show-info-image">
-        <%= attachment_image_tag @user, :profile_image, :fill, 120, 120, format: 'jpeg', fallback: "noimage.jpg", size: '120x120' %>
-      </div>
-      <div class="col-sm-4 user-show-info-name_follwer">
-        <div class="user-show-info-name">
-          <%= current_user.nickname %>
-        </div>
-        </br>
-        <div class="user-show-info-follower">
-          あなたのファン：<%= current_user.followers.count %>人
-        </div>
-      </div>
-    </div>
-    <!--ナビゲーショボタン-->
-    <div class="row user-show-info-nav">
-      <div class=" user-show-info-nav-favorite">
-        <%= link_to "お気に入り" %>
-      </div>
-      <div class=" user-show-info-nav-following">
-        <%= link_to "フォローしている人" %>
-      </div>
-      <div class=" user-show-info-nav-setting">
-        <%= link_to "設定", edit_user_path %>
-      </div>
-    </div>
+    <%= render 'users/current_user_show', user: @user %>
   <% else %>
     <!--ユーザー詳細として見ている時のview-->
     <%= render 'users/show', user: @user %>
