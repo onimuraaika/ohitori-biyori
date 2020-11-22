@@ -15,8 +15,8 @@
 }
 
 .article-index-title {
-  padding: 50px;
   text-align: center;
+  padding: 50px;
 }
 
 .article-index-genre {
@@ -24,6 +24,7 @@
   text-align: center;
 }
 
+//投稿一覧表示の部分テンプレート
 .article-index-articles {
   display: flex;
   justify-content: center;

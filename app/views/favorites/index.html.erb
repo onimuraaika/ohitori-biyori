@@ -1,9 +1,11 @@
-<!--お気に入りした投稿一覧表示画面-->
+<!--お気に入り投稿一覧表示画面-->
 
 <div class="container favorite-article">
 
   <!--ログインユーザーの部分テンプレート-->
   <%= render 'users/current_user_show', user: @user %>
+  
+  <h2 class="row favorite-article-title">お気に入りの投稿</h2>
 
   <!--お気に入り投稿一覧表示-->
   <div class="favorite-article-index">
