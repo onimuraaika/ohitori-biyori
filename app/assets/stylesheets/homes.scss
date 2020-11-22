@@ -11,13 +11,12 @@
 //トップページ
 .top {
   padding-top: 100px;
-}
-
-.top-message {
+  padding-bottom: 100px;
   text-align: center;
   align-items: center;
 }
 
+//(ここから　サイトの説明部分テンプレート)
 .top-message-subtitle {
   padding-top: 50px;
 }
@@ -36,9 +35,9 @@
   padding-top: 60px;
   font-size: 16px;
 }
+//(ここまで　サイトの説明部分テンプレート)
 
 .top-access {
-  text-align: center;
   padding: 50px;
 }
 
@@ -46,15 +45,11 @@
   margin: 10px;
 }
 
+//矢印アイコンの部分テンプレート
 .top-next-icon {
   padding: 40px;
   font-size: 4em;
   color: #CCC;
-  text-align: center;
-}
-
-.top-how_to_enjoy {
-  text-align: center;
 }
 
 .top-how_to_enjoy-subtitle {
@@ -68,6 +63,41 @@
 
 //ここは写真を入れたら削除する
 .top-how_to_enjoy-image {
+  padding-top: 10px;
+  width: 400px;
+  height: 250px;
+  background-color: #CCC;
+  margin: 0 auto;
+}
+
+//Aboutページ
+.about {
+  padding-bottom: 100px;
+  text-align: center;
+  align-items: center;
+}
+
+.about-top_message {
+  height: 300px; //背景画像挿入後削除
+  background-color: #ddd; //背景画像挿入後削除
+  line-height: 300px;
+}
+
+.about-site {
+  padding-top: 50px;
+}
+
+.about-how_to_enjoy-subtitle {
+  padding-top: 50px;
+}
+
+.about-how_to_enjoy-description {
+  padding-top: 20px;
+  font-size: 16px;
+}
+
+//ここは写真を入れたら削除する
+.about-how_to_enjoy-image {
   padding-top: 10px;
   width: 400px;
   height: 250px;
