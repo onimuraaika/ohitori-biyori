@@ -13,9 +13,9 @@ class User < ApplicationRecord
     # 自分をフォローしてくれている人
     has_many :followers, through: :passive_relationships, source: :following
     # 自分がフォローしている関係性
-    has_many :active_relationships, class_name: "Relationship", foreign_key: "following_id", dependent: :destroy
+    has_many :relationships, class_name: "Relationship", foreign_key: "following_id", dependent: :destroy
     #自分がフォローしている人
-    has_many :following, through: :active_relationships, source: :follower
+    has_many :following, through: :relationships, source: :followers
 
     validates :nickname, presence: true, length: { minimum: 2, maximum: 20 }, uniqueness: true
     validates :living_alone_month, presence: true
@@ -31,12 +31,12 @@ class User < ApplicationRecord
 
     # フォローする
     def follow(user_id)
-        active_relationships.create(followed_id: user_id)
+        relationships.create(followed_id: user_id)
     end
 
     # フォローをはずす
     def unfollow(user_id)
-        active_relationships.find_by(followed_id: user_id).destroy
+        relationships.find_by(followed_id: user_id).destroy
     end
 
 end

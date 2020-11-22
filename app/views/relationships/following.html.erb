@@ -1,4 +1,4 @@
-<!--フォロー一覧表示画面-->
+<!--フォローユーザー一覧表示画面-->
 
 <div class="container follow-index">
 
@@ -6,9 +6,12 @@
     <!--ログインユーザー表示-->
     <%= render 'users/current_user_show', user: @user %>
   </div>
+  
   <h2 class="row follow-index-title">フォローしている人</h2>
+  
+  <!--フォローユーザー一覧表示-->
   <div class="row follow-index-users">
-    <% @user.followings_user.each do |user| %>
+    <% @user.each do |user| %>
       <div class="row follow-index-user">
         <div class="col-sm-4 follow-index-user-image">
           <%= attachment_image_tag user, :profile_image, :fill, 120, 120, format: 'jpeg', fallback: "noimage.jpg", size: '120x120' %>
