@@ -14,7 +14,7 @@ class FavoritesController < ApplicationController
         redirect_to request.referer
     end
 
-    def index#お気に入り投稿一覧画面
+    def index # お気に入り投稿一覧画面
     end
     
 end
