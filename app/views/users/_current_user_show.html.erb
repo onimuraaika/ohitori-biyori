@@ -2,9 +2,9 @@
 
 <div class="row user-show-info">
   <div class="col-sm-4 user-show-info-image">
-    <%= attachment_image_tag user, :profile_image, :fill, 120, 120, format: 'jpeg', fallback: "noimage.jpg", size: '120x120' %>
+    <%= attachment_image_tag user, :profile_image, :fill, 150, 150, format: 'jpeg', fallback: "noimage.jpg", size: '150x150' %>
   </div>
-  <div class="col-sm-4 user-show-info-name_follwer">
+  <div class="col-sm-8 user-show-info-name_follwer">
     <div class="user-show-info-name">
       <%= current_user.nickname %>
     </div>
