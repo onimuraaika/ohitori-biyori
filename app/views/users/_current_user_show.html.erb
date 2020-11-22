@@ -1,0 +1,29 @@
+<!--ログインユーザー表示の部分テンプレート user: @user-->
+
+<div class="row user-show-info">
+  <div class="col-sm-4 user-show-info-image">
+    <%= attachment_image_tag user, :profile_image, :fill, 120, 120, format: 'jpeg', fallback: "noimage.jpg", size: '120x120' %>
+  </div>
+  <div class="col-sm-4 user-show-info-name_follwer">
+    <div class="user-show-info-name">
+      <%= current_user.nickname %>
+    </div>
+    </br>
+    <div class="user-show-info-follower">
+      あなたのファン：<%= current_user.followers.count %>人
+    </div>
+  </div>
+</div>
+
+<!--ナビゲーショボタン-->
+<div class="row user-show-info-nav">
+  <div class=" user-show-info-nav-favorite">
+    <%= link_to "お気に入り" %>
+  </div>
+  <div class=" user-show-info-nav-following">
+    <%= link_to "フォローしている人", user_followings_path(user) %>
+  </div>
+  <div class=" user-show-info-nav-setting">
+    <%= link_to "設定", edit_user_path(current_user) %>
+  </div>
+</div>
