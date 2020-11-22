@@ -2,26 +2,17 @@
 
 <div class="container about">
 
-  <div class="row about-top_message">
-    <h1>ひとり暮らしを楽しく素敵に。</h1>
+  <div class="row about-top">
+    <h1 class="row about-top_message">ひとり暮らしを楽しく素敵に。</h1>
   </div>
 
   <!--サイトの説明-->
   <div class="row about-site">
-    <h2>おひとり日和とは？</h2>
-    <p class="row about-site-discription">
-      おひとり日和は、"女性のひとり暮らしを楽しく素敵に"をコンセプトにしたライフスタイル投稿サイトです。</br>
-      </br>
-      お出かけ、雑貨、グルメ、レシピ、ファッション、節約術など</br>
-      ひとり暮らしを素敵にするヒントが見つかります。
-    </p>
-    <p class="about-site-title_description">"おひとり日和"＝おひとり生活を楽しむのにちょうどよいよい天気。</p>
+    <%= render 'homes/top_message' %>
   </div>
 
   <!--矢印のアイコン-->
-  <div class="row about-next-icon">
-    <i class="fa fa-chevron-circle-down top-next-icon" aria-hidden="true"></i>
-  </div>
+  <%= render 'next_icon' %>
 
   <!--楽しみ方-->
   <div class="row about-how_to_enjoy">
