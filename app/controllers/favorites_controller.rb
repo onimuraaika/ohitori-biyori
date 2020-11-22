@@ -15,6 +15,9 @@ class FavoritesController < ApplicationController
     end
 
     def index # お気に入り投稿一覧画面
+        @user = current_user # ユーザー表示の部分テンプレート
+        # @favorite_articles = @user.favorite_articles
+        @articles = @user.favorite_articles.page(params[:page]).per(10)
     end
-    
+
 end

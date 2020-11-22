@@ -1,13 +1,17 @@
 class User < ApplicationRecord
-    
+
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
+    attachment :profile_image
+    attachment :image
 
     devise :database_authenticatable, :registerable,
            :recoverable, :rememberable, :validatable
 
     has_many :articles, dependent: :destroy
     has_many :favorites, dependent: :destroy
+    has_many :favorite_articles, through: :favorites, source: :article
     has_many :article_comments, dependent: :destroy
     # 自分がフォローしてもらっている関係性
     has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
@@ -22,8 +26,6 @@ class User < ApplicationRecord
     validates :living_alone_month, presence: true
     validates :email, presence: true
     validates :introduction, length: { maximum: 100 }
-
-    attachment :profile_image
 
     # フォローしているかどうか
     def followed_by?(user)

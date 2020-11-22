@@ -1,3 +1,20 @@
 // Place all the styles related to the Favorites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//お気に入り投稿一覧表示画面
+.favorite-article {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.favorite-article-title {
+  text-align: center;
+  padding: 100px;
+}
