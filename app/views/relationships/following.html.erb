@@ -14,15 +14,15 @@
     <% @user.following.each do |user| %>
       <div class="row follow-index-user">
         <div class="col-sm-4 follow-index-user-image">
-          <%= attachment_image_tag user, :profile_image, :fill, 120, 120, format: 'jpeg', fallback: "noimage.jpg", size: '120x120' %>
+          <%= attachment_image_tag user, :profile_image, :fill, 150, 150, format: 'jpeg', fallback: "noimage.jpg", size: '150x150' %>
         </div>
-        <div class="col-sm-4 follow-index-user-details">
+        <div class="col-sm-8 follow-index-user-details">
           <div class="follow-index-user-nickname">
-            <%= user.nickname %>
+            <%= user.nickname %> <span class="follow-index-user-nickname-san">さん</span>
           </div>
           </br>
           <div class="follow-index-user-living_alone_month">
-            ひとり暮らし歴：<%= user.living_alone_month %>ヶ月
+            ひとり暮らし歴：<%= user.living_alone_month %>ヶ月目
           </div>
         </div>
       </div>

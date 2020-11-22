@@ -1,3 +1,47 @@
 // Place all the styles related to the Relationships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//フォローユーザー一覧表示画面
+.follow-index {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.follow-index-title {
+  padding: 50px;
+  text-align: center;
+}
+
+.follow-index-user {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.follow-index-user-image {
+  text-align: right;
+}
+
+.follow-index-user-nickname {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.follow-index-user-nickname-san {
+  font-size: 16px;
+}
+
+.follow-index-user-living_alone_month {
+  font-size: 20px;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 20px;
+}
