@@ -25,7 +25,7 @@
 
 //ヘッダー
 header {
-  height: 150px;
+  height: 190px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -38,7 +38,7 @@ header > :first-child {
 
 .header-button {
   height: 100px;
-  width: 100px;
+  width: 130px;
   font-size: 20px;
   line-height: 100px;
   padding: 0 auto;
@@ -46,12 +46,14 @@ header > :first-child {
   text-decoration: none
 }
 
+.header-button-about,
 .header-button-my_page,
 .header-button-post,
 .header-button-favorite,
-.header-button-logout {
+.header-button-logout
+{
   height: 100px;
-  width: 100px;
+  width: 130px;
   padding: 0 auto;
 }
 
