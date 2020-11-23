@@ -15,14 +15,15 @@ class UsersController < ApplicationController
         redirect_to user_path(@user.id)
     end
 
-    def unsubscribe#退会確認画面
+    def unsubscribe # 退会確認画面
+        @user = current_user # ヘッダーの部分テンプレート
     end
 
     def withdraw#退会処理
     end
-    
+
     private
-    
+
     def user_params
         params.require(:user).permit(:profile_image, :nickname, :introduction, :living_alone_month)
     end
