@@ -90,10 +90,18 @@
   align-items: center;
 }
 
+.about-top {
+  background-image: url('background-index.jpg');
+  height: 300px;
+  background-size: cover;
+  background-position: bottom;
+  background-color: rgba( 255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+}
+
 .about-top_message {
-  height: 300px; //背景画像挿入後削除
-  background-color: #ddd; //背景画像挿入後削除
-  line-height: 300px;
+  padding-top: 100px;
+  text-align: center;
 }
 
 .about-site {
