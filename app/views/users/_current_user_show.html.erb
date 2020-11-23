@@ -15,15 +15,12 @@
   </div>
 </div>
 
-<!--ナビゲーショボタン-->
 <div class="row user-show-info-nav">
-  <div class=" user-show-info-nav-favorite">
-    <%= link_to "お気に入り", article_favorites_path(user) %>
-  </div>
-  <div class=" user-show-info-nav-following">
-    <%= link_to "フォローしている人", user_followings_path(user) %>
-  </div>
-  <div class=" user-show-info-nav-setting">
-    <%= link_to "設定", edit_user_path(current_user) %>
-  </div>
+  <ul class="nav nav-tabs nav-justified">
+    <li role="presentation" class="active"><%= link_to "自分の投稿", user_path(user) %></li>
+  	<li role="presentation"><%= link_to "お気に入り", article_favorites_path(user) %></li>
+  	<li role="presentation"><%= link_to "フォローしている人", user_followings_path(user) %></li>
+  	<li role="presentation"><%= link_to "設定", edit_user_path(current_user) %></li>
+  </ul>
 </div>
+
