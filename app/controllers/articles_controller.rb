@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 
     def new # 新規投稿画面
+        @user = current_user # ヘッダーの部分テンプレート
         @article = Article.new
     end
 
