@@ -9,12 +9,21 @@
 }
 
 //トップページ
+.top-background {
+  background-image: url('background-top.jpg');
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
 .top {
   padding-top: 100px;
   padding-bottom: 100px;
   text-align: center;
   align-items: center;
+  background-color: #fff;
 }
+
 
 //(ここから　サイトの説明部分テンプレート)
 .top-message-subtitle {
