@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
     end
 
     def index # 投稿一覧画面
+        @user = current_user # ヘッダーの部分テンプレート
         @genres = Genre.all
         # ジャンル検索
         if @genre = Genre.find_by(name: params[:name])
