@@ -109,7 +109,27 @@ footer {
 }
 
 //新規会員登録画面
-.signup-row {
+.signup {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.signup-form {
   padding: 0 30%;
   align-items: center;
+}
+
+.signup-title {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.signup-form-title {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.signup-form-button {
+  text-align: center;
+  padding-top: 50px;
 }
