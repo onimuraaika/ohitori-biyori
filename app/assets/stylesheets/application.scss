@@ -89,16 +89,23 @@ footer {
 
 //ログイン画面
 .login {
-  padding-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
-.login-row {
+.login-form {
   padding: 0 30%;
   align-items: center;
 }
 
-.login-title {
+.login-form-title {
+  padding-bottom: 50px;
   text-align: center;
+}
+
+.login-form-button {
+  text-align: center;
+  padding-top: 50px;
 }
 
 //新規会員登録画面
