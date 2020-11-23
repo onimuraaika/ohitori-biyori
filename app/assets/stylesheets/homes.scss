@@ -46,13 +46,17 @@
 }
 //(ここまで　サイトの説明部分テンプレート)
 
+//(ここから　ログイン・新規登録ボタンの部分テンプレート)
 .top-access {
+  display: flex;
+  justify-content: center;
   padding: 50px;
 }
 
 .top-access-button {
   margin: 10px;
 }
+//(ここまで　ログイン・新規登録ボタンの部分テンプレート)
 
 //矢印アイコンの部分テンプレート
 .top-next-icon {
