@@ -1,7 +1,9 @@
-<div class="container login">
-  <div class="row login-row">
+<!--ログイン画面-->
 
-    <h1 class="login-title">ログイン</h1>
+<div class="container login">
+  <div class="row login-form">
+
+    <h2 class="login-form-title">ログイン</h2>
 
     <%= form_with model: @user, url: user_session_path, local: true do |f| %>
 
@@ -15,8 +17,8 @@
           <%= f.password_field :password, autocomplete: "current-password", class: "form-control input-lg" %>
         </div>
         <div class="form-group">
-          <div class="actions">
-            <%= f.submit "　　　　　ログイン　　　　　", class: "btn btn-default btn-lg" %>
+          <div class="actions  login-form-button">
+            <%= f.submit "　　　　　　　　　　ログインする　　　　　　　　　", class: "btn btn-default btn-lg" %>
            </div>
         </div>
       </form>
