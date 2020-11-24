@@ -20,7 +20,7 @@
     <% @genres.each do |genre| %>
       <div class="article-index-genre-button">
         <%= link_to articles_path(name: genre.name) do %>
-          <button type="button" class="btn btn-default btn-lg"><%= genre.name %></button>
+          <button type="button" class="btn btn-default btn-lg">　<%= genre.name %>　</button>
         <% end %>
       </div>
     <% end %>
