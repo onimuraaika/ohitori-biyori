@@ -15,15 +15,22 @@
   </div>
 </div>
 
-<!--ナビゲーショボタン-->
 <div class="row user-show-info-nav">
-  <div class=" user-show-info-nav-favorite">
-    <%= link_to "お気に入り", article_favorites_path(user) %>
+  <div class="user-show-info-nav-button">
+    <%= link_to article_favorites_path(user) do %>
+      <button type="button" class="btn btn-default btn-lg user-show-info-nav-favorite">お気に入り</button>
+    <% end %>
   </div>
-  <div class=" user-show-info-nav-following">
-    <%= link_to "フォローしている人", user_followings_path(user) %>
+  <div class="user-show-info-nav-button">
+    <%= link_to user_followings_path(user) do %>
+      <button type="button" class="btn btn-default btn-lg user-show-info-nav-following">フォローしている人</button>
+    <% end %>
   </div>
-  <div class=" user-show-info-nav-setting">
-    <%= link_to "設定", edit_user_path(current_user) %>
+  <div class="user-show-info-nav-button">
+    <%= link_to edit_user_path(current_user) do %>
+      <button type="button" class="btn btn-default btn-lg user-show-info-nav-setting">　設定　</button>
+    <% end %>
   </div>
 </div>
+
+
