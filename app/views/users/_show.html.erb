@@ -7,7 +7,7 @@
       <%= attachment_image_tag user, :profile_image, size: "150x150", format: 'jpeg', fallback: "noimage.jpg", size: '150x150' %>
     <% end %>
   </div>
-  <div class="col-sm-4 user-show-info-details">
+  <div class="col-sm-5 user-show-info-details">
     <div class="user-show-info-nickname">
       <%= user.nickname %>
     </div>
@@ -15,13 +15,14 @@
     <div class="user-show-info-living_alone_month">
       ひとり暮らし歴：<%= user.living_alone_month %>ヶ月
     </div>
+    </br>
     <div class="user-show-info-living_alone_month">
       <%= user.introduction %>
     </div>
   </div>
 
   <!--フォローボタン-->
-  <div class="col-sm-4 user-show-info-follow_button">
+  <div class="col-sm-2 user-show-info-follow_button">
     <% if current_user != user %> <!--自分には表示しない-->
       <% if user.followed_by?(current_user) %>
         <%= link_to user_relationships_path(user.id), method: :delete do %>
