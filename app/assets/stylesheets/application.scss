@@ -133,3 +133,30 @@ footer {
   text-align: center;
   padding-top: 50px;
 }
+
+//ページネーション
+.pagination {
+  font-size: 20px;
+  margin: 50px;
+}
+
+//(kaminariのデザイン)
+.pagination > li > a {
+  color: #000;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+//(表示しているページ番号のデザイン)
+.pagination > .active > a {
+  background-color: #FBEFC4;
+  color: #000;
+  border-color: #FBEFC4;
+  border-radius: 5px;
+}
+
+//(ホバー時のデザイン)
+.pagination > li > a:hover {
+  background-color: #FBEFC4;
+  border-radius: 5px;
+}

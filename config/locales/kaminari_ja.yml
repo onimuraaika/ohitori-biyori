@@ -1,0 +1,10 @@
+# ページネーション の表示変更
+
+ja:
+  views:
+    pagination:
+      first: " << "
+      last: " >> "
+      previous: " 前へ "
+      next: " 次へ "
+      truncate: "..."
