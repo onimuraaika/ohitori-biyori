@@ -96,12 +96,13 @@
 }
 
 //投稿詳細画面
-.article-show-user-show {
-  padding-top: 50px;
-  padding-bottom: 30px;
+.article-show {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .article-show-article {
+  padding-top: 100px;
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
@@ -130,23 +131,40 @@
 }
 
 .article-show-comment_form {
-  padding: 50px;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.article-show-comment {
-  text-align: center;
-  padding: 20px;
+.article-show-comment_form-text_area {
+  text-align: right;
+}
+
+.article-show-comment_form-submit_button {
+  text-align: left;
 }
 
 .article-show-comment-image {
   text-align: right;
 }
 
-.article-show-comment-nickname {
-  padding-top: 5px;
-}
 
 .article-show-comment-info {
+  text-align: left;
+}
+
+.article-show-comment-nickname {
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.article-show-comment-comment {
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.article-show-comment-destroy_button {
+  padding-top: 50px;
   text-align: left;
 }

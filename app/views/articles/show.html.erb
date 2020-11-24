@@ -15,7 +15,7 @@
     <div class="article-show-article-title_body">
       <p class="article-show-article-title"><%= @article.title %></p>
     </br>
-      <p class="article-show-article-body"><%= @article.body %></p>
+      <p class="article-show-article-body"><%= simple_format(@article.body) %></p>
     </div>
   </div>
 
@@ -37,19 +37,19 @@
     <!--ログインしている人以外の投稿の場合-->
     <div class="row article-show-button">
       <%= link_to :back do %>
-        <button type="button" class="btn btn-default btn-lg article-show-button-return">　　戻る　　</button>
+        <button type="button" class="btn btn-default btn-lg article-show-button-return">　　　戻る　　　</button>
       <% end %>
       <% if @article.favorited_by?(current_user) %>
         <%= link_to article_favorite_path(@article), method: :delete do %>
           <button type="button" class="btn btn-default btn-lg article-show-button-favorite">
-            <i class="fa fa-heart" aria-hidden="true" style="color: orange;"></i>
+            <i class="fa fa-heart" aria-hidden="true" style="color: #F5CC50;"></i>
             お気に入り解除
           </button>
         <% end %>
       <% else %>
         <%= link_to article_favorites_path(@article), method: :post do %>
           <button type="button" class="btn btn-default btn-lg article-show-button-favorite">
-            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <i class="fa fa-heart-o" aria-hidden="true" style="color: #F5CC50;"></i>
             お気に入り登録
           </button>
         <% end %>
@@ -60,32 +60,38 @@
   <!--コメント投稿フォーム-->
   <div class="row article-show-comment_form">
     <%= form_with model:[@article, @comment], local: true do |f| %>
-      <%= f.text_area :comment, rows: '4', class: "textbox", placeholder: "50文字まで" %>
-      <%= f.submit "　送信　", class: "form_submit, btn btn-md btn-default" %>
+      <div class="col-sm-8 article-show-comment_form-text_area">
+        <%= f.text_area :comment, rows: "3", class: "textbox", placeholder: "コメントを送りましょう！(50文字まで)", size: "60x2" %>
+      </div>
+      <div class="col-sm-4 article-show-comment_form-submit_button">
+        <%= f.submit "　送信　", class: "form_submit, btn btn-lg btn-default" %>
+      </div>
     <% end %>
   </div>
 
   <!--コメント表示-->
-  <div class="row article-show-comment">
-    <% @article.article_comments.each do |article_comment| %>
+  <% @article.article_comments.each do |article_comment| %>
+    <div class="row article-show-comment">
       <div class="col-sm-4 article-show-comment-image">
         <%= link_to user_path(article_comment.user) do %>
-          <%= attachment_image_tag article_comment.user, :profile_image, :fill, 100, 100, fallback: "noimage.jpg", size: "70x70" %>
+          <%= attachment_image_tag article_comment.user, :profile_image, size: "120x120", fallback: "noimage.jpg", size: "120x120" %>
         <% end %>
       </div>
-      <div class="col-sm-8 article-show-comment-info">
+      <div class="col-sm-4 article-show-comment-info">
         <div class="article-show-comment-nickname">
           <%= article_comment.user.nickname %>
         </div>
         </br>
         <div class="article-show-comment-comment">
-          <%= article_comment.comment %>
-          <% if current_user == article_comment.user %>
-          <%= link_to '削除する', article_article_comment_path(article_comment.article_id, article_comment.id), class: 'btn btn-sm btn-default article-show-comment-button', method: :delete, local: true %>
-          <% end %>
+          <%= simple_format(article_comment.comment) %>　　
         </div>
       </div>
-    <% end %>
-  </div>
+      <div class="col-sm-4 article-show-comment-destroy_button">
+        <% if current_user == article_comment.user %>
+          <%= link_to '　削除する　', article_article_comment_path(article_comment.article_id, article_comment.id), class: 'btn btn-md btn-default article-show-comment-button', method: :delete, local: true %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 
 </div>
