@@ -10,25 +10,29 @@
 
 //フォローユーザー一覧表示画面
 .follow-index {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.follow-index-title {
-  padding: 50px;
-  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .follow-index-user {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   padding-bottom: 10px;
 }
 
+.follow-index-title {
+  text-align: center;
+  padding: 100px;
+}
+
 .follow-index-user-image {
+  margin-right: 20px;
   text-align: right;
 }
 
-.follow-index-user-nickname {
+.follow-index-user-nickname,
+.follow-index-user-living_alone_month
+{
   font-size: 20px;
   padding-top: 20px;
   padding-left: 20px;

@@ -12,6 +12,7 @@ class RelationshipsController < ApplicationController
 
     def following # フォローしているユーザー一覧
         @user = current_user
+        @users = @user.following.all.page(params[:page]).per(10)
     end
 
 end
