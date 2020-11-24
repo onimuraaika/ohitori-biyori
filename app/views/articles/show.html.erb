@@ -4,7 +4,7 @@
 
   <!--ユーザー表示の部分テンプレート-->
   <div class="row article-show-user-show">
-    <%= render 'users/show', user: @user, article: @article %>
+    <%= render 'users/show', user: @user %>
   </div>
 
   <!--投稿内容-->
@@ -80,7 +80,7 @@
         </br>
         <div class="article-show-comment-comment">
           <%= article_comment.comment %>
-          <% if current_user == article_comment.user %>　　
+          <% if current_user == article_comment.user %>
           <%= link_to '削除する', article_article_comment_path(article_comment.article_id, article_comment.id), class: 'btn btn-sm btn-default article-show-comment-button', method: :delete, local: true %>
           <% end %>
         </div>

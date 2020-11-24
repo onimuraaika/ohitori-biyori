@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
 
     def show # 投稿詳細画面
         @article = Article.find(params[:id])
-        @user = @article.user # 部分テンプレート用
+        @user = @article.user # ユーザー表示の部分テンプレート
         @comment = ArticleComment.new
     end
 
