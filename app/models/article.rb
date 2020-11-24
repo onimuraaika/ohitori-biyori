@@ -8,9 +8,9 @@ class Article < ApplicationRecord
     has_many :article_comments, dependent: :destroy
 
     validates :image, presence: true
-    validates :title, presence: true, length: { minimum: 2, maximum: 20 }
+    validates :title, presence: true
     validates :genre_id, presence: true
-    validates :body, presence: true, length: { minimum: 5, maximum: 200 }
+    validates :body, presence: true
     
     # user_idがFavoritesテーブル内に存在するか
     def favorited_by?(user)

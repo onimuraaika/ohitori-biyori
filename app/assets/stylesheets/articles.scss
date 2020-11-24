@@ -8,6 +8,33 @@
   box-sizing: border-box;
 }
 
+//新規投稿画面
+.new-article {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.new-article-title {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.new-article-row {
+  padding: 0 30%;
+  align-items: center;
+  text-align: center;
+}
+
+.new-article-image {
+  margin: 0 auto;
+}
+
+.new-article-button {
+  text-align: center;
+  padding-top: 50px;
+}
+
+
 //投稿一覧画面
 .article-index {
   padding-bottom: 100px;
