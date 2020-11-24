@@ -10,9 +10,9 @@
     <!--エラーメッセージ -->
 
     <div class="row new-article-row">
-      <h3 class="new-article-subtitle">① 写真の選択</h3>
+      <h3 class="new-article-subtitle">① 写真の選択</h3></br>
       <% if @article.image.present? %>
-        <%= attachment_image_tag @article.image, id: :img_preview %>
+        <%= attachment_image_tag @article.image, id: :img_preview, size: "250x250" %>
       <% else %>
         <%= image_tag "no_image.jpg", size: "250x250", id: :img_preview %>
       <% end %>

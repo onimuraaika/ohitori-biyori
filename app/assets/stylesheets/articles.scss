@@ -26,14 +26,13 @@
 }
 
 .new-article-image {
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .new-article-button {
   text-align: center;
   padding-top: 50px;
 }
-
 
 //投稿一覧画面
 .article-index {
@@ -167,4 +166,30 @@
 .article-show-comment-destroy_button {
   padding-top: 50px;
   text-align: left;
+}
+
+// 投稿編集画面
+.edit-article {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.edit-article-title {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.edit-article-row {
+  padding: 0 30%;
+  align-items: center;
+  text-align: center;
+}
+
+.edit-article-image {
+  margin: 10px auto;
+}
+
+.edit-article-button {
+  text-align: center;
+  padding-top: 50px;
 }
