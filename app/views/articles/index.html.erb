@@ -18,9 +18,11 @@
   <!--ジャンル検索ボタン-->
   <div class="row article-index-genre">
     <% @genres.each do |genre| %>
-      <button type="button" class="btn btn-default btn-lg article-index-genre-button">
-        <%= link_to genre.name, articles_path(name: genre.name) %>
-      </button>
+      <div class="article-index-genre-button">
+        <%= link_to articles_path(name: genre.name) do %>
+          <button type="button" class="btn btn-default btn-lg">　<%= genre.name %>　</button>
+        <% end %>
+      </div>
     <% end %>
   </div>
 

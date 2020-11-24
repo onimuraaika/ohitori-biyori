@@ -9,6 +9,10 @@
 }
 
 //投稿一覧画面
+.article-index {
+  padding-bottom: 100px;
+}
+
 .article-index-top {
   background-image: url('background-index.jpg');
   height: 300px;
@@ -25,12 +29,17 @@
 
 .article-index-title {
   text-align: center;
-  padding: 50px;
+  padding-top: 50px;
 }
 
 .article-index-genre {
-  margin: 50px 20px;
-  text-align: center;
+  margin: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.article-index-genre-button {
+  margin: 10px;
 }
 
 //投稿一覧表示の部分テンプレート

@@ -9,13 +9,11 @@
     </div>
     <div class="col-sm-8 article-index-articles-title_body">
       <div class="article-index-articles-title">
-        <%= link_to article_path(article) do %>
-          <%= article.title %>
-        <% end %>
+        <%= article.title %>
       </div>
       </br>
       <div class="article-index-articles-body">
-        <%= article.body %>
+        <%= article.body.truncate(30) %>
       </div>
     </div>
   </div>
