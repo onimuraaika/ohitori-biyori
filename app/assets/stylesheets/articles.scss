@@ -30,7 +30,12 @@
 
 .article-index-genre {
   margin: 80px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.article-index-genre-button {
+  margin: 10px;
 }
 
 //投稿一覧表示の部分テンプレート
