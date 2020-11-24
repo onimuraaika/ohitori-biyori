@@ -61,7 +61,7 @@
   <div class="row article-show-comment_form">
     <%= form_with model:[@article, @comment], local: true do |f| %>
       <div class="col-sm-8 article-show-comment_form-text_area">
-        <%= f.text_area :comment, rows: "3", class: "textbox", placeholder: "コメントを送りましょう！(50文字まで)", size: "60x2" %>
+        <%= f.text_area :comment, class: "textbox", placeholder: "コメントを送りましょう！(50文字まで)", size: "60x2" %>
       </div>
       <div class="col-sm-4 article-show-comment_form-submit_button">
         <%= f.submit "　送信　", class: "form_submit, btn btn-lg btn-default" %>

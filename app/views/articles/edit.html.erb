@@ -1,47 +1,50 @@
 <!--投稿編集画面-->
 
 <div class="container new-article">
-    
+
   <!--新規投稿-->
-  <h1 class="new-article-title">投稿を編集する</h1>
-    
+  <h2 class="edit-article-title">編集する</h2>
+
   <%= form_with model:@article, local:true do |f| %>
-    
+
     <!--エラーメッセージ -->
-      
-    <div class="row new-article-row">
-      <div class="col-sm-6">
-        <h3 class="new-article-subtitle">① 写真の選択</h3>
-        <%= f.attachment_field :image, size: "200x200" %>
+
+    <div class="row edit-article-row">
+      <h3 class="edit-article-subtitle">① 写真の選択</h3></br>
+      <% if @article.image.present? %>
+        <%= attachment_image_tag @article, :image, id: :img_preview, size: "300x300" %>
+      <% else %>
+        <%= image_tag @article, :image, size: "300x300", id: :img_preview %>
+      <% end %>
+      </br>
+      <%= f.attachment_field :image, size: "300x300", class: "edit-article-image", id: :article_img %>
+    </div>
+    </br>
+    <div class="row edit-article-row">
+      <h3 class="edit-article-subtitle">② タイトル</h3>
+      <div class="form-group">
+        <%= f.text_field :title, class:"form-control input-lg" %>
       </div>
     </div>
-    <br>
-    <div class="row new-article-row">
-      <div class="col-sm-6">
-        <h3 class="new-article-subtitle">② タイトル</h3>
-        <div class="form-group">
-          <%= f.text_field :title, class:"form-control", placeholder:"例：わたしの休日のすごしかた" %>
-        </div>
+    </br>
+    <div class="row edit-article-row">
+      <h3 class="edit-article-subtitle">③ ジャンル</h3>
+      <div class="form-group input-lg">
+        <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: "　ジャンルを選択してください　" %>
       </div>
     </div>
-    <div class="row new-article-row">
-      <div class="col-sm-6">
-        <h3 class="new-article-subtitle">③ ジャンル</h3>
-        <div class="form-group">
-          <%= f.collection_select :genre_id, Genre.all, :id, :name  %>
-        </div>
+    </br>
+    <div class="row edit-article-row">
+      <h3 class="edit-article-subtitle">④ 伝えたいこと</h3>
+      <div class="form-group">
+        <%= f.text_area :body, class:"form-control", size: "60x5" %>
       </div>
     </div>
-    <div class="row new-article-row">
-      <div class="col-sm-6">
-        <h3 class="new-article-subtitle">④ 伝えたいこと</h3>
-        <div class="form-group">
-          <%= f.text_area :body, class:"form-control" %>
-        </div>
-      </div>
+    </br>
+    <div class="actions edit-article-button">
+      <%= f.submit "　　　　　　　　　　　更新する　　　　　　　　　　　", class:"btn btn-lg btn-default" %>
     </div>
-    <%= f.submit "　　　　投稿する　　　　", class:"btn btn-lg btn-default" %>
-    
+
   <% end %>
 
 </div>
