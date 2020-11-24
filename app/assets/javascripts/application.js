@@ -17,3 +17,22 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+
+//新規投稿の画像プレビュー
+$(function() {
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+  // 表示されている画像を変更
+  $('#img_preview').attr('src', e.target.result);
+    }
+    // 取得したurlにアップロード画像のurlを挿入
+    reader.readAsDataURL(input.files[0]);
+    }
+  }
+  // 選択された画像に変える
+  $("#article_img").change(function(){
+    readURL(this);
+  });
+});

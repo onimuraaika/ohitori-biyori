@@ -9,8 +9,9 @@ class ArticlesController < ApplicationController
         @article = Article.new(article_params)
         @article.user_id = current_user.id
         if @article.save
-          redirect_to article_path(@article) #投稿詳細画面へ
+           redirect_to article_path(@article) #投稿詳細画面へ
         else
+           @user = current_user # ヘッダーの部分テンプレート
            render "new"
         end
     end
