@@ -1,3 +1,5 @@
+<!--投稿一覧表示画面-->
+
 <div class="container article-index">
 
   <div class="row article-index-top">
@@ -26,6 +28,7 @@
   <%= render 'articles/article_index', articles: @articles %>
   
   <!--ページング-->
-  <%= paginate @articles %>
+  <div class="text-center"><%= paginate @articles %></div>
+  
   
 </div>
