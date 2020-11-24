@@ -15,7 +15,7 @@
           <%= attachment_image_tag user, :profile_image, size: "150x150", fallback: "noimage.jpg", size: '150x150' %>
         <% end %>
       </div>
-      <div class="col-sm-8 follow-index-user-details">
+      <div class="col-sm-5 follow-index-user-details">
         <div class="follow-index-user-nickname">
           <%= user.nickname %> <span class="follow-index-user-nickname-san">さん</span>
         </div>
@@ -25,8 +25,27 @@
         </div>
       </div>
     </div>
+    
+    <!--フォローボタン-->
+    <div class="col-sm-2 user-show-info-follow_button">
+      <% if user.followed_by?(current_user) %>
+        <%= link_to user_relationships_path(user.id), method: :delete do %>
+          <button type="button" class="btn btn-default btn-lg user-show-info-follow_button-unfollow">
+            <i class="fa fa-user" aria-hidden="true" style="color: #F5CC50;"></i>
+            ファン
+          </button>
+        <% end %>
+      <% else %>
+        <%= link_to user_relationships_path(user.id), method: :post do %>
+          <button type="button" class="btn btn-default btn-lg user-show-info-follow_button-follow">
+            <i class="fa fa-user-o" aria-hidden="true" style="color: #F5CC50;"></i>
+            ファンになる
+          </button>
+        <% end %>
+      <% end %>
+  </div>
   <% end %>
-  
+
   <!--ページング-->
   <div class="text-center"><%= paginate @users %></div>
 
