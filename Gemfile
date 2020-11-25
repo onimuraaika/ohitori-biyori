@@ -61,21 +61,25 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-#環境変数
-gem 'dotenv-rails'
-#ユーザー認証
+# ユーザー認証
 gem 'devise'
-#ページング
+# ページング
 gem 'kaminari'
-#レイアウト
+# レイアウト
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
-#画像投稿
+# 画像投稿
 gem "refile", require: "refile/rails", github: 'manfe/refile'
-#画像加工
+# 画像加工
 gem "refile-mini_magick"
-#リーダブルコード
+# リーダブルコード
 gem 'rubocop-airbnb'
-#デバッグ
+# デバッグ
 gem 'pry-byebug'
+# 環境変数
+gem 'dotenv-rails'
+# 本番環境
+group :production do
+  gem 'mysql2'
+end
