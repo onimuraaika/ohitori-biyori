@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
     def index # 投稿一覧画面
         @user = current_user # ヘッダーの部分テンプレート
         # ランキング表示
-        @all_rankings = Article.find(Favorite.group(:article_id).order('count(article_id) desc').limit(5).pluck(:article_id))
+        @all_rankings = Article.find(Favorite.group(:article_id).order('count(article_id) desc').limit(3).pluck(:article_id))
         @genres = Genre.all
         # ジャンル検索
         if @genre = Genre.find_by(name: params[:name])
