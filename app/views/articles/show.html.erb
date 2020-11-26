@@ -5,6 +5,7 @@
   <!--ユーザー表示の部分テンプレート-->
   <div class="row article-show-user-show">
     <%= render 'users/show', user: @user %>
+    <%= render 'relationships/follow_button', user: @user %>
   </div>
 
   <!--投稿内容-->
