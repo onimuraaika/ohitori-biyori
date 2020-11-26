@@ -27,21 +27,24 @@
   </div>
 
   <!--ランキング表示-->
-  <% @all_rankings.each do |ranking| %>
-    <div class="">
-      <%= link_to article_path(ranking) do %>
-        <%= attachment_image_tag ranking, :image, size: "150x150", format: 'jpeg' %>
-      <% end %>
-      <%= ranking.title %>
-      <%= ranking.favorites.count %>
-    </div>
-  <% end %>
+  <h3 class="text-center">人気投稿ランキング</h3>
+  <div class="row article-index-ranking">
+    <% @all_rankings.each do |ranking| %>
+      <div class="article-index-ranking-image">
+        <%= link_to article_path(ranking) do %>
+          <%= attachment_image_tag ranking, :image, size: "100x100" %>
+        <% end %>
+      </div>
+      <div class="article-index-ranking-image-title">
+        <%= ranking.title %>
+      </div>
+    <% end %>
+  </div>
 
   <!--投稿一覧表示-->
   <%= render 'articles/article_index', articles: @articles %>
 
   <!--ページング-->
   <div class="text-center"><%= paginate @articles %></div>
-
 
 </div>

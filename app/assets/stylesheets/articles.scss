@@ -58,6 +58,7 @@
   padding-top: 50px;
 }
 
+//(ここから　ジャンル検索)
 .article-index-genre {
   margin: 80px;
   display: flex;
@@ -67,6 +68,24 @@
 .article-index-genre-button {
   margin: 10px;
 }
+//(ここまで)
+
+//(ここから　ランキング機能)
+.article-index-ranking {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 100px auto;
+}
+
+.article-index-ranking-image {
+  margin: 20px;
+}
+
+.article-index-ranking-image-title {
+  line-height: 140px;
+  font-size: 16px;
+}
+//(ここまで)
 
 //投稿一覧表示の部分テンプレート
 .article-index-articles {
