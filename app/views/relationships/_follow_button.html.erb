@@ -3,14 +3,14 @@
 <div class="col-sm-2 user-show-info-follow_button">
   <% if current_user != user %> <!--自分には表示しない-->
     <% if user.followed_by?(current_user) %>
-      <%= link_to user_relationships_path(user.id), method: :delete do %>
+      <%= link_to user_relationships_path(user.id), method: :delete, remote: true do %>
         <button type="button" class="btn btn-default btn-lg user-show-info-follow_button-unfollow">
           <i class="fa fa-user" aria-hidden="true" style="color: #F5CC50;"></i>
           ファン
         </button>
       <% end %>
     <% else %>
-      <%= link_to user_relationships_path(user.id), method: :post do %>
+      <%= link_to user_relationships_path(user.id), method: :post, remote: true do %>
         <button type="button" class="btn btn-default btn-lg user-show-info-follow_button-follow">
           <i class="fa fa-user-o" aria-hidden="true" style="color: #F5CC50;"></i>
           ファンになる
