@@ -5,7 +5,9 @@
   <!--ユーザー表示の部分テンプレート-->
   <div class="row article-show-user-show">
     <%= render 'users/show', user: @user %>
-    <%= render 'relationships/follow_button', user: @user %>
+    <div id="relationship_<%= @user.id %>">
+      <%= render 'relationships/follow_button', user: @user %>
+    </div>
   </div>
 
   <!--投稿内容-->
@@ -41,7 +43,7 @@
         <button type="button" class="btn btn-default btn-lg article-show-button-return">　　　戻る　　　</button>
       <% end %>
       <!--お気に入りボタン-->
-      <div id= "favorite_<%= @article.id %>">
+      <div id="favorite_<%= @article.id %>">
         <%= render 'favorites/favorite_button', article: @article, favorite: @favorite %>
       </div>
     </div>

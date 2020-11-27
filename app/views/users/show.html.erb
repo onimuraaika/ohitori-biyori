@@ -8,6 +8,9 @@
   <% else %>
     <!--ユーザー詳細として見ている時のview-->
     <%= render 'users/show', user: @user %>
+    <div id="relationship_<%= @user.id %>">
+      <%= render 'relationships/follow_button', user: @user %>
+    </div>
   <% end %>
 
   <!--投稿一覧表示-->
