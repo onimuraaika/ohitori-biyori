@@ -8,6 +8,7 @@
   <% else %>
     <!--ユーザー詳細として見ている時のview-->
     <%= render 'users/show', user: @user %>
+    <!--フォローボタンの部分テンプレート-->
     <div id="relationship_<%= @user.id %>">
       <%= render 'relationships/follow_button', user: @user %>
     </div>
