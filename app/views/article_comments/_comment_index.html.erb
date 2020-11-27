@@ -18,7 +18,7 @@
     </div>
     <div class="col-sm-4 article-show-comment-destroy_button">
       <% if current_user == article_comment.user %>
-        <%= link_to '　削除する　', article_article_comment_path(article_comment.article_id, article_comment.id), class: 'btn btn-md btn-default article-show-comment-button', method: :delete, local: true %>
+        <%= link_to '　削除する　', article_article_comment_path(article_comment.article_id, article_comment.id), class: 'btn btn-md btn-default article-show-comment-button', method: :delete, remote: true %>
       <% end %>
     </div>
   </div>

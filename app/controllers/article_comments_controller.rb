@@ -13,8 +13,8 @@ class ArticleCommentsController < ApplicationController
 
     def destroy # コメント削除
         @article = Article.find(params[:article_id])
-        @article_comment = @article.article_comments.find(params[:id])
-    	@article_comment.destroy
+        article_comment = @article.article_comments.find(params[:id])
+    	article_comment.destroy
     end
 
     private
