@@ -2,9 +2,10 @@
 
 <div class="container article-show">
 
-  <!--ユーザー表示の部分テンプレート-->
   <div class="row article-show-user-show">
+    <!--ユーザー表示の部分テンプレート-->
     <%= render 'users/show', user: @user %>
+    <!--フォローボタンの部分テンプレート-->
     <div id="relationship_<%= @user.id %>">
       <%= render 'relationships/follow_button', user: @user %>
     </div>
@@ -51,9 +52,9 @@
 
   <!--コメント投稿フォーム-->
   <div class="row article-show-comment_form">
-    <%= form_with model:[@article, @comment], local: true do |f| %>
+    <%= form_with model:[@article, @comment] do |f| %>
       <div class="col-sm-8 article-show-comment_form-text_area">
-        <%= f.text_area :comment, class: "textbox", placeholder: "コメントを送りましょう！(50文字まで)", size: "60x2" %>
+        <%= f.text_area :comment, class: "textbox", placeholder: "コメントを送りましょう！(50文字まで)", size: "70x2" %>
       </div>
       <div class="col-sm-4 article-show-comment_form-submit_button">
         <%= f.submit "　送信　", class: "form_submit, btn btn-lg btn-default" %>
@@ -62,28 +63,8 @@
   </div>
 
   <!--コメント表示-->
-  <% @article.article_comments.each do |article_comment| %>
-    <div class="row article-show-comment">
-      <div class="col-sm-4 article-show-comment-image">
-        <%= link_to user_path(article_comment.user) do %>
-          <%= attachment_image_tag article_comment.user, :profile_image, size: "120x120", fallback: "noimage.jpg", size: "120x120" %>
-        <% end %>
-      </div>
-      <div class="col-sm-4 article-show-comment-info">
-        <div class="article-show-comment-nickname">
-          <%= article_comment.user.nickname %>
-        </div>
-        </br>
-        <div class="article-show-comment-comment">
-          <%= simple_format(article_comment.comment) %>
-        </div>
-      </div>
-      <div class="col-sm-4 article-show-comment-destroy_button">
-        <% if current_user == article_comment.user %>
-          <%= link_to '　削除する　', article_article_comment_path(article_comment.article_id, article_comment.id), class: 'btn btn-md btn-default article-show-comment-button', method: :delete, local: true %>
-        <% end %>
-      </div>
-    </div>
-  <% end %>
+  <div id="comment-index">
+    <%= render 'article_comments/comment_index', article: @article %>
+  </div>
 
 </div>
