@@ -14,7 +14,9 @@
       </br>
       <div class="article-index-articles-title">
         <% article.tag_list.each do |tag| %>
-          <span class="btn btn-default btn-sm"><%= tag %></span>
+          <%= link_to articles_path(tag_name: tag), class: "btn btn-default btn-sm" do %>
+            <%= tag %>
+          <% end %>
         <% end %>
       </div>
       <div class="article-index-articles-body">
