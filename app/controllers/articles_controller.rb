@@ -21,6 +21,8 @@ class ArticlesController < ApplicationController
         # ランキング表示
         @all_rankings = Article.find(Favorite.group(:article_id).order('count(article_id) desc').limit(3).pluck(:article_id))
         @genres = Genre.all
+        # おすすめ投稿表示
+        @random_article = Article.order("RANDOM()").limit(3)
         # ジャンル検索
         if @genre = Genre.find_by(name: params[:name])
            @articles = @genre.articles.page(params[:page]).per(10)
@@ -30,7 +32,6 @@ class ArticlesController < ApplicationController
         else    
             @articles = Article.all.page(params[:page]).per(10)
         end
-        
     end
 
     def show # 投稿詳細画面
