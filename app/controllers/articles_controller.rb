@@ -24,9 +24,14 @@ class ArticlesController < ApplicationController
         # ジャンル検索
         if @genre = Genre.find_by(name: params[:name])
            @articles = @genre.articles.page(params[:page]).per(10)
-        else
+        # タグ検索表示
+        elsif @tag = params[:tag_name]
+              @articles = Article.tagged_with("#{params[:tag_name]}").page(params[:page]).per(10)
+        else    
             @articles = Article.all.page(params[:page]).per(10)
         end
+     
+        
     end
 
     def show # 投稿詳細画面
