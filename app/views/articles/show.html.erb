@@ -18,7 +18,8 @@
     </div>
     <div class="article-show-article-title_body">
       <p class="article-show-article-title"><%= @article.title %></p>
-    </br>
+      <p class="article-show-article-title"><%= @article.tag_list %></p>
+      </br>
       <p class="article-show-article-body"><%= simple_format(@article.body) %></p>
     </div>
   </div>
