@@ -35,7 +35,15 @@
     </div>
     </br>
     <div class="row new-article-row">
-      <h3 class="new-article-subtitle">④ 伝えたいこと</h3>
+      <h3 class="new-article-subtitle">④ タグ</h3>
+      <div class="form-group">
+        <%= f.text_field :tag_list, value: @article.tag_list.join(','), class:"form-control input-lg", placeholder:"例：cafe,休日,ごはん,節約" %>
+      </div>
+    </div>
+    </br>
+    </br>
+    <div class="row new-article-row">
+      <h3 class="new-article-subtitle">⑤ 伝えたいこと</h3>
       <div class="form-group">
         <%= f.text_area :body, class:"form-control", placeholder:"例：○○公園の中にある○○カフェでゆっくりするのが日課です。" %>
       </div>

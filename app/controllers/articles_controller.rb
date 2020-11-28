@@ -65,8 +65,8 @@ class ArticlesController < ApplicationController
 
     private
 
-    def article_params
-        params.require(:article).permit(:image, :title, :genre_id, :body)
+    def article_params # 投稿
+        params.require(:article).permit(:image, :title, :genre_id, :body, :tag_list)
     end
-
+    
 end

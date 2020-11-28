@@ -73,6 +73,8 @@ gem 'font-awesome-rails'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 # 画像加工
 gem "refile-mini_magick"
+# タグ付け
+gem 'acts-as-taggable-on', '~> 6.0'
 # リーダブルコード
 gem 'rubocop-airbnb'
 # デバッグ
