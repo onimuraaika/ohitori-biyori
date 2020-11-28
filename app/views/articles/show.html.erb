@@ -18,7 +18,12 @@
     </div>
     <div class="article-show-article-title_body">
       <p class="article-show-article-title"><%= @article.title %></p>
-    </br>
+      <p class="article-show-article-title">
+        <% @article.tag_list.each do |tag| %>
+          <span class="btn btn-default btn-sm"><%= tag %></span>
+        <% end %>
+      </p>
+      </br>
       <p class="article-show-article-body"><%= simple_format(@article.body) %></p>
     </div>
   </div>

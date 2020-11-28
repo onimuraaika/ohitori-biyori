@@ -1,6 +1,8 @@
 class Article < ApplicationRecord
 
     attachment :image
+    
+    acts_as_taggable_on :tags
 
     belongs_to :user
     belongs_to :genre
