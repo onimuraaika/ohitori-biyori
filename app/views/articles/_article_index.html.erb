@@ -12,6 +12,11 @@
         <%= article.title %>
       </div>
       </br>
+      <div class="article-index-articles-title">
+        <% article.tag_list.each do |tag| %>
+          <span class="btn btn-default btn-sm"><%= tag %></span>
+        <% end %>
+      </div>
       <div class="article-index-articles-body">
         <%= article.body.truncate(30) %>
       </div>
