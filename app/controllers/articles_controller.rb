@@ -18,19 +18,20 @@ class ArticlesController < ApplicationController
 
     def index # 投稿一覧画面
         @user = current_user # ヘッダーの部分テンプレート
+        user_ids = User.where(is_deleted: false).pluck("id")
         # ランキング表示
-        @all_rankings = Article.find(Favorite.group(:article_id).order('count(article_id) desc').limit(3).pluck(:article_id))
+        @all_rankings = Article.find(Favorite.where(user_id: user_ids).group(:article_id).order('count(article_id) desc').limit(3).pluck(:article_id))
         @genres = Genre.all
         # おすすめ投稿表示
-        @random_article = Article.order("RANDOM()").limit(3)
+        @random_article = Article.where(user_id: user_ids).order("RANDOM()").limit(3)
         # ジャンル検索
         if @genre = Genre.find_by(name: params[:name])
-           @articles = @genre.articles.page(params[:page]).per(10)
+           @articles = @genre.articles.where(user_id: user_ids).page(params[:page]).per(10)
         # タグ検索表示
         elsif @tag = params[:tag_name]
-              @articles = Article.tagged_with("#{params[:tag_name]}").page(params[:page]).per(10)
-        else    
-            @articles = Article.all.page(params[:page]).per(10)
+              @articles = Article.where(user_id: user_ids).tagged_with("#{params[:tag_name]}").page(params[:page]).per(10)
+        else
+            @articles = Article.where(user_id: user_ids).page(params[:page]).per(10)
         end
     end
 
@@ -73,5 +74,5 @@ class ArticlesController < ApplicationController
     def article_params # 投稿
         params.require(:article).permit(:image, :title, :genre_id, :body, :tag_list)
     end
-    
+
 end
