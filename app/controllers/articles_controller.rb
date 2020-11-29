@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
 
     def index # 投稿一覧画面
         @user = current_user # ヘッダーの部分テンプレート
-        user_ids = User.where(is_deleted: false).pluck("id")
+        user_ids = User.where(is_deleted: false).pluck("id") # 退会済は非表示
         # ランキング表示
         @all_rankings = Article.find(Favorite.where(user_id: user_ids).group(:article_id).order('count(article_id) desc').limit(3).pluck(:article_id))
         @genres = Genre.all
