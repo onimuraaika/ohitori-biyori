@@ -7,13 +7,13 @@ Rails.application.routes.draw do
     get '/' => 'homes#top', as: "root"
     get '/homes/about' => 'homes#about'
 
+    get '/users/unsubscribe/:id' => 'users#unsubscribe', as: "unsubscribe"
+    patch '/users/withdraw' => 'users#withdraw'
+    
     resources :users, only: [:show, :edit, :update] do
         resource :relationships, only: [:create, :destroy]
   	    get 'following' => 'relationships#following', as: 'followings'
     end
-
-    get '/users/unsubscribe/:id' => 'users#unsubscribe', as: "unsubscribe"
-    patch '/users/withdraw' => 'users#withdraw'
 
     resources :articles do
         resources :favorites, only: [:create, :destroy, :index]

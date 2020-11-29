@@ -8,18 +8,16 @@ class User < ApplicationRecord
 
     devise :database_authenticatable, :registerable,
            :recoverable, :rememberable, :validatable
-
+           
     has_many :articles, dependent: :destroy
     has_many :favorites, dependent: :destroy
     has_many :favorite_articles, through: :favorites, source: :article
     has_many :article_comments, dependent: :destroy
-    # 自分がフォローしてもらっている関係性
+    # フォローしてもらっている
     has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
-    # 自分をフォローしてくれている人
     has_many :followers, through: :passive_relationships, source: :following
-    # 自分がフォローしている関係性
+    # フォローしている
     has_many :relationships, class_name: "Relationship", foreign_key: "following_id", dependent: :destroy
-    #自分がフォローしている人
     has_many :following, through: :relationships, source: :followed
 
     validates :nickname, presence: true, length: { minimum: 2, maximum: 20 }, uniqueness: true
@@ -42,4 +40,9 @@ class User < ApplicationRecord
         relationships.find_by(followed_id: user_id).destroy
     end
 
+    # 退会後ログイン拒否
+    def active_for_authentication?
+        super && (self.is_deleted == false)
+    end
+    
 end
