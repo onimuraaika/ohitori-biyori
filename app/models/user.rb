@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
     # ゲストユーザー生成
     def self.guest
-        find_or_create_by!(nickname: 'ゲスト', email: 'guest@guest.com', living_alone_month: 1) do |user|
+        find_or_create_by!(nickname: 'ゲスト', email: 'guest@user.com', living_alone_month: 1) do |user|
             user.password = SecureRandom.urlsafe_base64
         end
     end
