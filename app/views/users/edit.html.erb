@@ -4,8 +4,7 @@
 
   <h2 class="user-edit-title">プロフィールを編集する</h2>
 
-  <%= form_with model:@user, local:true do |f| %>
-    <!--<form class="form-horizontal">-->
+  <%= form_with model:@user, local: true do |f| %>
 
       <div class="row user-edit-form">
         <div class="form-group">
@@ -36,7 +35,6 @@
         <%= f.submit "　　　　　　　　更新する　　　　　　　　", class: "btn btn-default btn-lg" %>
       </div>
 
-    <!--</form>-->
   <% end %>
   
   <div class="row header-border"></div>
@@ -48,7 +46,7 @@
   </div>
   <div class="row user-edit-unsubscribe">
     <button type="button" class="btn btn-default btn-lg top-access-button">
-      <%= link_to "　　　　　　　　退会する　　　　　　　　", unsubscribe_path %>
+      <%= link_to "　　　　　　　　退会する　　　　　　　　", unsubscribe_path(@user) %>
     </button>
   </div>
   

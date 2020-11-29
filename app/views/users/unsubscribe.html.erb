@@ -1,2 +1,20 @@
-<h1>Users#unsubscribe</h1>
-<p>Find me in app/views/users/unsubscribe.html.erb</p>
+<!--退会確認画面-->
+
+<div class="container quit-box">
+  <div class="row">
+    <div class="quit-message">
+      <h3 class="text-center"><strong>本当に退会しますか？</strong></h3>
+      <br></br>
+      <h4 class="text-center">退会すると、会員登録情報や</h4>
+      <h4 class="text-center">これまでの購入履歴が閲覧できなくなります。</h4>
+      <h4 class="text-center">退会する場合は退会するをクリックしてください。</h4>
+    </div>
+    <br></br></br>
+    <div class="col-md-4 col-md-offset-4">
+      <div class="btn-toolbar">
+        <%= link_to "　退会しない　", user_path, class:"btn btn-default pull-left btn-lg" %>
+        <%= link_to "　 退会する 　", users_withdraw_path(), method: :patch, data: {confirm: "本当に退会してもよろしいですか？"}, class:"btn btn-default pull-right btn-lg" %>
+      </div>
+    </div>
+  </div>
+</div>
