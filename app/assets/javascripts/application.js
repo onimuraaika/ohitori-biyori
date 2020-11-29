@@ -32,7 +32,7 @@ $(function() {
     }
   }
   // 選択された画像に変える
-  $("#article_img").change(function(){
+  $(document).on("change", "#article_img", function() {
     readURL(this);
   });
 });
