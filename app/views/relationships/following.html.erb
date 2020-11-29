@@ -8,7 +8,7 @@
   <h2 class="row follow-index-title">フォローしている人</h2>
 
   <!--フォローユーザー一覧表示-->
-  <% @user.following.each do |user| %>
+  <% @users.each do |user| %>
     <div class="row follow-index-user">
       <div class="col-sm-4 follow-index-user-image">
         <%= link_to user_path(user) do %>

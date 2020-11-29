@@ -14,7 +14,7 @@ class RelationshipsController < ApplicationController
 
     def following # フォローしているユーザー一覧
         @user = current_user # ヘッダーの部分テンプレート
-        @users = @user.following.all.page(params[:page]).per(10)
+        @users = @user.following.where(is_deleted: false).page(params[:page]).per(10)
     end
 
 end

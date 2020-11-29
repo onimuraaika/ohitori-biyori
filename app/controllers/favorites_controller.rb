@@ -16,7 +16,8 @@ class FavoritesController < ApplicationController
 
     def index # お気に入り投稿一覧画面
         @user = current_user # ユーザー表示の部分テンプレート
-        @articles = @user.favorite_articles.page(params[:page]).per(10)
+        user_ids = User.where(is_deleted: false).pluck("id") # 退会済は非表示
+        @articles = @user.favorite_articles.where(user_id: user_ids).page(params[:page]).per(10)
     end
 
 end
