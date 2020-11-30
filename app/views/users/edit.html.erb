@@ -6,6 +6,17 @@
 
   <%= form_with model:@user, local: true do |f| %>
 
+    <!--エラーメッセージ -->
+    <% if @user.errors.any? %>
+      <div class="alert alert-position">
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <div class="row user-edit-form">
       <div class="form-group">
         <p class="user-edit-form-label">プロフィール画像</p></br>

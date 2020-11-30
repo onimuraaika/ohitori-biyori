@@ -1,0 +1,18 @@
+# モデルの日本語化
+
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: メールアドレス
+        living_alone_month: おひとり暮らし歴
+        password: パスワード
+        current_password: 現在のパスワード
+        password_confirmation: パスワード（確認用）
+
+      article:
+        image: 投稿画像
+        title: タイトル
+        genre: ジャンル
+        body: 伝えたいこと

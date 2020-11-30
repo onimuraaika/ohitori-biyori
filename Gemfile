@@ -75,6 +75,9 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 # タグ付け
 gem 'acts-as-taggable-on', '~> 6.0'
+# 日本語化
+gem 'rails-i18n', '~> 5.1'
+gem 'devise-i18n'
 # リーダブルコード
 gem 'rubocop-airbnb'
 # デバッグ
