@@ -27,7 +27,7 @@ class User < ApplicationRecord
     has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
     has_many :followers, through: :passive_relationships, source: :following
 
-    validates :nickname, presence: true, length: { minimum: 2 }
+    validates :nickname, presence: true, length: { minimum: 2 }, uniqueness: true
     validates :living_alone_month, presence: true
     validates :email, presence: true
     validates :introduction, length: { maximum: 100 }
