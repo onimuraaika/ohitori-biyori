@@ -59,18 +59,10 @@
     <% end %>
   </div>
   <div class="row user-edit-unsubscribe">
-    <% if current_user.nickname == 'ゲスト' %>
-      <%= link_to unsubscribe_path(@user) do %>
-        <button type="button" class="btn btn-default btn-lg top-access-button" disabled="disabled">
-          退会する
-        </button>
-      <% end %>
-    <% else %>
-      <%= link_to unsubscribe_path(@user) do %>
-        <button type="button" class="btn btn-default btn-lg top-access-button">
-          退会する
-        </button>
-      <% end %>
+    <%= link_to unsubscribe_path(@user) do %>
+      <button type="button" class="btn btn-default btn-lg top-access-button">
+        退会する
+      </button>
     <% end %>
   </div>
 
