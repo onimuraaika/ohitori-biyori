@@ -1,0 +1,18 @@
+# deviseエラーメッセージを日本語化
+
+ja:
+  errors:
+    messages:
+      not_found: "は見つかりませんでした。"
+      already_confirmed: "は既に登録済みです。"
+      not_saved:
+        one: "1 つの間違いがあります。"
+        other: "%{count}つの間違いががあります。"
+
+  devise:
+    failure:
+      unauthenticated: 'ログインしてください。'
+      invalid: 'ニックネームまたはパスワードが違います。'
+    sessions:
+        signed_in: ''
+        signed_out: ''

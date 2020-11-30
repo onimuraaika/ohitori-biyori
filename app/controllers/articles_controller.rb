@@ -59,6 +59,7 @@ class ArticlesController < ApplicationController
         if @article.update(article_params)
           redirect_to article_path(@article)
         else
+           @user = current_user
            render "edit"
         end
     end

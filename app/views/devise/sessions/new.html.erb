@@ -8,14 +8,8 @@
     <%= form_with model: @user, url: user_session_path, local: true do |f| %>
 
       <!--エラーメッセージ -->
-      <% if @user.errors.any? %>
-        <div class="alert alert-position">
-          <ul>
-            <% @user.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
+      <% flash.each do |name, message| %>
+        <%= content_tag :div, message, :id => "flash_#{name}" if message.is_a?(String) %>
       <% end %>
 
       <form class="form-horizontal">

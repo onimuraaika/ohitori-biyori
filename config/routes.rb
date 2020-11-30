@@ -24,4 +24,4 @@ Rails.application.routes.draw do
         resources :article_comments, only: [:create, :destroy]
     end
 
-__END__
+end
