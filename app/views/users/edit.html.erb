@@ -6,48 +6,72 @@
 
   <%= form_with model:@user, local: true do |f| %>
 
-      <div class="row user-edit-form">
-        <div class="form-group">
-          <p class="user-edit-form-label">プロフィール画像</p></br>
-          <%= attachment_image_tag @user, :profile_image, fallback: "noimage.jpg", size: "200x200", class: "user-edit-form-image" %>
-          <%= f.attachment_field :profile_image %>
-        </div>
+    <div class="row user-edit-form">
+      <div class="form-group">
+        <p class="user-edit-form-label">プロフィール画像</p></br>
+        <%= attachment_image_tag @user, :profile_image, fallback: "noimage.jpg", size: "200x200", class: "user-edit-form-image" %>
+        <%= f.attachment_field :profile_image %>
       </div>
-      <div class="row user-edit-form">
-        <div class="form-group">
-          <p class="user-edit-form-label">ニックネーム(必須)</p>
-          <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "form-control input-lg" %>
-        </div>
+    </div>
+    <div class="row user-edit-form">
+      <div class="form-group">
+        <p class="user-edit-form-label">ニックネーム(必須)</p>
+        <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "form-control input-lg" %>
       </div>
-      <div class="row user-edit-form">
-        <div class="form-group">
-          <p class="user-edit-form-label">自己紹介文</p>
-          <%= f.text_area :introduction, autofocus: true, autocomplete: "introduction", class: "form-control input-lg" %>
-        </div>
+    </div>
+    <div class="row user-edit-form">
+      <div class="form-group">
+        <p class="user-edit-form-label">自己紹介文</p>
+        <%= f.text_area :introduction, autofocus: true, autocomplete: "introduction", class: "form-control input-lg" %>
       </div>
-      <div class="row user-edit-form">
-        <div class="form-group">
-          <p class="user-edit-form-label">おひとり暮らし歴○○ヶ月目(必須)</p>
-          <%= f.text_field :living_alone_month, autofocus: true, autocomplete: "living_alone_month", class: "form-control input-lg" %>
-        </div>
+    </div>
+    <div class="row user-edit-form">
+      <div class="form-group">
+        <p class="user-edit-form-label">おひとり暮らし歴○○ヶ月目(必須)</p>
+        <%= f.text_field :living_alone_month, autofocus: true, autocomplete: "living_alone_month", class: "form-control input-lg" %>
       </div>
-       <div class="row user-edit-form user-edit-form-button">
+    </div>
+    <div class="row user-edit-form user-edit-form-button">
+      <% if current_user.nickname == 'ゲスト' %>
+        <%= f.submit "　　　　　　　　更新する　　　　　　　　", class: "btn btn-default btn-lg disabled" %>
+      <% else %>
         <%= f.submit "　　　　　　　　更新する　　　　　　　　", class: "btn btn-default btn-lg" %>
-      </div>
+      <% end %>
+    </div>
 
   <% end %>
-  
+
   <div class="row header-border"></div>
-  
+
   <div class="row user-edit-password">
-    <button type="button" class="btn btn-default btn-lg top-access-button">
-      <%= link_to "　　　　　パスワードを変更する　　　　　", edit_user_registration_path %>
-    </button>
+    <% if current_user.nickname == 'ゲスト' %>
+      <%= link_to edit_user_registration_path do %>
+        <button type="button" class="btn btn-default btn-lg top-access-button" disabled="disabled">
+          パスワードを変更する
+        </button>
+      <% end %>
+    <% else %>
+      <%= link_to edit_user_registration_path do %>
+        <button type="button" class="btn btn-default btn-lg top-access-button">
+          パスワードを変更する
+        </button>
+      <% end %>
+    <% end %>
   </div>
   <div class="row user-edit-unsubscribe">
-    <button type="button" class="btn btn-default btn-lg top-access-button">
-      <%= link_to "　　　　　　　　退会する　　　　　　　　", unsubscribe_path(@user) %>
-    </button>
+    <% if current_user.nickname == 'ゲスト' %>
+      <%= link_to unsubscribe_path(@user) do %>
+        <button type="button" class="btn btn-default btn-lg top-access-button" disabled="disabled">
+          退会する
+        </button>
+      <% end %>
+    <% else %>
+      <%= link_to unsubscribe_path(@user) do %>
+        <button type="button" class="btn btn-default btn-lg top-access-button">
+          退会する
+        </button>
+      <% end %>
+    <% end %>
   </div>
-  
+
 </div>
