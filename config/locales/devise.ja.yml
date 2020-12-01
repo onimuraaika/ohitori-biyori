@@ -7,7 +7,7 @@ ja:
       already_confirmed: "は既に登録済みです。"
       not_saved:
         one: "1 つの間違いがあります。"
-        other: "%{count}つの間違いががあります。"
+        other: "%{count}つの間違いがあります。"
 
   devise:
     failure:

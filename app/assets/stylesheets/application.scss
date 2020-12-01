@@ -160,3 +160,14 @@ footer {
   background-color: #FBEFC4;
   border-radius: 5px;
 }
+
+//エラーメッセージ
+.error-message {
+  color: #262626;
+  list-style: none;
+  text-align: center;
+  border: 2px solid #FFD865;
+  padding: 10px;
+  border-radius: 15px;
+}
+

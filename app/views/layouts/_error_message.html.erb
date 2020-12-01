@@ -1,0 +1,11 @@
+<!--エラーメッセージの部分テンプレート-->
+
+<% if model.errors.any? %>
+  <div class="alert alert-warning error-message">
+    <ul style="list-style: none;">
+      <% model.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
