@@ -2,18 +2,20 @@
 
 <div class="container user-show">
 
-  <% if @user == current_user %>
-    <!--マイページとして見ている時のview-->
-    <%= render 'users/current_user_show', user: @user %>
-  <% else %>
-    <!--ユーザー詳細として見ている時のview-->
-    <%= render 'users/show', user: @user %>
-    <!--フォローボタンの部分テンプレート-->
-    <div id="relationship_<%= @user.id %>">
-      <%= render 'relationships/follow_button', user: @user %>
-    </div>
-  <% end %>
-  
+  <div class="row user-show-info">
+    <% if @user == current_user %>
+      <!--マイページとして見ている時のview-->
+      <%= render 'users/current_user_show', user: @user %>
+    <% else %>
+      <!--ユーザー詳細として見ている時のview-->
+      <%= render 'users/show', user: @user %>
+      <!--フォローボタンの部分テンプレート-->
+      <div id="relationship_<%= @user.id %>">
+        <%= render 'relationships/follow_button', user: @user %>
+      </div>
+    <% end %>
+  </div>
+
   <!--投稿一覧表示-->
   <div class="user-show-article-index">
     <%= render 'articles/article_index', articles: @articles %>

@@ -1,6 +1,6 @@
 <!--フォローボタンの部分テンプレート user: @user-->
 
-<div class="col-sm-2 user-show-info-follow_button">
+<div class="col-xs-2 user-show-info-follow_button">
   <% if current_user != user %> <!--自分には表示しない-->
     <% if user.followed_by?(current_user) %>
       <%= link_to user_relationships_path(user.id), method: :delete, remote: true do %>

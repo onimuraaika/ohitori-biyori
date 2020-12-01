@@ -47,9 +47,18 @@
 }
 
 .user-show-info-details {
-   padding-top: 20px;
-   text-align: left;
-   font-size: 20px;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.user-show-info-nickname,
+.user-show-info-living_alone_month
+{
+  font-size: 20px;
+}
+
+.user-show-info-introduction {
+  font-size: 15px;
 }
 
 .user-show-info-follow_button {

@@ -1,6 +1,5 @@
-<!--ログインユーザー表示の部分テンプレート user: @user-->
+<!--ログインユーザー表示の部分テンプレート(user)-->
 
-<div class="row user-show-info">
   <div class="col-sm-4 user-show-info-image">
     <%= attachment_image_tag user, :profile_image, size: "150x150", format: 'jpeg', fallback: "noimage.jpg", size: '150x150' %>
   </div>
@@ -31,6 +30,4 @@
       <button type="button" class="btn btn-default btn-lg user-show-info-nav-setting">　設定　</button>
     <% end %>
   </div>
-</div>
-
 
