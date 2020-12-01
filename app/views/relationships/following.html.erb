@@ -3,7 +3,9 @@
 <div class="container follow-index">
 
   <!--ログインユーザー表示-->
-  <%= render 'users/current_user_show', user: @user %>
+  <div class="row">
+    <%= render 'users/current_user_show', user: @user %>
+  </div>
 
   <h2 class="row follow-index-title">フォローしている人</h2>
 
