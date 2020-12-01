@@ -40,7 +40,7 @@
     <div class="row new-article-row">
       <h3 class="new-article-subtitle">④ タグをつける</h3>
       <div class="form-group">
-        <%= f.text_field :tag_list, value: @article.tag_list.join('、'), class:"form-control input-lg", placeholder:"例：cafe、休日、お散歩" %>
+        <%= f.text_field :tag_list, value: @article.tag_list.join(','), class:"form-control input-lg", placeholder:"例：cafe,休日,お散歩" %>
       </div>
     </div>
     </br>
