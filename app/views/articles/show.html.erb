@@ -17,7 +17,12 @@
       <%= attachment_image_tag @article, :image, size: "250x250", format: 'jpeg' %>
     </div>
     <div class="article-show-article-title_tag_body">
-      <p class="article-show-article-title"><%= @article.title %></p>
+      <p class="article-show-article-title">
+        <%= @article.title %>
+      </p>
+      <p class="article-show-article-body">
+        <%= simple_format(@article.body) %>
+      </p>
       <p class="article-show-article-tag">
         <% @article.tag_list.each do |tag| %>
           <%= link_to articles_path(tag_name: tag), class: "btn btn-default btn-md" do %>
@@ -25,7 +30,6 @@
           <% end %>
         <% end %>
       </p>
-      <p class="article-show-article-body"><%= simple_format(@article.body) %></p>
     </div>
   </div>
 

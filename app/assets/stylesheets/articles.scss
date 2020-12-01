@@ -89,24 +89,28 @@
 //(ここまで)
 
 //投稿一覧表示の部分テンプレート
-.article-index-articles {
+.article-index-article {
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
 }
 
-.article-index-articles-image {
+.article-index-article-image {
   margin-right: 20px;
   text-align: right;
 }
 
-.article-index-articles-title,
-.article-index-articles-body
-{
+.article-index-article-title_body {
   font-size: 20px;
   padding-top: 20px;
   padding-left: 20px;
   text-align: left;
+}
+
+.article-index-article-body,
+.article-index-article-tag
+{
+  padding-top: 5px;
 }
 
 //投稿詳細画面

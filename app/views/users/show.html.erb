@@ -13,9 +13,11 @@
       <%= render 'relationships/follow_button', user: @user %>
     </div>
   <% end %>
-
+  
   <!--投稿一覧表示-->
-  <%= render 'articles/article_index', articles: @articles %>
+  <div class="user-show-article-index">
+    <%= render 'articles/article_index', articles: @articles %>
+  </div>
 
   <!--ページング-->
   <%= paginate @articles %>
