@@ -3,7 +3,9 @@
 <div class="container favorite-article">
 
   <!--ログインユーザーの部分テンプレート-->
-  <%= render 'users/current_user_show', user: @user %>
+  <div class="row">
+    <%= render 'users/current_user_show', user: @user %>
+  </div>
   
   <h2 class="row favorite-article-title">お気に入りの投稿</h2>
 
