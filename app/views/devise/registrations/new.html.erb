@@ -6,18 +6,10 @@
     <h2 class="signup-form-title">新規会員登録</h2>
 
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-    
-      <!--エラーメッセージ -->
-      <% if @user.errors.any? %>
-        <div class="alert alert-position">
-          <ul>
-            <% @user.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-    
+
+      <!--エラーメッセージ-->
+      <%= render 'layouts/error_message', model: @user %>
+
       <form class="form-horizontal">
         <div class="form-group">
           <label class="control-label signup-label"><%= f.label "ニックネーム(必須)" %></label></br>

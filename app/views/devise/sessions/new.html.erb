@@ -9,7 +9,7 @@
 
       <!--エラーメッセージ -->
       <% flash.each do |name, message| %>
-        <%= content_tag :div, message, :id => "flash_#{name}" if message.is_a?(String) %>
+        <%= content_tag :div, message, :id => "flash_#{name}", :class => "alert alert-warning error-message" if message.is_a?(String) %>
       <% end %>
 
       <form class="form-horizontal">
