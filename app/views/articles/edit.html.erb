@@ -11,7 +11,7 @@
     <%= render 'layouts/error_message', model: @article %>
 
     <div class="row edit-article-row">
-      <h3 class="edit-article-subtitle">① 写真の選択</h3></br>
+      <h3 class="edit-article-subtitle">① 写真を選ぶ</h3></br>
       <% if @article.image.present? %>
         <%= attachment_image_tag @article, :image, id: :img_preview, size: "300x300" %>
       <% else %>
@@ -22,21 +22,21 @@
     </div>
     </br>
     <div class="row edit-article-row">
-      <h3 class="edit-article-subtitle">② タイトル</h3>
+      <h3 class="edit-article-subtitle">② タイトルをつける</h3>
       <div class="form-group">
         <%= f.text_field :title, class:"form-control input-lg" %>
       </div>
     </div>
     </br>
     <div class="row edit-article-row">
-      <h3 class="edit-article-subtitle">③ ジャンル</h3>
+      <h3 class="edit-article-subtitle">③ ジャンルを選ぶ</h3>
       <div class="form-group input-lg">
         <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: "　ジャンルを選択してください　" %>
       </div>
     </div>
     </br>
     <div class="row new-article-row">
-      <h3 class="new-article-subtitle">④ タグ</h3>
+      <h3 class="new-article-subtitle">④ タグをつける</h3>
       <div class="form-group">
         <%= f.text_field :tag_list, value: @article.tag_list.join('、'), class:"form-control input-lg", placeholder:"例：cafe、休日、お散歩" %>
       </div>
@@ -45,12 +45,12 @@
     <div class="row edit-article-row">
       <h3 class="edit-article-subtitle">⑤ 伝えたいこと</h3>
       <div class="form-group">
-        <%= f.text_area :body, class:"form-control", size: "60x5" %>
+        <%= f.text_area :body, class:"form-control", rows: "10", cols: "50" %>
       </div>
     </div>
     </br>
-    <div class="actions edit-article-button">
-      <%= f.submit "　　　　　　　　　　　更新する　　　　　　　　　　　", class:"btn btn-lg btn-default" %>
+    <div class="actions row edit-article-row">
+      <%= f.submit "更新する", class:"btn btn-lg btn-block btn-default edit-article-button" %>
     </div>
 
   <% end %>
