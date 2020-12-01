@@ -122,13 +122,19 @@
   margin-bottom: 30px;
 }
 
-.article-show-article-title_body {
+.article-show-article-title_tag_body {
   font-size: 20px;
   padding: 20px;
 }
 
 .article-show-article-title {
   font-size: 25px;
+}
+
+.article-show-article-tag,
+.article-show-article-body
+{
+  padding-top: 10px;
 }
 
 .article-show-button {
@@ -157,8 +163,10 @@
 
 .article-show-comment_form-submit_button {
   text-align: left;
+  margin: 10px 0 10px 20px;
 }
 
+//(ここから　コメント表示の部分テンプレート)
 .article-show-comment {
   padding-bottom: 10px;
 }
@@ -186,6 +194,7 @@
   padding-top: 50px;
   text-align: left;
 }
+//(ここまで)
 
 // 投稿編集画面
 .edit-article {

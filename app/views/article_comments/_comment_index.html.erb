@@ -1,4 +1,4 @@
-<!--コメント表示の部分テンプレートarticle: @article-->
+<!--コメント表示の部分テンプレート(article)-->
 
 <% article.article_comments.each do |article_comment| %>
   <div class="row article-show-comment">
@@ -19,7 +19,7 @@
     <div class="col-sm-4 article-show-comment-destroy_button">
       <% if current_user == article_comment.user %>
         <%= link_to article_article_comment_path(article_comment.article_id, article_comment.id), class: 'article-show-comment-button', method: :delete, remote: true do %>
-          <i class="fa fa-trash-o fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-trash-o fa-2x" style="color: #BDB29D;" aria-hidden="true"></i>
         <% end %>
       <% end %>
     </div>

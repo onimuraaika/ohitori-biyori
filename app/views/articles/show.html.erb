@@ -16,16 +16,15 @@
     <div class="article-show-article-image">
       <%= attachment_image_tag @article, :image, size: "250x250", format: 'jpeg' %>
     </div>
-    <div class="article-show-article-title_body">
+    <div class="article-show-article-title_tag_body">
       <p class="article-show-article-title"><%= @article.title %></p>
-      <p class="article-show-article-title">
+      <p class="article-show-article-tag">
         <% @article.tag_list.each do |tag| %>
-          <%= link_to articles_path(tag_name: tag), class: "btn btn-default btn-sm" do %>
+          <%= link_to articles_path(tag_name: tag), class: "btn btn-default btn-md" do %>
             <%= tag %>
           <% end %>
         <% end %>
       </p>
-      </br>
       <p class="article-show-article-body"><%= simple_format(@article.body) %></p>
     </div>
   </div>
@@ -60,10 +59,10 @@
   <!--コメント投稿フォーム-->
   <div class="row article-show-comment_form">
     <%= form_with model:[@article, @comment] do |f| %>
-      <div class="col-sm-8 article-show-comment_form-text_area">
-        <%= f.text_area :comment, class: "textbox", placeholder: "コメントを送りましょう！(50文字まで)", size: "70x2" %>
+      <div class="col-xs-8 article-show-comment_form-text_area">
+        <%= f.text_area :comment, class: "textbox", rows: "3", cols: "70", placeholder: "コメントを送りましょう！(50文字まで)" %>
       </div>
-      <div class="col-sm-4 article-show-comment_form-submit_button">
+      <div class="col-xs-3 article-show-comment_form-submit_button">
         <%= f.submit "　送信　", class: "form_submit, btn btn-lg btn-default" %>
       </div>
     <% end %>
