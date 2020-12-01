@@ -11,7 +11,6 @@ class Article < ApplicationRecord
 
     validates :image, presence: true
     validates :title, presence: true
-    # validates :genre_id, presence: true
     validates :body, presence: true
 
     # user_idがFavoritesテーブル内に存在するか
