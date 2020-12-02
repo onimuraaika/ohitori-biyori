@@ -39,7 +39,7 @@ $(document).on('turbolinks:load', function() {
     reader.readAsDataURL(input.files[0]);
     }
   }
-  $(document).on("change", "#article_img", function() {
+  $(document).on("change", "#change_img", function() {
     readURL(this);
   });
 });
