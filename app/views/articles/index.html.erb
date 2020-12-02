@@ -2,10 +2,9 @@
 
 <div class="container article-index">
 
-  <!--ジャンル検索時にタイトル表示を切り替える-->
-
+  <!--ジャンル検索時にタイトル表示を切り替え-->
   <div class="row article-index-title">
-  <hr class="border-line" />
+  <hr class="border-line"/>
   </br>
     <% if @genre %>
       <h2>「<%= @genre.name %>」に関する投稿</h2>
@@ -18,50 +17,56 @@
   <hr class="border-line" />
   </div>
 
+  <div class="row article-index-body">
 
-  <!--ジャンル検索ボタン-->
-  <div class="row article-index-genre">
-    <% @genres.each do |genre| %>
-      <div class="article-index-genre-button">
-        <%= link_to articles_path(name: genre.name) do %>
-          <button type="button" class="btn btn-default btn-lg">　<%= genre.name %>　</button>
+    <div class="article-index-side_bar">
+      <!--ジャンル検索ボタン-->
+      <div class="article-index-genre">
+        <h4 class="text-center article-index-side_bar-title">カテゴリ</h4></br>
+        <% @genres.each do |genre| %>
+          <div class="article-index-genre-button">
+            <%= link_to articles_path(name: genre.name) do %>
+              <button type="button" class="btn btn-default btn-lg">　<%= genre.name %>　</button>
+            <% end %>
+          </div>
         <% end %>
       </div>
-    <% end %>
-  </div>
+      </br>
+      <!--ランキング表示-->
+      <h4 class="text-center article-index-side_bar-title">人気の投稿</h4></br>
+      <% @all_rankings.each do |ranking| %>
+        <div class="article-index-ranking">
+          <div class="article-index-ranking-image_title">
+            <%= link_to article_path(ranking) do %>
+              <%= attachment_image_tag ranking, :image, size: "80x80" %>
+            <% end %>
+          </div>
+          <div><%= ranking.title %></div>
+        </div>
+      <% end %>
+      </br>
+      <!--おすすめ投稿表示-->
+      <h4 class="text-center article-index-side_bar-title">おすすめの投稿</h4></br>
+      <% @random_article.each do |article| %>
+        <div class="article-index-recommend">
+          <div class="article-index-recommend-image_title">
+            <%= link_to article_path(article) do %>
+              <%= attachment_image_tag article, :image, size: "80x80" %>
+            <% end %>
+          </div>
+          <div>
+            <%= article.title %>
+          </div>
+        </div>
+      <% end %>
+    </div>
 
-  <!--ランキング表示-->
-  <h3 class="text-center">人気投稿ランキング</h3>
-  <div class="row article-index-ranking">
-    <% @all_rankings.each do |ranking| %>
-      <div class="article-index-ranking-image">
-        <%= link_to article_path(ranking) do %>
-          <%= attachment_image_tag ranking, :image, size: "100x100" %>
-        <% end %>
-      </div>
-      <div class="article-index-ranking-image-title">
-        <%= ranking.title %>
-      </div>
-    <% end %>
-  </div>
+    <!--投稿一覧表示-->
+    <div class="article-index-main">
+      <%= render 'articles/article_index', articles: @articles %>
+    </div>
 
-  <!--おすすめ投稿表示-->
-  <h3 class="text-center">おすすめの投稿</h3>
-  <div class="row article-index-ranking">
-    <% @random_article.each do |article| %>
-      <div class="article-index-ranking-image">
-        <%= link_to article_path(article) do %>
-          <%= attachment_image_tag article, :image, size: "100x100" %>
-        <% end %>
-      </div>
-      <div class="article-index-ranking-image-title">
-        <%= article.title %>
-      </div>
-    <% end %>
   </div>
-
-  <!--投稿一覧表示-->
-  <%= render 'articles/article_index', articles: @articles %>
 
   <!--ページング-->
   <div class="text-center"><%= paginate @articles %></div>
