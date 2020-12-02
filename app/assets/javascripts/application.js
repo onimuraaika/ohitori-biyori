@@ -19,7 +19,7 @@
 //= require_tree .
 
 //ページトップへの移動ボタン
-$(function() {
+$(document).on('turbolinks:load', function() {
   $('#page-top-button a').on('click',function(event){
     $('body, html').animate({
       scrollTop:0
@@ -29,7 +29,7 @@ $(function() {
 });
 
 //新規投稿の画像プレビュー
-$(function() {
+$(document).on('turbolinks:load', function() {
   function readURL(input) {
     if (input.files && input.files[0]) {
     var reader = new FileReader();

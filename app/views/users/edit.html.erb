@@ -12,8 +12,8 @@
     <div class="row user-edit-form">
       <div class="form-group">
         <p class="user-edit-form-label">プロフィール画像</p></br>
-        <%= attachment_image_tag @user, :profile_image, fallback: "noimage.jpg", size: "200x200", class: "user-edit-form-image" %>
-        <%= f.attachment_field :profile_image %>
+        <%= attachment_image_tag @user, :profile_image, id: :img_preview, fallback: "noimage.jpg", size: "200x200", class: "user-edit-form-image" %>
+        <%= f.attachment_field :profile_image, id: :article_img %>
       </div>
     </div>
     <div class="row user-edit-form">
