@@ -58,6 +58,10 @@
   justify-content: center;
 }
 
+.article-index-side_bar {
+  width: 25%;
+}
+
 .article-index-side_bar-title {
   padding: 10px 30px;
   border-radius: 100vh;
@@ -90,6 +94,7 @@
 
 .article-index-main {
   padding-left: 100px;
+  width: 70%;
 }
 
 //投稿一覧表示の部分テンプレート
