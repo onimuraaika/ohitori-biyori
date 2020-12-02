@@ -18,21 +18,29 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+//ページトップへの移動ボタン
+$(function() {
+  $('#page-top-button a').on('click',function(event){
+    $('body, html').animate({
+      scrollTop:0
+    }, 800);
+    event.preventDefault();
+  });
+});
+
 //新規投稿の画像プレビュー
 $(function() {
   function readURL(input) {
     if (input.files && input.files[0]) {
     var reader = new FileReader();
     reader.onload = function (e) {
-  // 表示されている画像を変更
   $('#img_preview').attr('src', e.target.result);
     }
-    // 取得したurlにアップロード画像のurlを挿入
     reader.readAsDataURL(input.files[0]);
     }
   }
-  // 選択された画像に変える
   $(document).on("change", "#article_img", function() {
     readURL(this);
   });
 });
+

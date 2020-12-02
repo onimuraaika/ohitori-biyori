@@ -28,6 +28,13 @@ body {
   color: #7F7F7F;
 }
 
+//ページトップへの移動ボタン
+#page-top-button {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+}
+
 //ヘッダー
 header {
   height: 190px;
@@ -64,6 +71,7 @@ header > :first-child {
 //フッター
 footer {
   height: 250px;
+  background-color: #EAEAEA;
 }
 
 .footer-title {

@@ -8,13 +8,6 @@
   box-sizing: border-box;
 }
 
-//区切り線
-.border-line {
-  border-width: 3px 0 0 0;
-	border-style: dashed;
-	border-color: #F7E077;
-}
-
 //新規投稿画面
 .new-article {
   padding-top: 100px;
@@ -49,7 +42,14 @@
 
 .article-index-title {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 30px;
+}
+
+//(タイトルの区切り線)
+.border-line {
+  border-width: 3px 0 0 0;
+	border-style: dashed;
+	border-color: #F7E077;
 }
 
 //(ここから　ジャンル検索)
