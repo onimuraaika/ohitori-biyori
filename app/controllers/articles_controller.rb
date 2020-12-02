@@ -40,6 +40,7 @@ class ArticlesController < ApplicationController
         @user = @article.user # ユーザー表示の部分テンプレート
         @favorite = Favorite.find_by(user_id: current_user, article_id: @article) # お気に入りボタン
         @comment = ArticleComment.new
+        
     end
 
     def edit # 投稿編集画面
