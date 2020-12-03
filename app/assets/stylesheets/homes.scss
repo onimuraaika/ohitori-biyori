@@ -11,9 +11,8 @@
 //トップページ
 .top-background {
   background-image: image-url("top-background-image.jpg");
-  height: 100%;
-  width: 100%;
   background-size: cover;
+  background-position: bottom;
 }
 
 .top {

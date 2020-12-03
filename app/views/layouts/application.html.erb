@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <title>OhitoriBiyori</title>
     <%= csrf_meta_tags %>
@@ -13,6 +14,7 @@
     <%= render 'layouts/header', user: @user %>
     <%= yield %>
     <%= render 'layouts/footer' %>
+
     <!--ページトップへの移動ボタン-->
     <span id="page-top-button">
       <a href="#">
@@ -20,4 +22,5 @@
       </a>
     </span>
   </body>
+  
 </html>
