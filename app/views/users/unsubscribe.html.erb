@@ -1,25 +1,49 @@
 <!--退会確認画面-->
 
-<div class="container quit-box">
-  <div class="row">
-    <div class="quit-message">
-      <h3 class="text-center"><strong>本当に退会しますか？</strong></h3>
-      <br></br>
-      <h4 class="text-center">退会すると、会員登録情報や</h4>
-      <h4 class="text-center">これまでの購入履歴が閲覧できなくなります。</h4>
-      <h4 class="text-center">退会する場合は退会するをクリックしてください。</h4>
-    </div>
-    <br></br></br>
-    <div class="col-md-4 col-md-offset-4">
-      <div class="btn-toolbar">
-        <% if current_user.nickname == 'ゲスト' %>
-          <%= link_to "　退会しない　", user_path, class:"btn btn-default pull-left btn-lg" %>
-          <button class="btn btn-default pull-right btn-lg" disabled="disabled">　 退会する 　</button>
-        <% else %>
-          <%= link_to "　退会しない　", user_path, class:"btn btn-default pull-left btn-lg" %>
-          <%= link_to "　 退会する 　", users_withdraw_path(current_user.id), method: :patch, data: {confirm: "本当に退会してもよろしいですか？"}, class:"btn btn-default pull-right btn-lg" %>
-        <% end %>
-      </div>
+<div class="container unsubscribe">
+
+  <div class="row unsubscribe-title">
+    <hr class="border-line"/>
+    <h2>本当に退会しますか？</h2>
+    <hr class="border-line"/>
+  </div>
+
+  <div class="unsubscribe-message">
+    <p>退会すると、会員情報や</p>
+    <p>みんなの投稿が閲覧できなくなります。</p>
+    <p>退会する場合は退会するをクリックしてください。</p>
+  </div>
+
+  <div class="row unsubscribe-buttons">
+    <div class="unsubscribe-button">
+      <% if current_user.nickname == 'ゲスト' %>
+        <div>
+          <button class="btn btn-default btn-lg unsubscribe-button-confirm">
+            退会しない
+          </button>
+        </div>
+        <div>
+          <button class="btn btn-default btn-lg unsubscribe-button-confirm">
+            退会する
+          </button>
+        </div>
+      <% else %>
+        <div>
+          <%= link_to user_path(current_user) do %>
+            <button class="btn btn-default btn-lg unsubscribe-button-confirm">
+              退会しない
+            </button>
+          <% end %>
+        </div>
+        <div>
+          <%= link_to users_withdraw_path(current_user.id), method: :patch, data: {confirm: "本当に退会してもよろしいですか？"} do  %>
+            <button class="btn btn-default btn-lg unsubscribe-button-confirm">
+              退会する
+            </button>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
+
 </div>

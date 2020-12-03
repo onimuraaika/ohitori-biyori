@@ -139,3 +139,38 @@
   margin-top: 20px;
   margin-bottom: 50px;
 }
+
+//退会確認画面
+.unsubscribe {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.unsubscribe-title {
+  text-align: center;
+  padding: 0 25% 50px 25%;
+  margin: 0 auto;
+}
+
+.unsubscribe-message {
+  font-size: 20px;
+  padding-bottom: 50px;
+}
+
+.unsubscribe-button {
+  display: flex;
+  justify-content: center;
+}
+
+.unsubscribe-button-back {
+  margin-right: 20px;
+  height: 70px;
+  width: 230px;
+}
+
+.unsubscribe-button-confirm {
+  margin-left: 20px;
+  height: 70px;
+  width: 230px;
+}
