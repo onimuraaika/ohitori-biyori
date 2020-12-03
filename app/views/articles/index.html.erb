@@ -41,7 +41,7 @@
         <div class="article-index-ranking">
           <div class="article-index-ranking-image_title">
             <%= link_to article_path(ranking) do %>
-              <%= attachment_image_tag ranking, :image, size: "80x80" %>
+              <%= attachment_image_tag ranking, :image, size: "80x80", style: "border-radius:15px" %>
             <% end %>
           </div>
           <div><%= ranking.title %></div>
@@ -54,7 +54,7 @@
         <div class="article-index-recommend">
           <div class="article-index-recommend-image_title">
             <%= link_to article_path(article) do %>
-              <%= attachment_image_tag article, :image, size: "80x80" %>
+              <%= attachment_image_tag article, :image, size: "80x80", style: "border-radius:15px" %>
             <% end %>
           </div>
           <div>

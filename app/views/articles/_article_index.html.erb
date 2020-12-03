@@ -4,7 +4,7 @@
   <div class="row article-index-article">
     <div class="article-index-article-image">
       <%= link_to article_path(article) do %>
-        <%= attachment_image_tag article, :image, size: "150x150" %>
+        <%= attachment_image_tag article, :image, size: "150x150", style: "border-radius:15px" %>
       <% end %>
     </div>
     <div class="article-index-article-title_body">
