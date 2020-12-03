@@ -9,29 +9,28 @@
 }
 
 //フォローユーザー一覧表示画面
-.follow-index {
+.following-index {
   margin-top: 100px;
-  margin-bottom: 100px;
 }
 
-.follow-index-user {
+.following-index-user {
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
 }
 
-.follow-index-title {
+.following-index-title {
+  padding: 100px 20%;
   text-align: center;
-  padding: 100px;
 }
 
-.follow-index-user-image {
+.following-index-user-image {
   margin-right: 20px;
   text-align: right;
 }
 
-.follow-index-user-nickname,
-.follow-index-user-living_alone_month
+.following-index-user-nickname,
+.following-index-user-living_alone_month
 {
   font-size: 20px;
   padding-top: 20px;
@@ -39,17 +38,21 @@
   text-align: left;
 }
 
-.follow-index-user-nickname-san {
+.following-index-user-nickname-san {
   font-size: 16px;
 }
 
-.follow-index-user-living_alone_month {
+.following-index-user-living_alone_month {
   font-size: 20px;
   text-align: left;
   padding-left: 20px;
   padding-top: 20px;
 }
 
-.follow-index-user-follow_button {
+.following-index-user-follow_button {
   padding-top: 50px;
+}
+
+.following-article-index-paginate {
+  padding-bottom: 100px;
 }

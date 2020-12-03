@@ -6,12 +6,19 @@
   <div class="row">
     <%= render 'users/current_user_show', user: @user %>
   </div>
-  
-  <h2 class="row favorite-article-title">お気に入りの投稿</h2>
+
+  <div class="row favorite-article-title">
+    <hr class="border-line"/>
+    <h2>お気に入りの投稿</h2>
+    <hr class="border-line"/>
+  </div>
 
   <!--お気に入り投稿一覧表示-->
   <div class="favorite-article-index">
     <%= render 'articles/article_index', articles: @articles %>
   </div>
+
+  <!--ページング-->
+  <div class="text-center favorite-article-index-paginate"><%= paginate @articles %></div>
 
 </div>
