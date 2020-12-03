@@ -5,7 +5,6 @@
   <!--ジャンル検索時にタイトル表示を切り替え-->
   <div class="row article-index-title">
   <hr class="border-line"/>
-  </br>
     <% if @genre %>
       <h2>「<%= @genre.name %>」に関する投稿</h2>
     <% elsif @tag %>
@@ -13,7 +12,6 @@
     <% else %>
       <h2>みんなの投稿</h2>
     <% end %>
-  </br>
   <hr class="border-line" />
   </div>
 
