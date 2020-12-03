@@ -3,7 +3,9 @@
 <div class="container login">
   <div class="row login-form">
 
-    <h2 class="login-form-title">ログイン</h2>
+    <hr class="border-line"/>
+      <h2 class="text-center">ログイン</h2>
+    <hr class="border-line login-form-border"/>
 
     <%= form_with model: @user, url: user_session_path, local: true do |f| %>
 
@@ -23,7 +25,7 @@
         </div>
         <div class="form-group">
           <div class="actions login-form-button">
-            <%= f.submit "　　　　　　　　　　ログインする　　　　　　　　　　", class: "btn btn-default btn-lg" %>
+            <%= f.submit "ログインする", class: "btn btn-block btn-default btn-lg" %>
            </div>
         </div>
       </form>
