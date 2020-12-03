@@ -26,12 +26,12 @@ class ArticlesController < ApplicationController
         @random_article = Article.where(user_id: user_ids).order("RANDOM()").limit(3)
         # ジャンル検索
         if @genre = Genre.find_by(name: params[:name])
-           @articles = @genre.articles.where(user_id: user_ids).page(params[:page]).per(10)
+           @articles = @genre.articles.where(user_id: user_ids).page(params[:page]).per(10).order("id DESC")
         # タグ検索表示
         elsif @tag = params[:tag_name]
-              @articles = Article.where(user_id: user_ids).tagged_with("#{params[:tag_name]}").page(params[:page]).per(10)
+              @articles = Article.where(user_id: user_ids).tagged_with("#{params[:tag_name]}").page(params[:page]).per(10).order("id DESC")
         else
-            @articles = Article.where(user_id: user_ids).page(params[:page]).per(10)
+            @articles = Article.where(user_id: user_ids).page(params[:page]).per(10).order("id DESC")
         end
     end
 
@@ -40,7 +40,6 @@ class ArticlesController < ApplicationController
         @user = @article.user # ユーザー表示の部分テンプレート
         @favorite = Favorite.find_by(user_id: current_user, article_id: @article) # お気に入りボタン
         @comment = ArticleComment.new
-        
     end
 
     def edit # 投稿編集画面
