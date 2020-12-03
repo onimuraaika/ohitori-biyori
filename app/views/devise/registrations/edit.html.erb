@@ -3,7 +3,11 @@
 <div class="container signup">
   <div class="row signup-form">
 
-    <h2 class="signup-form-title">パスワード変更</h2>
+    <div class="row signup-form-title">
+      <hr class="border-line"/>
+      <h2>パスワード変更</h2>
+      <hr class="border-line"/>
+    </div>
 
     <%= form_with model:@user, url: registration_path(@user), local: true do |f| %>
 
