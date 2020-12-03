@@ -58,11 +58,10 @@ header > :first-child {
 .header-button {
   height: 100px;
   width: 130px;
-  font-size: 20px;
   line-height: 100px;
   padding: 0 auto;
   margin: 10px;
-  border-radius: 20%;
+  border-radius: 15%;
 }
 
 .header-button-about,
@@ -74,7 +73,7 @@ header > :first-child {
   height: 100px;
   width: 130px;
   padding: 0 auto;
-  border-radius: 20%;
+  border-radius: 15%;
 }
 
 //フッター
@@ -153,7 +152,7 @@ footer {
 
 //(kaminariのデザイン)
 .pagination > li > a {
-  color: #000;
+  color: #7F7F7F;;
   margin: 10px;
   border-radius: 5px;
 }

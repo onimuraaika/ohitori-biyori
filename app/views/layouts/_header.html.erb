@@ -11,22 +11,34 @@
       </div>
       <div class="header-button">
         <%= link_to user_path(current_user) do %>
-          <button type="button" class="btn btn-default btn-lg header-button-my_page">マイページ</button>
+          <button type="button" class="btn btn-default btn-lg header-button-my_page">
+            <i class="fa fa-sun-o" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
+            マイページ
+          </button>
         <% end %>
       </div>
       <div class="header-button">
         <%= link_to new_article_path do %>
-          <button type="button" class="btn btn-default btn-lg header-button-post">投稿する</button>
+          <button type="button" class="btn btn-default btn-lg header-button-post">
+            <i class="fa fa-pencil" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
+            投稿する
+          </button>
         <% end %>
       </div>
       <div class="header-button">
         <%= link_to article_favorites_path(user) do %>
-          <button type="button" class="btn btn-default btn-lg header-button-favorite">お気に入り</button>
+          <button type="button" class="btn btn-default btn-lg header-button-favorite">
+            <i class="fa fa-heart" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
+            お気に入り
+          </button>
         <% end %>
       </div>
       <div class="header-button">
         <%= link_to destroy_user_session_path, method: :delete do %>
-          <button type="button" class="btn btn-default btn-lg header-button-logout">ログアウト</button>
+          <button type="button" class="btn btn-default btn-lg header-button-logout">
+            <i class="fa fa-sign-out" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
+            ログアウト
+          </button>
         <% end %>
       </div>
     </header>
@@ -47,12 +59,18 @@
       </div>
       <div class="header-button">
         <%= link_to user_session_path do %>
-          <button type="button" class="btn btn-default btn-lg header-button-post">ログイン</button>
+          <button type="button" class="btn btn-default btn-lg header-button-post">
+            <i class="fa fa-sign-in" aria-hidden="true" style="color: #8CC3E2; font-size: 30px;"></i></br>
+            ログイン
+          </button>
         <% end %>
       </div>
       <div class="header-button">
         <%= link_to new_user_registration_path do %>
-          <button type="button" class="btn btn-default btn-lg header-button-favorite">新規登録</button>
+          <button type="button" class="btn btn-default btn-lg header-button-favorite">
+            <i class="fa fa-user-plus" aria-hidden="true" style="color: #8CC3E2; font-size: 30px;"></i></br>
+            新規登録
+          </button>
         <% end %>
       </div>
     </header>
