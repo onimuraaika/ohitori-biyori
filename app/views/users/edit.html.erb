@@ -2,7 +2,9 @@
 
 <div class="container user-edit">
 
-  <h2 class="user-edit-title">プロフィールを編集する</h2>
+  <hr class="border-line"/></br>
+    <h2 class="user-edit-title">プロフィールを編集する</h2></br>
+  <hr class="border-line" />
 
   <%= form_with model:@user, local: true do |f| %>
 
@@ -47,23 +49,19 @@
 
   <% end %>
 
-  <div class="row hr"></div>
+  <hr class="user-edit-border" />
 
   <div class="row user-edit-password">
     <% if current_user.nickname == 'ゲスト' %>
-      <div class="ser-edit-password-button">
+      <div class="user-edit-password-button">
         <%= link_to edit_user_registration_path do %>
-          <button type="button" class="btn btn-block btn-default btn-lg top-access-button" disabled="disabled">
-            パスワードを変更する
-          </button>
+          <button type="button" class="btn btn-block btn-default btn-lg top-access-button" disabled="disabled">パスワードを変更する</button>
         <% end %>
       </div>
     <% else %>
-      <div class="ser-edit-password-button">
+      <div class="user-edit-password-button">
         <%= link_to edit_user_registration_path do %>
-          <button type="button" class="btn btn-block btn-default btn-lg top-access-button">
-            パスワードを変更する
-          </button>
+          <button type="button" class="btn btn-block btn-default btn-lg top-access-button">パスワードを変更する</button>
         <% end %>
       </div>
     <% end %>

@@ -103,11 +103,10 @@
   margin-bottom: 50px;
 }
 
-.header-border {
-  width: 50%;
-  height: 1px;
-  border-bottom: 5px solid #CCC;
-  margin: 0  auto;
+.user-edit-border {
+  border-width: 2px 0 0 0;
+	border-style: solid;
+	border-color: #E7E6E3;
 }
 
 .user-edit-password {
