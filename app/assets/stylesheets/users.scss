@@ -10,8 +10,8 @@
 
 //マイページ・ユーザー詳細画面
 .user-show {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 //(ここから　ユーザー表示の部分テンプレート)
@@ -67,7 +67,12 @@
 //(ここまで)
 
 .user-show-article-index {
-  padding-top: 100px;
+  margin: 0 auto;
+  width: 40%;
+}
+
+.user-show-article-index-paginate {
+  padding-bottom: 100px;
 }
 
 //会員情報編集画面

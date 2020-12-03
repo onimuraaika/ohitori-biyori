@@ -1,7 +1,7 @@
 <!--マイページ・ユーザー詳細画面-->
 
 <div class="container user-show">
-
+  
   <div class="row user-show-info">
     <% if @user == current_user %>
       <!--マイページとして見ている時のview-->
@@ -22,7 +22,7 @@
   </div>
 
   <!--ページング-->
-  <%= paginate @articles %>
+  <div class="text-center user-show-article-index-paginate"><%= paginate @articles %></div>
 
 </div>
 
