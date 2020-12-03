@@ -2,8 +2,10 @@
 
 <div class="container signup">
   <div class="row signup-form">
-
-    <h2 class="signup-form-title">新規会員登録</h2>
+    
+    <hr class="border-line"/>
+    <h2 class="text-center">新規会員登録</h2>
+    <hr class="border-line signup-form-border"/>
 
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
 
