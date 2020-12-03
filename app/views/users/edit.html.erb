@@ -2,7 +2,9 @@
 
 <div class="container user-edit">
 
-  <h2 class="user-edit-title">プロフィールを編集する</h2>
+  <hr class="border-line"/></br>
+    <h2 class="user-edit-title">プロフィールを編集する</h2></br>
+  <hr class="border-line" />
 
   <%= form_with model:@user, local: true do |f| %>
 
@@ -10,65 +12,63 @@
     <%= render 'layouts/error_message', model: @user %>
 
     <div class="row user-edit-form">
-      <div class="form-group">
-        <h3 class="user-edit-form-label">プロフィール画像</h3></br>
-        <% if @user.profile_image.present? %>
-          <%= attachment_image_tag @user, :profile_image, id: :img_preview, size: "250x250", class: "user-edit-form-image", style: "border-radius:15px" %>
-        <% else %>
-          <%= image_tag "noimage.jpg", size: "250x250", id: :img_preview, style: "border-radius:15px" %>
-        <% end %>
-        </br>
-        <%= f.attachment_field :profile_image, size: "250x250", id: :change_img %>
-      </div>
+      <h3 class="user-edit-form-label">プロフィール画像</h3></br>
+      <% if @user.profile_image.present? %>
+        <%= attachment_image_tag @user, :profile_image, id: :img_preview, size: "250x250", class: "user-edit-form-image", style: "border-radius:15px" %>
+      <% else %>
+        <%= image_tag "noimage.jpg", size: "250x250", id: :img_preview, style: "border-radius:15px" %>
+      <% end %>
+      </br>
+      <%= f.attachment_field :profile_image, size: "250x250", class: "user-edit-form-profile_image", id: :change_img %>
     </div>
     <div class="row user-edit-form">
       <div class="form-group">
-        <p class="user-edit-form-label">ニックネーム(必須)</p>
+        <h3 class="user-edit-form-label">ニックネーム</h3>
         <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "form-control input-lg" %>
       </div>
     </div>
     <div class="row user-edit-form">
       <div class="form-group">
-        <p class="user-edit-form-label">自己紹介文</p>
-        <%= f.text_area :introduction, autofocus: true, autocomplete: "introduction", class: "form-control input-lg" %>
+        <h3 class="user-edit-form-label">自己紹介文</h3>
+        <%= f.text_area :introduction, rows: "6", autofocus: true, autocomplete: "introduction", placeholder:"例：東京でひとり暮らしを始めたばかりの社会人です。(100文字まで)", class: "form-control input-lg" %>
       </div>
     </div>
     <div class="row user-edit-form">
       <div class="form-group">
-        <p class="user-edit-form-label">おひとり暮らし歴○○ヶ月目(必須)</p>
-        <%= f.text_field :living_alone_month, autofocus: true, autocomplete: "living_alone_month", class: "form-control input-lg" %>
+        <h3 class="user-edit-form-label">おひとり暮らし歴○○ヶ月目</h3>
+        <%= f.text_field :living_alone_month, autofocus: true, autocomplete: "living_alone_month", placeholder:"半角数字", class: "form-control input-lg" %>
       </div>
     </div>
     <div class="row user-edit-form user-edit-form-button">
       <% if current_user.nickname == 'ゲスト' %>
-        <%= f.submit "　　　　　　　　更新する　　　　　　　　", class: "btn btn-default btn-lg disabled" %>
+        <%= f.submit "更新する", class: "btn btn-block btn-default btn-lg disabled" %>
       <% else %>
-        <%= f.submit "　　　　　　　　更新する　　　　　　　　", class: "btn btn-default btn-lg" %>
+        <%= f.submit "更新する", class: "btn btn-block btn-default btn-lg" %>
       <% end %>
     </div>
 
   <% end %>
 
-  <div class="row header-border"></div>
+  <hr class="user-edit-border" />
 
   <div class="row user-edit-password">
     <% if current_user.nickname == 'ゲスト' %>
-      <%= link_to edit_user_registration_path do %>
-        <button type="button" class="btn btn-default btn-lg top-access-button" disabled="disabled">
-          パスワードを変更する
-        </button>
-      <% end %>
+      <div class="user-edit-password-button">
+        <%= link_to edit_user_registration_path do %>
+          <button type="button" class="btn btn-block btn-default btn-lg top-access-button" disabled="disabled">パスワードを変更する</button>
+        <% end %>
+      </div>
     <% else %>
-      <%= link_to edit_user_registration_path do %>
-        <button type="button" class="btn btn-default btn-lg top-access-button">
-          パスワードを変更する
-        </button>
-      <% end %>
+      <div class="user-edit-password-button">
+        <%= link_to edit_user_registration_path do %>
+          <button type="button" class="btn btn-block btn-default btn-lg top-access-button">パスワードを変更する</button>
+        <% end %>
+      </div>
     <% end %>
   </div>
   <div class="row user-edit-unsubscribe">
     <%= link_to unsubscribe_path(@user) do %>
-      <button type="button" class="btn btn-default btn-lg top-access-button">
+      <button type="button" class="btn btn-block btn-default btn-lg top-access-button">
         退会する
       </button>
     <% end %>

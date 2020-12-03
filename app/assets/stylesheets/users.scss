@@ -71,37 +71,42 @@
 }
 
 //会員情報編集画面
-.user-edit-title {
-  text-align: center;
+.user-edit {
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
-.user-edit-form {
-  justify-content: center;
-  padding-right: 20%;
-  padding-left: 20%;
+.user-edit-title {
+  text-align: center;
+}
+
+.user-edit-form,
+.user-edit-password,
+.user-edit-unsubscribe
+{
   margin: 20px;
+  padding: 0 30%;
+  align-items: center;
+  text-align: center;
 }
 
 .user-edit-form-label {
-  margin: 0 auto;
+  padding-top: 50px;
 }
 
-.user-edit-form-image {
-  margin: 10px;
+.user-edit-form-profile_image {
+  margin: 10px auto;
 }
 
 .user-edit-form-button {
-  text-align: center;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.header-border {
-  width: 50%;
-  height: 1px;
-  border-bottom: 5px solid #CCC;
-  margin: 0  auto;
+.user-edit-border {
+  border-width: 2px 0 0 0;
+	border-style: solid;
+	border-color: #E7E6E3;
 }
 
 .user-edit-password {

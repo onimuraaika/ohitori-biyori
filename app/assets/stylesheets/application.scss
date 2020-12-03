@@ -28,6 +28,13 @@ body {
   color: #7F7F7F;
 }
 
+//タイトルの区切り線
+.border-line {
+  border-width: 3px 0 0 0;
+	border-style: dashed;
+	border-color: #F7E077;
+}
+
 //ページトップへの移動ボタン
 #page-top-button {
   position: fixed;

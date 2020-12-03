@@ -17,17 +17,23 @@
 <div class="row user-show-info-nav">
   <div class="user-show-info-nav-button">
     <%= link_to article_favorites_path(user) do %>
-      <button type="button" class="btn btn-default btn-lg user-show-info-nav-favorite">お気に入り</button>
+      <button type="button" class="btn btn-default btn-lg user-show-info-nav-favorite">
+        お気に入り
+      </button>
     <% end %>
   </div>
   <div class="user-show-info-nav-button">
     <%= link_to user_followings_path(user) do %>
-      <button type="button" class="btn btn-default btn-lg user-show-info-nav-following">フォローしている人</button>
+      <button type="button" class="btn btn-default btn-lg user-show-info-nav-following">
+        フォローしている人
+      </button>
     <% end %>
   </div>
   <div class="user-show-info-nav-button">
     <%= link_to edit_user_path(current_user) do %>
-      <button type="button" class="btn btn-default btn-lg user-show-info-nav-setting">　設定　</button>
+      <button type="button" class="btn btn-default btn-lg user-show-info-nav-setting">
+        　設定
+      </button>
     <% end %>
   </div>
-
+</div>
