@@ -1,6 +1,12 @@
 <!--新規登録画面-->
 
-<div class="container-fluid signup-header"></div>
+<div class="container-fluid signup-header">
+  <div class="logo-image">
+    <%= link_to root_path do %>
+      <%= image_tag 'logo.jpg', :alt => 'ロゴ画像、みんなの投稿一覧ページに飛べます。' %>
+    <% end %>
+  </div>
+</div>
 
 <div class="container signup">
   <div class="row signup-form">
@@ -39,7 +45,7 @@
           <div class="actions signup-form-button">
             <%= f.submit "新規会員登録する", class: "btn btn-block btn-default btn-lg signup-form-signup_button" %></br>
            <%= link_to user_session_path, style: "text-decoration: none;" do %>
-              <button type="button" class="btn btn-block  btn-default btn-lg signin-page-button">
+              <button type="button" class="btn btn-block btn-default btn-lg signin-page-button">
                 すでに会員の方(ログイン)はこちら
               </button>
             <% end %>

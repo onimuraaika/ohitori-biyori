@@ -1,6 +1,12 @@
 <!--ログイン画面-->
 
-<div class="container-fluid signin-header"></div>
+<div class="container-fluid signin-header">
+  <div class="logo-image">
+  <%= link_to root_path do %>
+    <%= image_tag 'logo.jpg', :alt => 'ロゴ画像、みんなの投稿一覧ページに飛べます。' %>
+  <% end %>
+  </div>
+</div>
 
 <div class="container login">
   <div class="row login-form">
