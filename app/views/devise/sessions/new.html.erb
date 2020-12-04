@@ -27,7 +27,12 @@
         </div>
         <div class="form-group">
           <div class="actions login-form-button">
-            <%= f.submit "ログインする", class: "btn btn-block btn-default btn-lg login-form-login_button" %>
+            <%= f.submit "ログインする", class: "btn btn-block btn-default btn-lg login-form-login_button" %></br>
+            <%= link_to new_user_registration_path, style: "text-decoration: none;" do %>
+              <button type="button" class="btn btn-block btn-default btn-lg signup-page-button">
+                登録がお済みでない方(新規登録)はこちら
+              </button>
+            <% end %>
            </div>
         </div>
       </form>

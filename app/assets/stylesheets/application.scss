@@ -144,6 +144,11 @@ header > :first-child {
   background-color: #FCF6D8!important;
 }
 
+.signin-page-button {
+  height: 80px;
+  background-color: #D8F1FC!important;
+}
+
 //ログイン画面
 .signin-header,
 .signin-footer
@@ -168,12 +173,17 @@ header > :first-child {
 
 .login-form-button {
   text-align: center;
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 .login-form-login_button {
   height: 80px;
   background-color: #FCF6D8!important;
+}
+
+.signup-page-button {
+  height: 80px;
+  background-color: #D8F1FC!important;
 }
 
 //パスワード変更画面
