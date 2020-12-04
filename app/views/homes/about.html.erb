@@ -5,15 +5,17 @@
 
 <div class="container about">
 
-
   <!--サイトの説明-->
   <div class="row about-site">
     <%= render 'homes/top_message' %>
   </div>
+  
+  <!--新規登録・ログインボタン-->
+  <%= render 'homes/signin_signup_button'%>
 
   <!--矢印のアイコン-->
   <div class="row top-next-icon">
-    <i class="fa fa-chevron-circle-down top-next-icon" aria-hidden="true" style="color: #F8D48A;"></i>
+    <i class="fa fa-angle-double-down" aria-hidden="true" style="color: #8CC3E2;"></i>
   </div>
 
   <!--楽しみ方-->
@@ -39,6 +41,11 @@
       <p class="about-how_to_enjoy-description">あこがれの人を発見できたらフォローできます。</p>
       <div class="about-how_to_enjoy-image">！写真が入ります！</div>
     </div>
+  </div>
+  
+  <!--新規登録・ログインボタン-->
+  <div class="about-signin_signup_button">
+    <%= render 'homes/signin_signup_button'%>
   </div>
 
 </div>
