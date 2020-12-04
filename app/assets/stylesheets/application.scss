@@ -139,6 +139,11 @@ header > :first-child {
   padding-top: 50px;
 }
 
+.signup-form-signup_button {
+  height: 80px;
+  background-color: #FCF6D8!important;
+}
+
 //ログイン画面
 .signin-header,
 .signin-footer
@@ -164,6 +169,17 @@ header > :first-child {
 .login-form-button {
   text-align: center;
   padding-top: 70px;
+}
+
+.login-form-login_button {
+  height: 80px;
+  background-color: #FCF6D8!important;
+}
+
+//パスワード変更画面
+.signup-form-update_button {
+  height: 80px;
+  background-color: #FCF6D8!important;
 }
 
 //ページネーション
@@ -202,4 +218,3 @@ header > :first-child {
   padding: 10px;
   border-radius: 15px;
 }
-
