@@ -14,9 +14,9 @@
     <div class="row user-edit-form">
       <h3 class="user-edit-form-label">プロフィール画像</h3></br>
       <% if @user.profile_image.present? %>
-        <%= attachment_image_tag @user, :profile_image, id: :img_preview, size: "250x250", class: "user-edit-form-image", style: "border-radius:15px" %>
+        <%= attachment_image_tag @user, :profile_image, id: :img_preview, size: "250x250", class: "user-edit-form-image", style: "border-radius: 15px;" %>
       <% else %>
-        <%= image_tag "noimage.jpg", size: "250x250", id: :img_preview, style: "border-radius:15px" %>
+        <%= image_tag "no_profile_image.jpg", size: "250x250", id: :img_preview, style: "border-radius: 15px;" %>
       <% end %>
       </br>
       <%= f.attachment_field :profile_image, size: "250x250", class: "user-edit-form-profile_image", id: :change_img %>
@@ -26,24 +26,27 @@
         <h3 class="user-edit-form-label">ニックネーム</h3>
         <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "form-control input-lg" %>
       </div>
+      <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #FAE8B1;", class="down-arrow"></i>
     </div>
     <div class="row user-edit-form">
       <div class="form-group">
         <h3 class="user-edit-form-label">自己紹介文</h3>
         <%= f.text_area :introduction, rows: "6", autofocus: true, autocomplete: "introduction", placeholder:"例：東京でひとり暮らしを始めたばかりの社会人です。(100文字まで)", class: "form-control input-lg" %>
       </div>
+      <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F6D263;", class="down-arrow"></i>
     </div>
     <div class="row user-edit-form">
       <div class="form-group">
         <h3 class="user-edit-form-label">おひとり暮らし歴○○ヶ月目</h3>
         <%= f.text_field :living_alone_month, autofocus: true, autocomplete: "living_alone_month", placeholder:"半角数字", class: "form-control input-lg" %>
       </div>
+      <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #E8B10C;", class="down-arrow"></i>
     </div>
     <div class="row user-edit-form user-edit-form-button">
       <% if current_user.nickname == 'ゲスト' %>
-        <%= f.submit "更新する", class: "btn btn-block btn-default btn-lg disabled" %>
+        <%= f.submit "更新する", class: "btn btn-block btn-default btn-lg disabled user-edit-update_button" %>
       <% else %>
-        <%= f.submit "更新する", class: "btn btn-block btn-default btn-lg" %>
+        <%= f.submit "更新する", class: "btn btn-block btn-default btn-lg user-edit-update_button" %>
       <% end %>
     </div>
 
@@ -53,22 +56,26 @@
 
   <div class="row user-edit-password">
     <% if current_user.nickname == 'ゲスト' %>
-      <div class="user-edit-password-button">
-        <%= link_to edit_user_registration_path do %>
-          <button type="button" class="btn btn-block btn-default btn-lg top-access-button" disabled="disabled">パスワードを変更する</button>
+      <div>
+        <%= link_to edit_user_registration_path, style: "text-decoration: none;" do %>
+          <button type="button" class="btn btn-default btn-block btn-lg user-edit-password-button" disabled="disabled">
+            パスワードを変更する
+          </button>
         <% end %>
       </div>
     <% else %>
-      <div class="user-edit-password-button">
-        <%= link_to edit_user_registration_path do %>
-          <button type="button" class="btn btn-block btn-default btn-lg top-access-button">パスワードを変更する</button>
+      <div>
+        <%= link_to edit_user_registration_path, style: "text-decoration: none;" do %>
+          <button type="button" class="btn btn-default btn-block btn-lg user-edit-password-button">
+            パスワードを変更する
+          </button>
         <% end %>
       </div>
     <% end %>
   </div>
   <div class="row user-edit-unsubscribe">
-    <%= link_to unsubscribe_path(@user) do %>
-      <button type="button" class="btn btn-block btn-default btn-lg top-access-button">
+    <%= link_to unsubscribe_path(@user), style: "text-decoration: none;" do %>
+      <button type="button" class="btn btn-block btn-default btn-lg user-edit-unsubscribe-button">
         退会する
       </button>
     <% end %>

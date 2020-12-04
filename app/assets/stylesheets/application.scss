@@ -26,6 +26,7 @@
 //共通
 body {
   color: #7F7F7F;
+  font-family: 'Hannotate TC','Hannotate SC','MS UI Gothic',YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
 }
 
 //タイトルの区切り線
@@ -36,10 +37,14 @@ body {
 }
 
 //ページトップへの移動ボタン
-#page-top-button {
+#top-arrow {
   position: fixed;
   right: 2%;
   bottom: 2%;
+}
+
+.top-arrow-button {
+border-radius: 50%;
 }
 
 //ヘッダー
@@ -111,6 +116,11 @@ header > :first-child {
   background-color: #FAF7EE;
 }
 
+.logo-image {
+  text-align: center;
+  line-height: 150px;
+}
+
 .signup {
   padding-top: 50px;
   padding-bottom: 100px;
@@ -133,6 +143,16 @@ header > :first-child {
 .signup-form-button {
   text-align: center;
   padding-top: 50px;
+}
+
+.signup-form-signup_button {
+  height: 80px;
+  background-color: #FCF6D8!important;
+}
+
+.signin-page-button {
+  height: 80px;
+  background-color: #D8F1FC!important;
 }
 
 //ログイン画面
@@ -159,7 +179,23 @@ header > :first-child {
 
 .login-form-button {
   text-align: center;
-  padding-top: 70px;
+  padding-top: 50px;
+}
+
+.login-form-login_button {
+  height: 80px;
+  background-color: #FCF6D8!important;
+}
+
+.signup-page-button {
+  height: 80px;
+  background-color: #D8F1FC!important;
+}
+
+//パスワード変更画面
+.signup-form-update_button {
+  height: 80px;
+  background-color: #FCF6D8!important;
 }
 
 //ページネーション

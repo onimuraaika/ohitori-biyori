@@ -104,14 +104,13 @@
 .user-edit-password,
 .user-edit-unsubscribe
 {
-  margin: 20px;
   padding: 0 30%;
   align-items: center;
   text-align: center;
 }
 
 .user-edit-form-label {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .user-edit-form-profile_image {
@@ -119,7 +118,7 @@
 }
 
 .user-edit-form-button {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -134,13 +133,25 @@
   margin-top: 50px;
 }
 
-.user-edit-unsubscribe {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
+.user-edit-update_button,
+.user-edit-password-button
+{
+  height: 80px;
+  background-color: #FCF6D8!important;
+}
+
+.user-edit-unsubscribe-button {
+  height: 80px;
+  background-color: #FBD9C4!important;
 }
 
 //退会確認画面
+.user-edit-unsubscribe {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
 .unsubscribe {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -167,10 +178,14 @@
   margin-right: 20px;
   height: 70px;
   width: 230px;
+  height: 80px;
+  background-color: #FCF6D8!important;
 }
 
 .unsubscribe-button-confirm {
   margin-left: 20px;
   height: 70px;
   width: 230px;
+  height: 80px;
+  background-color: #FBD9C4!important;
 }

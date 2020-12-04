@@ -23,7 +23,6 @@
 }
 
 .new-article-row {
-  margin: 20px;
   padding: 0 30%;
   align-items: center;
   text-align: center;
@@ -31,6 +30,11 @@
 
 .new-article-image {
   margin: 10px auto;
+}
+
+.new-article-button {
+  height: 80px;
+  background-color: #FCF6D8!important;
 }
 
 //投稿一覧画面
@@ -227,7 +231,6 @@
 }
 
 .edit-article-row {
-  margin: 20px;
   padding: 0 30%;
   align-items: center;
   text-align: center;
@@ -237,3 +240,7 @@
   margin: 10px auto;
 }
 
+.edit-article-button {
+  height: 80px;
+  background-color: #FCF6D8!important;
+}

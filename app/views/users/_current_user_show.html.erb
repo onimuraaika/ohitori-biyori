@@ -1,7 +1,7 @@
 <!--ログインユーザー表示の部分テンプレート (user)-->
 
   <div class="col-sm-4 user-show-info-image">
-    <%= attachment_image_tag user, :profile_image, size: "150x150", fallback: "noimage.jpg", size: '150x150', style: "border-radius:15px" %>
+    <%= attachment_image_tag user, :profile_image, size: "150x150", fallback: "no_profile_image.jpg", size: '150x150', style: "border-radius: 15px;" %>
   </div>
   <div class="col-sm-8 user-show-info-name_follwer">
     <div class="user-show-info-name">
@@ -47,5 +47,4 @@
       </button>
     <% end %>
   </div>
-
 </div>
