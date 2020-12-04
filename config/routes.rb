@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     end
 
     get '/' => 'homes#top', as: "root"
-    get '/homes/about' => 'homes#about'
+    get '/about' => 'homes#about'
 
     get '/users/unsubscribe/:id' => 'users#unsubscribe', as: "unsubscribe"
     patch '/users/withdraw' => 'users#withdraw'

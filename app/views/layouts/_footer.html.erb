@@ -1,10 +1,12 @@
 <!--フッター の部分テンプレート-->
 
-<footer class="container-fluid">
-  <h3 class="footer-title">おひとり日和</h3>
-  <p class="footer-description">
-    おひとり日和は、「ひとり暮らしを楽しく素敵に。」をテーマにした</br>
-    ライフスタイル投稿サイトです。
-  </p>
-  <p class="copyright">©2020 aika</p>
-</footer>
+<% if user_signed_in? %>
+  <div class="container-fluid footer">
+    <h3 class="footer-title">おひとり日和</h3>
+    <p class="footer-description">
+      おひとり日和は、「ひとり暮らしを楽しく素敵に。」をテーマにした</br>
+      ライフスタイル投稿サイトです。
+    </p>
+    <p class="copyright">©2020 aika</p>
+  </div>
+<% end %>

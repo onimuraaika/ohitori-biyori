@@ -69,7 +69,6 @@ header > :first-child {
   border-radius: 15%;
 }
 
-.header-button-about,
 .header-button-my_page,
 .header-button-post,
 .header-button-favorite,
@@ -105,8 +104,15 @@ footer {
 }
 
 //新規会員登録画面
+.signup-header,
+.signup-footer
+{
+  height: 150px;
+  background-color: #FAF7EE;
+}
+
 .signup {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
 }
 
@@ -130,8 +136,15 @@ footer {
 }
 
 //ログイン画面
+.signin-header,
+.signin-footer
+{
+  height: 150px;
+  background-color: #FAF7EE;
+}
+
 .login {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
 }
 
@@ -146,7 +159,7 @@ footer {
 
 .login-form-button {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 70px;
 }
 
 //ページネーション
