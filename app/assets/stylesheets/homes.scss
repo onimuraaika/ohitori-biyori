@@ -10,9 +10,12 @@
 
 //トップページ
 .top-background {
-  background-image: image-url("top-background-image.jpg");
+  background-image: image-url("background-index.jpg");
+  height: 400px;
   background-size: cover;
   background-position: bottom;
+  background-color: rgba( 255, 255, 255, 0.4);
+  background-blend-mode: lighten;
 }
 
 .top {
@@ -82,13 +85,10 @@
 }
 
 //Aboutページ
-.about-top {
-  background-image: image-url("background-index.jpg");
-  height: 400px;
+.about-background {
+  background-image: image-url("top-background-image.jpg");
   background-size: cover;
   background-position: bottom;
-  background-color: rgba( 255, 255, 255, 0.4);
-  background-blend-mode: lighten;
 }
 
 .about-top_message {
