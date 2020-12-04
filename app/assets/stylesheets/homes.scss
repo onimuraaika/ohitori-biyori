@@ -8,23 +8,11 @@
   box-sizing: border-box;
 }
 
-.header {
-  display: none;
-}
-
-.footer {
-  display: none;
-}
-
 //トップページ
 .top-background {
-  // background-image: image-url("top-background-image.jpg");
   background-image: image-url("top.jpg");
   background-size: cover;
   background-position: bottom;
-  // height: 400px;
-  // background-size: cover;
-  // background-position: bottom;
   background-color: rgba( 255, 255, 255, 0.4);
   background-blend-mode: lighten;
 }
@@ -39,16 +27,15 @@
   padding-bottom: 100px;
   text-align: center;
   align-items: center;
-  // background-color: #fff;
 }
 
 //(ここから　サイトの説明部分テンプレート)
 .top-message-subtitle {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 .top-message-description-title {
-  padding-top: 30px;
+  padding-top: 50px;
   font-size: 16px;
 }
 
@@ -59,6 +46,7 @@
 
 .top-message-title_description {
   padding-top: 60px;
+  padding-bottom: 60px;
   font-size: 16px;
 }
 //(ここまで)
@@ -67,16 +55,17 @@
 .access-buttons {
   display: flex;
   justify-content: center;
-  padding: 50px;
+  padding-bottom: 20px;
 }
 
 .access-button {
   height: 100px;
-  width: 230px;
+  width: 240px;
   line-height: 100px;
-  padding: 0 auto;
+  padding: 20px auto;
   margin: 10px;
-  border-radius: 50px;
+  border-radius: 15px 15px;
+  overflow: hidden;
 }
 
 .access-button-about,
@@ -85,9 +74,18 @@
 .access-button-guest
 {
   height: 100px;
-  width: 230px;
+  width: 240px;
   padding: 0 auto;
-  border-radius: 50px;
+  border-radius: 15px 15px;
+  overflow: hidden;
+}
+
+.access-button-about:hover,
+.access-button-signup:hover,
+.access-button-signin:hover,
+.access-button-guest:hover
+{
+  border-color: #fff;
 }
 //(ここまで)
 
