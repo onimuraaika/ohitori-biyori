@@ -15,8 +15,11 @@
 }
 
 .new-article-title {
-  padding-bottom: 50px;
   text-align: center;
+}
+
+.new-article-border {
+  padding-bottom: 50px;
 }
 
 .new-article-row {
@@ -33,7 +36,6 @@
 //投稿一覧画面
 .article-index {
   padding-bottom: 100px;
-  background-color: #fff;
 }
 
 .article-index-title {
@@ -52,6 +54,7 @@
 }
 
 .article-index-side_bar-title {
+  text-align: center;
   padding: 10px 30px;
   border-radius: 100vh;
   background-color: #E7E6E3;
@@ -69,12 +72,11 @@
 }
 //(ここまで)
 
-//(ランキング投稿・おすすめ投稿)
+//(ここから　人気の投稿・おすすめ投稿)
 .article-index-ranking,
 .article-index-recommend
 {
   display: flex;
-  line-height: 80px;
   padding-left: 30px;
 }
 
@@ -83,6 +85,14 @@
 {
   margin: 5px;
 }
+
+.article-index-ranking-title,
+.article-index-recommend-title
+{
+  padding-top: 25px;
+}
+//(ここまで)
+
 
 .article-index-main {
   padding-left: 80px;
@@ -120,7 +130,7 @@
 }
 
 .article-show-article {
-  padding-top: 100px;
+  padding: 100px 20% 0;
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
@@ -209,8 +219,11 @@
 }
 
 .edit-article-title {
-  padding-bottom: 50px;
   text-align: center;
+}
+
+.edit-article-border {
+  padding-bottom: 50px;
 }
 
 .edit-article-row {

@@ -2,8 +2,9 @@
 
 <div class="container new-article">
 
-  <!--新規投稿-->
+  <hr class="border-line"/>
   <h2 class="new-article-title">投稿する</h2>
+  <hr class="border-line new-article-border"/>
 
   <%= form_with model:@article, local:true do |f| %>
 
@@ -26,7 +27,7 @@
     <div class="row new-article-row">
       <h3 class="new-article-subtitle">② タイトルをつける</h3>
       <div class="form-group">
-        <%= f.text_field :title, class:"form-control input-lg", placeholder:"例：わたしの休日のすごしかた" %>
+        <%= f.text_field :title, class:"form-control input-lg", placeholder:"例：わたしの休日のすごしかた(20文字)" %>
       </div>
     </div>
     </br>

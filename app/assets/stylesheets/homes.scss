@@ -76,14 +76,6 @@
   padding: 0 auto;
 }
 
-.access-button-about:hover,
-.access-button-signup:hover,
-.access-button-signin:hover,
-.access-button-guest:hover
-{
-  border-color: #fff;
-}
-
 .about-signin_signup_button {
   padding-top: 100px;
 }
@@ -111,6 +103,7 @@
 .about-background {
   background-image: image-url("about-background-image.jpg");
   background-size: cover;
+  background-attachment: fixed;
   background-position: bottom;
 }
 
@@ -131,7 +124,7 @@
 }
 
 .about-how_to_enjoy-subtitle {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 .about-how_to_enjoy-title {
@@ -141,13 +134,4 @@
 .about-how_to_enjoy-description {
   padding-top: 20px;
   font-size: 16px;
-}
-
-//ここは写真を入れたら削除する
-.about-how_to_enjoy-image {
-  padding-top: 10px;
-  width: 400px;
-  height: 250px;
-  background-color: #CCC;
-  margin: 0 auto;
 }
