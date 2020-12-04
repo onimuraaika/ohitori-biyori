@@ -8,14 +8,30 @@
   box-sizing: border-box;
 }
 
+.header {
+  display: none;
+}
+
+.footer {
+  display: none;
+}
+
 //トップページ
 .top-background {
-  background-image: image-url("background-index.jpg");
-  height: 400px;
+  // background-image: image-url("top-background-image.jpg");
+  background-image: image-url("top.jpg");
   background-size: cover;
   background-position: bottom;
+  // height: 400px;
+  // background-size: cover;
+  // background-position: bottom;
   background-color: rgba( 255, 255, 255, 0.4);
   background-blend-mode: lighten;
+}
+
+.top_title {
+  padding-top: 150px;
+  text-align: center;
 }
 
 .top {
@@ -23,7 +39,7 @@
   padding-bottom: 100px;
   text-align: center;
   align-items: center;
-  background-color: #fff;
+  // background-color: #fff;
 }
 
 //(ここから　サイトの説明部分テンプレート)
@@ -48,23 +64,32 @@
 //(ここまで)
 
 //(ここから　ログイン・新規登録ボタンの部分テンプレート)
-.top-access {
+.access-buttons {
   display: flex;
   justify-content: center;
   padding: 50px;
 }
 
-.top-access-button {
+.access-button {
+  height: 100px;
+  width: 230px;
+  line-height: 100px;
+  padding: 0 auto;
   margin: 10px;
+  border-radius: 50px;
+}
+
+.access-button-about,
+.access-button-signup,
+.access-button-signin,
+.access-button-guest
+{
+  height: 100px;
+  width: 230px;
+  padding: 0 auto;
+  border-radius: 50px;
 }
 //(ここまで)
-
-//矢印アイコンの部分テンプレート
-.top-next-icon {
-  padding: 40px;
-  font-size: 4em;
-  color: #F5CC50;
-}
 
 .top-how_to_enjoy-subtitle {
   padding-top: 50px;
@@ -86,14 +111,9 @@
 
 //Aboutページ
 .about-background {
-  background-image: image-url("top-background-image.jpg");
+  background-image: image-url("about-background-image.jpg");
   background-size: cover;
   background-position: bottom;
-}
-
-.about-top_message {
-  padding-top: 150px;
-  text-align: center;
 }
 
 .about {
@@ -106,8 +126,17 @@
   padding-top: 50px;
 }
 
+.top-next-icon {
+  padding: 40px;
+  font-size: 70px;
+}
+
 .about-how_to_enjoy-subtitle {
   padding-top: 50px;
+}
+
+.about-how_to_enjoy-title {
+  padding-bottom: 10px;
 }
 
 .about-how_to_enjoy-description {

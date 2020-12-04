@@ -1,19 +1,36 @@
-<!--新規登録・ログインボタンの部分テンプレート-->
-
-<div class="row top-access">
-  <div class="top-access-button">
+ <!--新規登録・ログインボタンの部分テンプレート-->
+ 
+<div class="row access-buttons">
+  <div class="access-button">
+    <%= link_to about_path do %>
+      <button type="button" class="btn btn-default btn-lg access-button-about">
+        <i class="fa fa-sun-o" aria-hidden="true" style="color: #8CC3E2; font-size: 30px;"></i></br>
+        おひとり日和とは
+      </button>
+    <% end %>
+  </div>
+  <div class="access-button">
     <%= link_to new_user_registration_path do %>
-      <button type="button" class="btn btn-default btn-lg">新規会員(無料)はこちら</button>
+      <button type="button" class="btn btn-default btn-lg access-button-signup">
+        <i class="fa fa-user-plus" aria-hidden="true" style="color: #8CC3E2; font-size: 30px;"></i></br>
+        新規登録(無料)はこちら
+      </button>
     <% end %>
   </div>
-  <div class="top-access-button">
-    <%= link_to user_session_path, class: "top-access-button" do %>
-      <button type="button" class="btn btn-default btn-lg">ログインはこちら</button>
+  <div class="access-button">
+    <%= link_to user_session_path do %>
+      <button type="button" class="btn btn-default btn-lg access-button-signin">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: #8CC3E2; font-size: 30px;"></i></br>
+        ログインはこちら
+      </button>
     <% end %>
   </div>
-  <div class="top-access-button">
-    <%= link_to users_guest_sign_in_path, method: :post, class: "top-access-button" do %>
-      <button type="button" class="btn btn-default btn-lg">簡単ログインはこちら</button>
+  <div class="access-button">
+    <%= link_to users_guest_sign_in_path, method: :post do %>
+      <button type="button" class="btn btn-default btn-lg access-button-guest">
+        <i class="fa fa-sign-in" aria-hidden="true" style="color: #8CC3E2; font-size: 30px;"></i></br>
+        お試しログインはこちら
+      </button>
     <% end %>
   </div>
 </div>
