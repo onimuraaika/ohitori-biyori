@@ -20,7 +20,7 @@
 
 //ページトップへの移動ボタン
 $(document).on('turbolinks:load', function() {
-  $('#page-top-button a').on('click',function(event){
+  $('#top-arrow-button').on('click',function(event){
     $('body, html').animate({
       scrollTop:0
     }, 800);

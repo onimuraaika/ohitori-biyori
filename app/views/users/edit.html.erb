@@ -53,22 +53,26 @@
 
   <div class="row user-edit-password">
     <% if current_user.nickname == 'ゲスト' %>
-      <div class="user-edit-password-button">
-        <%= link_to edit_user_registration_path do %>
-          <button type="button" class="btn btn-block btn-default btn-lg top-access-button" disabled="disabled">パスワードを変更する</button>
+      <div>
+        <%= link_to edit_user_registration_path, style: "text-decoration: none;" do %>
+          <button type="button" class="btn btn-default btn-block btn-lg " disabled="disabled">
+            パスワードを変更する
+          </button>
         <% end %>
       </div>
     <% else %>
-      <div class="user-edit-password-button">
-        <%= link_to edit_user_registration_path do %>
-          <button type="button" class="btn btn-block btn-default btn-lg top-access-button">パスワードを変更する</button>
+      <div>
+        <%= link_to edit_user_registration_path, style: "text-decoration: none;" do %>
+          <button type="button" class="btn btn-default btn-block btn-lg">
+            パスワードを変更する
+          </button>
         <% end %>
       </div>
     <% end %>
   </div>
   <div class="row user-edit-unsubscribe">
     <%= link_to unsubscribe_path(@user) do %>
-      <button type="button" class="btn btn-block btn-default btn-lg top-access-button">
+      <button type="button" class="btn btn-block btn-default btn-lg ">
         退会する
       </button>
     <% end %>
