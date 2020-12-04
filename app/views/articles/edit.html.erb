@@ -14,12 +14,12 @@
     <div class="row edit-article-row">
       <h3 class="edit-article-subtitle">① 写真を選ぶ</h3></br>
       <% if @article.image.present? %>
-        <%= attachment_image_tag @article, :image, id: :img_preview, size: "300x300", style: "border-radius:15px" %>
+        <%= attachment_image_tag @article, :image, style: "border-radius: 15px;", id: :img_preview, size: "300x300" %>
       <% else %>
-        <%= image_tag @article, :image, size: "300x300", style: "border-radius:15px", id: :img_preview %>
+        <%= image_tag @article, :image, size: "300x300", style: "border-radius: 15px;", id: :img_preview %>
       <% end %>
       </br>
-      <%= f.attachment_field :image, size: "300x300", class: "edit-article-image", id: :article_img %>
+      <%= f.attachment_field :image, size: "300x300", class: "edit-article-image", id: :change_img %>
     </div>
     </br>
     <div class="row edit-article-row">

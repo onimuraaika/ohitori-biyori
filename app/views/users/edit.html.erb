@@ -14,9 +14,9 @@
     <div class="row user-edit-form">
       <h3 class="user-edit-form-label">プロフィール画像</h3></br>
       <% if @user.profile_image.present? %>
-        <%= attachment_image_tag @user, :profile_image, id: :img_preview, size: "250x250", class: "user-edit-form-image", style: "border-radius:15px" %>
+        <%= attachment_image_tag @user, :profile_image, id: :img_preview, size: "250x250", class: "user-edit-form-image", style: "border-radius: 15px;" %>
       <% else %>
-        <%= image_tag "noimage.jpg", size: "250x250", id: :img_preview, style: "border-radius:15px" %>
+        <%= image_tag "no_profile_image.jpg", size: "250x250", id: :img_preview, style: "border-radius: 15px;" %>
       <% end %>
       </br>
       <%= f.attachment_field :profile_image, size: "250x250", class: "user-edit-form-profile_image", id: :change_img %>
