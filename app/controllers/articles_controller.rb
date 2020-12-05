@@ -8,11 +8,11 @@ class ArticlesController < ApplicationController
     def create # 投稿処理
         @article = Article.new(article_params)
         @article.user_id = current_user.id
-        if @article.save
-           redirect_to article_path(@article) #投稿詳細画面へ
+        if  @article.save
+            redirect_to article_path(@article) #投稿詳細画面へ
         else
-           @user = current_user # ヘッダーの部分テンプレート
-           render "new"
+            @user = current_user # ヘッダーの部分テンプレート
+            render "new"
         end
     end
 
@@ -24,14 +24,16 @@ class ArticlesController < ApplicationController
         @genres = Genre.all
         # おすすめ投稿表示
         @random_article = Article.where(user_id: user_ids).order("RANDOM()").limit(3)
+        # フリーワード検索
+        @articles = Article.all.search(params[:body]).page(params[:page]).per(10).order("id DESC")
         # ジャンル検索
         if @genre = Genre.find_by(name: params[:name])
-           @articles = @genre.articles.where(user_id: user_ids).page(params[:page]).per(10).order("id DESC")
+              @articles = @genre.articles.where(user_id: user_ids).page(params[:page]).per(10).order("id DESC")
         # タグ検索表示
         elsif @tag = params[:tag_name]
               @articles = Article.where(user_id: user_ids).tagged_with("#{params[:tag_name]}").page(params[:page]).per(10).order("id DESC")
         else
-            @articles = Article.where(user_id: user_ids).page(params[:page]).per(10).order("id DESC")
+              @articles = Article.where(user_id: user_ids).page(params[:page]).per(10).order("id DESC")
         end
     end
 
@@ -46,21 +48,21 @@ class ArticlesController < ApplicationController
         @user = current_user # ヘッダーの部分テンプレート
         @article = Article.find(params[:id])
         # 他人の場合は一覧表示画面へ返す
-        if @article.user == current_user
-           render "edit"
+        if  @article.user == current_user
+            render "edit"
         else
-           redirect_to articles_path
+            redirect_to articles_path
         end
     end
 
     def update # 投稿内容更新
         @article = Article.find(params[:id])
         @article.user_id = current_user.id
-        if @article.update(article_params)
-          redirect_to article_path(@article)
+        if  @article.update(article_params)
+            redirect_to article_path(@article)
         else
-           @user = current_user
-           render "edit"
+            @user = current_user
+            render "edit"
         end
     end
 
