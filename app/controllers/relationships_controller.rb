@@ -17,4 +17,9 @@ class RelationshipsController < ApplicationController
         @users = @user.following.where(is_deleted: false).page(params[:page]).per(5)
     end
 
+    def followed
+        @user = current_user # ヘッダーの部分テンプレート
+        @users = @user.followers.where(is_deleted: false).page(params[:page]).per(5)
+    end
+
 end
