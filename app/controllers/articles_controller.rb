@@ -33,6 +33,7 @@ class ArticlesController < ApplicationController
         # フリーワード検索
         elsif params.has_key?(:search)
               @articles = Article.search(params[:search]).where(user_id: user_ids).page(params[:page]).per(10).order("id DESC")
+              @keyword = params[:search]
         else
               @articles = Article.where(user_id: user_ids).page(params[:page]).per(10).order("id DESC")
         end
