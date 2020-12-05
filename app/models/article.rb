@@ -17,10 +17,9 @@ class Article < ApplicationRecord
     def favorited_by?(user)
 	      favorites.where(user_id: user.id).exists?
   	end
-  	
-  	def self.search(search)
-        @articles= Article.where("title LIKE ?", "%#{:keyword}%")
-        @article = Article.where("body LIKE ?", "%#{:keyword}%")
+
+  	def self.search(article)
+        Article.where(["title LIKE ? OR body LIKE ?", "%#{article}%", "%#{article}%"])
     end
 
 end

@@ -24,14 +24,16 @@ class ArticlesController < ApplicationController
         @genres = Genre.all
         # おすすめ投稿表示
         @random_article = Article.where(user_id: user_ids).order("RANDOM()").limit(3)
-        # フリーワード検索
-        @articles = Article.all.search(params[:body]).page(params[:page]).per(10).order("id DESC")
         # ジャンル検索
-        if @genre = Genre.find_by(name: params[:name])
+        if    @genre = Genre.find_by(name: params[:name])
               @articles = @genre.articles.where(user_id: user_ids).page(params[:page]).per(10).order("id DESC")
         # タグ検索表示
         elsif @tag = params[:tag_name]
               @articles = Article.where(user_id: user_ids).tagged_with("#{params[:tag_name]}").page(params[:page]).per(10).order("id DESC")
+        # フリーワード検索
+        elsif params.has_key?(:search)
+              @articles = Article.search(params[:search]).where(user_id: user_ids).page(params[:page]).per(10).order("id DESC")
+              @keyword = params[:search]
         else
               @articles = Article.where(user_id: user_ids).page(params[:page]).per(10).order("id DESC")
         end
