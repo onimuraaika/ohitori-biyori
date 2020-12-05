@@ -15,7 +15,12 @@ class Article < ApplicationRecord
 
     # user_idがFavoritesテーブル内に存在するか
     def favorited_by?(user)
-	    favorites.where(user_id: user.id).exists?
-	end
+	      favorites.where(user_id: user.id).exists?
+  	end
+  	
+  	def self.search(search)
+        @articles= Article.where("title LIKE ?", "%#{:keyword}%")
+        @article = Article.where("body LIKE ?", "%#{:keyword}%")
+    end
 
 end
