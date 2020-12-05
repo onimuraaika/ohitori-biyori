@@ -53,8 +53,13 @@ class User < ApplicationRecord
     end
 
     # おひとり暮らし歴
-    def add_living_alone_month
-        living_alone_month + 1
+    def self.add_living_alone_month
+        users = all
+        users.each do |user|
+            user.living_alone_month += 1
+            user.save
+        end
+
     end
 
 end
