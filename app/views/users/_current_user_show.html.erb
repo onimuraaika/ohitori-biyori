@@ -1,5 +1,6 @@
 <!--ログインユーザー表示の部分テンプレート (user)-->
 
+<div class="row">
   <div class="col-sm-4 user-show-info-image">
     <%= attachment_image_tag user, :profile_image, size: "150x150", fallback: "no_profile_image.jpg", size: '150x150', style: "border-radius: 15px;" %>
   </div>
@@ -27,7 +28,7 @@
     <%= link_to article_favorites_path(user) do %>
       <button type="button" class="btn btn-default btn-lg user-show-info-nav-favorite">
         <i class="fa fa-heart" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
-        お気に入りの投稿
+        お気に入り
       </button>
     <% end %>
   </div>
@@ -35,7 +36,15 @@
     <%= link_to user_followings_path(user) do %>
       <button type="button" class="btn btn-default btn-lg user-show-info-nav-following">
         <i class="fa fa-user" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
-        フォローしている人
+        フォロー中
+      </button>
+    <% end %>
+  </div>
+  <div class="user-show-info-nav-button">
+    <%= link_to user_followed_path(user) do %>
+      <button type="button" class="btn btn-default btn-lg user-show-info-nav-followed">
+        <i class="fa fa-user" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
+        わたしのファン
       </button>
     <% end %>
   </div>
@@ -43,7 +52,7 @@
     <%= link_to edit_user_path(current_user) do %>
       <button type="button" class="btn btn-default btn-lg user-show-info-nav-setting">
         <i class="fa fa-edit" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
-        プロフィールの編集
+        設定
       </button>
     <% end %>
   </div>
