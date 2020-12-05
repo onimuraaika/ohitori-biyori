@@ -60,7 +60,6 @@ class User < ApplicationRecord
             user.living_alone_month += 1
             user.save
         end
-
     end
 
 end
