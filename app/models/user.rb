@@ -52,4 +52,9 @@ class User < ApplicationRecord
         super && (self.is_deleted == false)
     end
 
+    # おひとり暮らし歴
+    def add_living_alone_month
+        living_alone_month + 1
+    end
+
 end

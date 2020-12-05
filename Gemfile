@@ -80,6 +80,8 @@ gem 'rails-i18n', '~> 5.1'
 gem 'devise-i18n'
 # リーダブルコード
 gem 'rubocop-airbnb'
+# バッチ処理
+gem 'whenever', require: false
 # デバッグ
 gem 'pry-byebug'
 # 環境変数
