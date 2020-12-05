@@ -49,7 +49,6 @@ class ArticlesController < ApplicationController
     def edit # 投稿編集画面
         @user = current_user # ヘッダーの部分テンプレート
         @article = Article.find(params[:id])
-        # 他人の場合は一覧表示画面へ返す
         if  @article.user == current_user
             render "edit"
         else

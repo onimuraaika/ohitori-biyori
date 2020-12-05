@@ -7,6 +7,11 @@ class UsersController < ApplicationController
 
     def edit # 会員情報編集画面
         @user = current_user
+        if  @user == current_user
+            render "edit"
+        else
+            redirect_to articles_path
+        end
     end
 
     def update # 会員情報更新
