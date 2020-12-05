@@ -19,7 +19,7 @@ class Article < ApplicationRecord
   	end
 
   	def self.search(article)
-        Article.where("title LIKE ? and body LIKE ?", "%#{article}%", "%#{article}%")
+        Article.where(["title LIKE ? OR body LIKE ?", "%#{article}%", "%#{article}%"])
     end
 
 end
