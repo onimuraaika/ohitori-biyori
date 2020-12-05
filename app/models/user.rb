@@ -27,7 +27,7 @@ class User < ApplicationRecord
     has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
     has_many :followers, through: :passive_relationships, source: :following
 
-    validates :nickname, presence: true, length: { minimum: 2 }, uniqueness: true
+    validates :nickname, presence: true, length: { minimum: 2 }
     validates :living_alone_month, presence: true
     validates :email, presence: true
     validates :introduction, length: { maximum: 100 }
@@ -56,6 +56,7 @@ class User < ApplicationRecord
     def self.add_living_alone_month
         users = all
         users.each do |user|
+            next if user.email == 'guest@user.com'
             user.living_alone_month += 1
             user.save
         end
