@@ -22,8 +22,8 @@
     <div class="article-index-side_bar">
       <!--キーワード検索-->
       <div class="article-index-search">
-        <div class="article-index-side_bar-title">キーワード</div></br>
-        <div class="article-index-search-box">
+        <h4 class="article-index-side_bar-title">キーワード</h4></br>
+        <div class="row article-index-search-box">
           <%= form_tag(articles_path, method: :get) do %>
             <%= text_field_tag :search %>
             <%= submit_tag '　検索　' %>
