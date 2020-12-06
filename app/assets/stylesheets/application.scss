@@ -133,7 +133,6 @@ header > :first-child {
 
 .signup-form-title {
   padding-bottom: 50px;
-  text-align: center;
 }
 
 .signup-form-border {
@@ -141,7 +140,6 @@ header > :first-child {
 }
 
 .signup-form-button {
-  text-align: center;
   padding-top: 50px;
 }
 
@@ -193,7 +191,26 @@ header > :first-child {
 }
 
 //パスワード変更画面
-.signup-form-update_button {
+.change-password {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.change-password-form {
+  padding: 0 30%;
+  align-items: center;
+}
+
+.change-password-form-title {
+  padding-bottom: 50px;
+}
+
+.change-password-form-button {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.change-password-form-update_button {
   height: 80px;
   background-color: #FCF6D8!important;
 }
