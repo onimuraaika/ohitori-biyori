@@ -11,7 +11,7 @@
   <div class="unsubscribe-message">
     <p>退会すると、会員情報や</p>
     <p>みんなの投稿が閲覧できなくなります。</p>
-    <p>退会する場合は退会するをクリックしてください。</p>
+    <p>退会する場合は「はい、退会します」をクリックしてください。</p>
   </div>
 
   <div class="row unsubscribe-buttons">
@@ -19,26 +19,26 @@
       <% if current_user.nickname == 'ゲスト' %>
         <div>
           <button class="btn btn-default btn-lg unsubscribe-button-back">
-            退会しない
+            いいえ、退会しません
           </button>
         </div>
         <div>
           <button class="btn btn-default btn-lg unsubscribe-button-confirm">
-            退会する
+            はい、退会します
           </button>
         </div>
       <% else %>
         <div>
           <%= link_to user_path(current_user) do %>
             <button class="btn btn-default btn-lg unsubscribe-button-back">
-              退会しない
+              いいえ、退会しません
             </button>
           <% end %>
         </div>
         <div>
           <%= link_to users_withdraw_path(current_user.id), method: :patch, data: {confirm: "本当に退会してもよろしいですか？"} do  %>
             <button class="btn btn-default btn-lg unsubscribe-button-confirm">
-              退会する
+              はい、退会します
             </button>
           <% end %>
         </div>

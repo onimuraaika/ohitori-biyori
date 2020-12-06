@@ -1,0 +1,21 @@
+<!--おしらせ一覧表示-->
+
+<div class="container notification">
+  
+  <div class="row notification-title">
+    <hr class="border-line"/>
+    <h2 class="text-center">みんなからのお知らせ</h2>
+    <hr class="border-line notification-border"/>
+  </div>
+  
+  <div class="row">
+    <% notifications = @notifications.where.not(visitor_id: current_user.id) %>
+    <% if notifications.exists? %>
+      <%= render notifications %>
+      <%= paginate notifications %>
+    <% else %>
+      <h3 class="text-center notification-nothing">お知らせはまだ届いていません。</h3>
+    <% end %>
+  </div>
+
+</div>

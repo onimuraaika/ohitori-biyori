@@ -1,33 +1,36 @@
-<% visitor = notification.visitor %>
-<% visited = notification.visited %>
-<div class="col-md-6.mx-auto"></div>
-  <div class="form-inline"></div>
+<!--お知らせメッセージ-->
 
-      <%= link_to user_path(visitor) do %>
-        <%= image_tag avatar_url(visitor).to_s, class: "icon_mini" %>
-        <%= visitor.name %>
-        <%= 'さんが' %>
+<div class="row notification-message">
 
+  <% visitor = notification.visitor %>
+  <% visited = notification.visited %>
+
+  <div class="col-sm-4 notification-message-profile_image">
+    <%= link_to user_path(visitor) do %>
+      <%= attachment_image_tag visitor, :profile_image, size: "100x100", fallback: "no_profile_image.jpg", size: '100x100', style: "border-radius: 15px;" %>
+    <% end %>
+  </div>
+
+  <div class="col-sm-8 notification-message-details">
+    <div class="notification-messages">
+      <strong><%= visitor.nickname %>さん</strong>が
+
+      <% case notification.action %>
+      <% when 'follow' then %>
+        <%= 'あなたのファンになりました' %>
+      <% when 'favorite' then %>
+        <%= link_to 'あなたの投稿', notification.article, style: "font-weight: bold;" %>
+        <%= 'をお気に入り登録しました' %>
+      <% when 'comment' then %>
+        <% if notification.article.user_id == visited.id %>
+          <%= link_to "あなたの投稿", notification.article, style: "font-weight: bold;" %>
+          <%= 'にコメントしました' %>
         <% end %>
-        <% case notification.action %>
-        <% when 'follow' then %>
-          <%= "あなたをフォローしました" %>
-        <% when 'like' then %>
-          <%= link_to 'あなたの投稿', notification.post, style: "font-weight: bold;" %>
-          <%= "にいいねしました" %>
-        <% when 'comment' then %>
-          <% if notification.post.user_id == visited.id %>
-          <%= link_to "あなたの投稿", notification.post, style: "font-weight: bold;" %>
-        <% else %>
-            <%= link_to post_path(notification.post) do %>
-              <%= image_tag avatar_url(notification.post.user).to_s, class: "icon_mini"  %>
-              <strong><%= notification.post.user.name + 'さんの投稿' %></strong>
-            <% end %>
-            <%= "にコメントしました" %>
-            <p class="text-muted.mb-0">
-              <%= Comment.find_by(id: notification.comment_id)&.comment %></p>
-          <% end %>
-            
+      <% end %>
+    </div>
+    <div class="notification-time">
+      <%= time_ago_in_words(notification.created_at).upcase %>
+    </div>
+  </div>
 
-  <div class="small.text-muted.text-right"><%= time_ago_in_words(notification.created_at).upcase %></div>
-    
+</div>
