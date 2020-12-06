@@ -4,6 +4,7 @@ class FavoritesController < ApplicationController
         @article = Article.find(params[:article_id])
         @favorite = @article.favorites.new(user_id: current_user.id)
         @favorite.save
+        @article.create_notification_favorite(current_user)
         # redirect_to request.referer
     end
 
