@@ -59,6 +59,7 @@
       <div>
         <%= link_to edit_user_registration_path, style: "text-decoration: none;" do %>
           <button type="button" class="btn btn-default btn-block btn-lg user-edit-password-button" disabled="disabled">
+            <i class="fa fa-key" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
             パスワードを変更する
           </button>
         <% end %>
@@ -67,6 +68,7 @@
       <div>
         <%= link_to edit_user_registration_path, style: "text-decoration: none;" do %>
           <button type="button" class="btn btn-default btn-block btn-lg user-edit-password-button">
+            <i class="fa fa-key" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
             パスワードを変更する
           </button>
         <% end %>
@@ -76,6 +78,7 @@
   <div class="row user-edit-unsubscribe">
     <%= link_to unsubscribe_path(@user), style: "text-decoration: none;" do %>
       <button type="button" class="btn btn-block btn-default btn-lg user-edit-unsubscribe-button">
+        <i class="fa fa-exclamation-circle" aria-hidden="true" style="color: #FFCCCC; font-size: 25px;"></i>
         退会する
       </button>
     <% end %>

@@ -49,7 +49,7 @@
 .user-show-info-nav-setting
 {
   height: 70px;
-  width: 200px;
+  width: 170px;
 }
 
 .btn-user-show-info-nav-favorite {
@@ -134,16 +134,17 @@
   margin-top: 50px;
 }
 
-.user-edit-update_button,
-.user-edit-password-button
-{
+.user-edit-update_button {
   height: 80px;
   background-color: #FCF6D8!important;
 }
 
+.user-edit-password-button {
+  height: 80px;
+}
+
 .user-edit-unsubscribe-button {
   height: 80px;
-  background-color: #FBD9C4!important;
 }
 
 //退会確認画面
@@ -173,12 +174,13 @@
 .unsubscribe-button {
   display: flex;
   justify-content: center;
+  padding-top: 30px;
 }
 
 .unsubscribe-button-back {
   margin-right: 20px;
   height: 70px;
-  width: 230px;
+  width: 250px;
   height: 80px;
   background-color: #FCF6D8!important;
 }
@@ -186,7 +188,7 @@
 .unsubscribe-button-confirm {
   margin-left: 20px;
   height: 70px;
-  width: 230px;
+  width: 250px;
   height: 80px;
   background-color: #FBD9C4!important;
 }

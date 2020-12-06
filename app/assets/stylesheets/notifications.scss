@@ -1,3 +1,45 @@
 // Place all the styles related to the notifications controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.notification {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.notification-border {
+  padding-bottom: 100px;
+}
+
+.notification-nothing {
+  padding-bottom: 200px;
+}
+
+//お知らせメッセージの部分テンプレート
+.notification-message {
+  margin: 20px;
+}
+
+.notification-message-profile_image {
+  text-align: right;
+}
+
+.notification-message-details {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.notification-messages {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.notification-time {
+  font-size: 18px;
+}

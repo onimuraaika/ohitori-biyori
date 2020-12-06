@@ -1,28 +1,36 @@
-<div class="container">
-  <div class="row">
+<!--お知らせメッセージ-->
 
-    <% visitor = notification.visitor %>
-    <% visited = notification.visited %>
+<div class="row notification-message">
 
+  <% visitor = notification.visitor %>
+  <% visited = notification.visited %>
+
+  <div class="col-sm-4 notification-message-profile_image">
     <%= link_to user_path(visitor) do %>
-    <%= attachment_image_tag visitor, :profile_image, size: "100x100", fallback: "no_profile_image.jpg", size: '100x100', style: "border-radius: 15px;" %>
+      <%= attachment_image_tag visitor, :profile_image, size: "100x100", fallback: "no_profile_image.jpg", size: '100x100', style: "border-radius: 15px;" %>
     <% end %>
-      <strong><%= visitor.nickname %>さんが</strong>
-
-    <% case notification.action %>
-    <% when 'follow' then %>
-      <%= "あなたをフォローしました" %>
-    <% when 'favorite' then %>
-      <%= link_to 'あなたの投稿', notification.article, style: "font-weight: bold;" %>
-      <%= "をお気に入り登録しました" %>
-    <% when 'comment' then %>
-      <% if notification.article.user_id == visited.id %>
-        <%= link_to "あなたの投稿", notification.article, style: "font-weight: bold;" %>
-        <%= "にコメントしました" %>
-      <% end %>
-    <% end %>
-
-    <p><%= time_ago_in_words(notification.created_at).upcase %> </p>
-
   </div>
+
+  <div class="col-sm-8 notification-message-details">
+    <div class="notification-messages">
+      <strong><%= visitor.nickname %>さん</strong>が
+
+      <% case notification.action %>
+      <% when 'follow' then %>
+        <%= 'あなたのファンになりました' %>
+      <% when 'favorite' then %>
+        <%= link_to 'あなたの投稿', notification.article, style: "font-weight: bold;" %>
+        <%= 'をお気に入り登録しました' %>
+      <% when 'comment' then %>
+        <% if notification.article.user_id == visited.id %>
+          <%= link_to "あなたの投稿", notification.article, style: "font-weight: bold;" %>
+          <%= 'にコメントしました' %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="notification-time">
+      <%= time_ago_in_words(notification.created_at).upcase %>
+    </div>
+  </div>
+
 </div>
