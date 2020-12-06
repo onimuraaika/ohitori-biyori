@@ -10,7 +10,7 @@
 
 //トップページ
 .top-background {
-  background-image: image-url("top.jpg");
+  background-image: image-url("top_background_image.jpg");
   background-size: cover;
   background-position: bottom;
   background-color: rgba( 255, 255, 255, 0.4);
@@ -25,8 +25,8 @@
 .top {
   padding-top: 100px;
   padding-bottom: 100px;
-  text-align: center;
   align-items: center;
+  text-align: center;
 }
 
 //(ここから　サイトの説明部分テンプレート)
@@ -53,14 +53,14 @@
 
 //(ここから　ログイン・新規登録ボタンの部分テンプレート)
 .access-buttons {
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
 }
 
 .access-button {
-  padding: 20px auto;
   margin: 10px;
+  padding: 20px auto;
 }
 
 .access-button-top,
@@ -69,9 +69,9 @@
 .access-button-signin,
 .access-button-guest
 {
+  padding: 0 auto;
   height: 100px;
   width: 240px;
-  padding: 0 auto;
 }
 
 .about-signin_signup_button {
@@ -90,16 +90,16 @@
 
 //ここは写真を入れたら削除する
 .top-how_to_enjoy-image {
-  padding-top: 10px;
-  width: 400px;
-  height: 250px;
-  background-color: #CCC;
   margin: 0 auto;
+  padding-top: 10px;
+  height: 250px;
+  width: 400px;
+  background-color: #CCC;
 }
 
 //Aboutページ
 .about-background {
-  background-image: image-url("about-background-image.jpg");
+  background-image: image-url("about_background_image.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: bottom;
@@ -108,8 +108,8 @@
 .about {
   padding-top: 50px;
   padding-bottom: 100px;
-  text-align: center;
   align-items: center;
+  text-align: center;
 }
 
 .about-site {
@@ -130,7 +130,7 @@
 }
 
 .about-how_to_enjoy-description {
-  padding-top: 20px;
   margin-bottom: 20px;
+  padding-top: 20px;
   font-size: 16px;
 }

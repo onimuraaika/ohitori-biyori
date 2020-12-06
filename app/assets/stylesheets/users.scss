@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -19,17 +19,17 @@
 }
 
 .user-show-info-name {
-  font-size: 20px;
   padding-top: 20px;
   padding-left: 20px;
+  font-size: 20px;
   text-align: left;
 }
 
 .user-show-info-follower {
-  font-size: 20px;
-  text-align: left;
   padding-left: 20px;
   padding-top: 20px;
+  font-size: 20px;
+  text-align: left;
 }
 
 .user-show-info-nav {
@@ -50,11 +50,6 @@
 {
   height: 70px;
   width: 170px;
-}
-
-.btn-user-show-info-nav-favorite {
-  color: #fff;
-  background-color: #eb6100;
 }
 
 .user-show-info-details {
@@ -130,8 +125,8 @@
 }
 
 .user-edit-password {
-  text-align: center;
   margin-top: 50px;
+  text-align: center;
 }
 
 .user-edit-update_button {
@@ -149,9 +144,9 @@
 
 //退会確認画面
 .user-edit-unsubscribe {
-  text-align: center;
   margin-top: 30px;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .unsubscribe {
@@ -161,34 +156,32 @@
 }
 
 .unsubscribe-title {
-  text-align: center;
-  padding: 0 25% 50px 25%;
   margin: 0 auto;
+  padding: 0 25% 50px 25%;
+  text-align: center;
 }
 
 .unsubscribe-message {
-  font-size: 20px;
   padding-bottom: 50px;
+  font-size: 20px;
 }
 
 .unsubscribe-button {
+  padding-top: 30px;
   display: flex;
   justify-content: center;
-  padding-top: 30px;
 }
 
 .unsubscribe-button-back {
   margin-right: 20px;
-  height: 70px;
-  width: 250px;
   height: 80px;
+  width: 250px;
   background-color: #FCF6D8!important;
 }
 
 .unsubscribe-button-confirm {
   margin-left: 20px;
-  height: 70px;
-  width: 250px;
   height: 80px;
+  width: 250px;
   background-color: #FBD9C4!important;
 }

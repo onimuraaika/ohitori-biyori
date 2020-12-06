@@ -43,9 +43,9 @@
 }
 
 .article-index-title {
-  text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;
+  text-align: center;
 }
 
 .article-index-body {
@@ -58,8 +58,8 @@
 }
 
 .article-index-side_bar-title {
-  text-align: center;
   padding: 10px 30px;
+  text-align: center;
   border-radius: 100vh;
   background-color: #E7E6E3;
 }
@@ -123,10 +123,10 @@
 }
 
 .article-index-article-title_body {
-  font-size: 20px;
   padding-top: 20px;
   padding-left: 20px;
   text-align: left;
+  font-size: 20px;
 }
 
 .article-index-article-body,
@@ -142,15 +142,15 @@
 }
 
 .article-show-article {
+  margin-bottom: 30px;
   padding: 100px 20% 0;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
 }
 
 .article-show-article-title_tag_body {
-  font-size: 20px;
   padding: 20px;
+  font-size: 20px;
 }
 
 .article-show-article-title {
@@ -179,9 +179,9 @@
 }
 
 .article-show-comment_form {
+  margin: 0 auto;
   padding-top: 150px;
   padding-bottom: 50px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -190,8 +190,8 @@
 }
 
 .article-show-comment_form-submit_button {
-  text-align: left;
   margin: 10px 0 10px 20px;
+  text-align: left;
 }
 
 //(ここから　コメント表示の部分テンプレート)
