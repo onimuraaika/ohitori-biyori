@@ -2,7 +2,7 @@
 
 <div class="col-xs-4 user-show-info-image">
   <%= link_to user_path(user) do %>
-    <%= attachment_image_tag user, :profile_image, size: "150x150", format: 'jpeg', fallback: "no_profile_image.jpg", size: '150x150' %>
+    <%= attachment_image_tag user, :profile_image, size: "150x150", fallback: "no_profile_image.jpg", style: "border-radius: 15px;" %>
   <% end %>
 </div>
 <div class="col-xs-5 user-show-info-details">
