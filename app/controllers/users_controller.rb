@@ -6,7 +6,7 @@ class UsersController < ApplicationController
         
     end
 
-    def edit # 会員情報編集画面
+    def edit # 会員情報編集
         @user = current_user
         if  @user == current_user
             render "edit"
@@ -17,15 +17,15 @@ class UsersController < ApplicationController
 
     def update # 会員情報更新
         @user = current_user
-        if @user.update(user_params)
-           redirect_to user_path(current_user.id)
+        if  @user.update(user_params)
+            redirect_to user_path(current_user.id)
         else
             render 'edit'
         end
     end
 
-    def unsubscribe # 退会確認画面
-        @user = current_user # ヘッダーの部分テンプレート
+    def unsubscribe # 退会確認
+        @user = current_user # ヘッダー
     end
 
     def withdraw # 退会処理
