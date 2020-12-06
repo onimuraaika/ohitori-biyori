@@ -1,15 +1,15 @@
 <!--おしらせ一覧表示-->
 
 <div class="container notification">
-  
+
   <div class="row notification-title">
     <hr class="border-line"/>
     <h2 class="text-center">みんなからのお知らせ</h2>
     <hr class="border-line notification-border"/>
   </div>
-  
+
   <div class="row">
-    <% notifications = @notifications.where.not(visitor_id: current_user.id) %>
+    <% notifications = @notifications %>
     <% if notifications.exists? %>
       <%= render notifications %>
       <%= paginate notifications %>
