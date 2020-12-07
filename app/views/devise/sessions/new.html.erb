@@ -17,7 +17,7 @@
 
     <%= form_with model: @user, url: user_session_path, local: true do |f| %>
 
-      <!--エラーメッセージ -->
+      <!--エラーメッセージ-->
       <% flash.each do |name, message| %>
         <%= content_tag :div, message, :id => "flash_#{name}", :class => "alert alert-warning error-message" if message.is_a?(String) %>
       <% end %>
@@ -39,7 +39,7 @@
                 登録がお済みでない方(新規登録)はこちら
               </button>
             <% end %>
-           </div>
+          </div>
         </div>
       </form>
 

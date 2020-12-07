@@ -1,4 +1,4 @@
-<!--フォローユーザー一覧表示画面-->
+<!--フォローユーザー一覧-->
 
 <div class="container following-index">
 
@@ -13,19 +13,18 @@
     <hr class="border-line"/>
   </div>
 
-  <!--フォローユーザー一覧表示-->
+  <!--フォローユーザー一覧-->
   <% @users.each do |user| %>
     <div class="row following-index-user">
       <div class="col-sm-4 following-index-user-image">
         <%= link_to user_path(user) do %>
-          <%= attachment_image_tag user, :profile_image, size: "150x150", fallback: "no_profile_image.jpg", size: '150x150', style: "border-radius:15px" %>
+          <%= attachment_image_tag user, :profile_image, size: "150x150", style: "border-radius:15px", fallback: "no_profile_image.jpg" %>
         <% end %>
       </div>
       <div class="col-sm-5 following-index-user-details">
         <div class="following-index-user-nickname">
           <%= user.nickname %> <span class="follow-index-user-nickname-san">さん</span>
-        </div>
-        </br>
+        </div></br>
         <div class="following-index-user-living_alone_month">
           ひとり暮らし歴：<%= user.living_alone_month %>ヶ月目
         </div>

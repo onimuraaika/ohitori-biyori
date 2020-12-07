@@ -1,14 +1,14 @@
-<!--ログインユーザー表示の部分テンプレート (user)-->
+<!--ログインユーザー表示(user)-->
 
 <div class="row">
+  
   <div class="col-sm-4 user-show-info-image">
-    <%= attachment_image_tag user, :profile_image, size: "150x150", fallback: "no_profile_image.jpg", size: '150x150', style: "border-radius: 15px;" %>
+    <%= attachment_image_tag user, :profile_image, size: '150x150', style: "border-radius: 15px;", fallback: "no_profile_image.jpg" %>
   </div>
   <div class="col-sm-8 user-show-info-name_follwer">
     <div class="user-show-info-name">
       <%= current_user.nickname %>
-    </div>
-    </br>
+    </div></br>
     <div class="user-show-info-follower">
       あなたのファン：<%= current_user.followers.count %>人
     </div>
@@ -56,4 +56,5 @@
       </button>
     <% end %>
   </div>
+  
 </div>

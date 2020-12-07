@@ -65,7 +65,6 @@ class ArticlesController < ApplicationController
         @user = @article.user # ユーザー表示
         @favorite = Favorite.find_by(user_id: current_user, article_id: @article)
         @comment = ArticleComment.new
-        @comments = @article.article_comments.order(created_at: :desc)
     end
 
     def edit # 投稿編集

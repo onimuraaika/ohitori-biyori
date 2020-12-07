@@ -1,4 +1,4 @@
-<!--お気に入りボタンの部分テンプレート article: @article favorite: @favorite-->
+<!--お気に入りボタン(article/favorite)-->
 
 <% if article.favorited_by?(current_user) %>
   <%= link_to article_favorite_path(article, favorite), method: :delete, remote: true do %>
