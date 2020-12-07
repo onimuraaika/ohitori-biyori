@@ -1,4 +1,4 @@
-<!--会員情報編集画面-->
+<!--会員情報編集-->
 
 <div class="container user-edit">
 
@@ -21,6 +21,7 @@
       </br>
       <%= f.attachment_field :profile_image, size: "250x250", class: "user-edit-form-profile_image", id: :change_img %>
     </div>
+    
     <div class="row user-edit-form">
       <div class="form-group">
         <h3 class="user-edit-form-label">ニックネーム</h3>
@@ -28,20 +29,23 @@
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #FAE8B1;", class="down-arrow"></i>
     </div>
+    
     <div class="row user-edit-form">
       <div class="form-group">
         <h3 class="user-edit-form-label">自己紹介文</h3>
-        <%= f.text_area :introduction, rows: "6", autofocus: true, autocomplete: "introduction", placeholder:"例：東京でひとり暮らしを始めたばかりの社会人です。(100文字まで)", class: "form-control input-lg" %>
+        <%= f.text_area :introduction, rows: "6", autofocus: true, autocomplete: "introduction", class: "form-control input-lg", placeholder:"例：東京でひとり暮らしを始めたばかりの社会人です。(100文字まで)" %>
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F6D263;", class="down-arrow"></i>
     </div>
+    
     <div class="row user-edit-form">
       <div class="form-group">
         <h3 class="user-edit-form-label">おひとり暮らし歴○○ヶ月目</h3>
-        <%= f.text_field :living_alone_month, autofocus: true, autocomplete: "living_alone_month", placeholder:"半角数字", class: "form-control input-lg" %>
+        <%= f.text_field :living_alone_month, autofocus: true, autocomplete: "living_alone_month", class: "form-control input-lg", placeholder:"半角数字" %>
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #E8B10C;", class="down-arrow"></i>
     </div>
+    
     <div class="row user-edit-form user-edit-form-button">
       <% if current_user.nickname == 'ゲスト' %>
         <%= f.submit "更新する", class: "btn btn-block btn-default btn-lg disabled user-edit-update_button" %>

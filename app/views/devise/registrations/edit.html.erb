@@ -1,4 +1,4 @@
-<!--パスワード変更画面-->
+<!--パスワード変更-->
 
 <div class="container change-password">
   <div class="row change-password-form">
@@ -17,15 +17,15 @@
       <form class="form-horizontal">
         <div class="form-group">
           <label class="control-label signup-label"><%= f.label "新しいパスワード(必須)" %></label></br>
-          <%= f.password_field :password, autocomplete: "new-password", placeholder:"半角英数字6文字以上", class: "form-control input-lg" %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control input-lg", placeholder:"半角英数字6文字以上" %>
         </div>
         <div class="form-group">
           <label class="control-label login-label"><%= f.label "新しいパスワード確認(必須)" %></label></br>
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"半角英数字6文字以上", class: "form-control input-lg" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control input-lg", placeholder:"半角英数字6文字以上" %>
         </div>
         <div class="form-group">
           <label class="control-label login-label"><%= f.label "現在のパスワード(必須)" %></label></br>
-          <%= f.password_field :current_password, autocomplete: "current-password", placeholder:"半角英数字6文字以上", class: "form-control input-lg" %>
+          <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control input-lg", placeholder:"半角英数字6文字以上" %>
         </div>
         <div class="form-group">
           <div class="actions change-password-form-button">
@@ -33,6 +33,7 @@
            </div>
         </div>
       </form>
+      
     <% end %>
 
   </div>

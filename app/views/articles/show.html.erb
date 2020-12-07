@@ -1,4 +1,4 @@
-<!--投稿詳細画面-->
+<!--投稿詳細-->
 
 <div class="container article-show">
 
@@ -33,29 +33,9 @@
     </div>
   </div>
 
-  <!--ボタン-->
+  <!--自分の投稿の場合のボタン-->
   <% if user_signed_in? && current_user.id == @article.user_id %>
     <!--ログインしている人の投稿の場合-->
-    <div class="row article-show-button">
-      <%= link_to :back do %>
-          <button type="button" class="btn btn-default btn-lg article-show-button-return">
-            <i class="fa fa-arrow-left" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
-            戻る</button>
-        <% end %>
-      <%= link_to edit_article_path(@article.id) do %>
-        <button type="button" class="btn btn-default btn-lg article-show-button-edit">
-          <i class="fa fa-edit" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
-          編集する
-        </button>
-      <% end %>
-      <%= link_to article_path(@article), method: :delete, data: {confirm: "本当に削除しますか？"} do %>
-        <button type="button" class="btn btn-default btn-lg article-show-button-delete">
-          <i class="fa fa-trash" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
-          削除する</button>
-      <% end %>
-    </div>
-  <% else %>
-    <!--ログインしている人以外の投稿の場合-->
     <div class="row article-show-button">
       <%= link_to :back do %>
         <button type="button" class="btn btn-default btn-lg article-show-button-return">
@@ -63,7 +43,28 @@
           戻る
         </button>
       <% end %>
-      <!--お気に入りボタン-->
+      <%= link_to edit_article_path(@article.id) do %>
+        <button type="button" class="btn btn-default btn-lg article-show-button-edit">
+          <i class="fa fa-edit" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
+          編集する
+        </button>
+      <% end %>
+      <%= link_to article_path(@article), method: :delete, data: { confirm: "本当に削除しますか？" } do %>
+        <button type="button" class="btn btn-default btn-lg article-show-button-delete">
+          <i class="fa fa-trash" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
+          削除する
+        </button>
+      <% end %>
+    </div>
+  <% else %>
+    <!--他人の投稿の場合のボタン-->
+    <div class="row article-show-button">
+      <%= link_to :back do %>
+        <button type="button" class="btn btn-default btn-lg article-show-button-return">
+          <i class="fa fa-arrow-left" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
+          戻る
+        </button>
+      <% end %>
       <div id="favorite_<%= @article.id %>">
         <%= render 'favorites/favorite_button', article: @article, favorite: @favorite %>
       </div>
@@ -74,7 +75,7 @@
   <div class="row article-show-comment_form">
     <%= form_with model:[@article, @comment] do |f| %>
       <div class="col-xs-8 article-show-comment_form-text_area">
-        <%= f.text_area :comment, class: "textbox", rows: "3", cols: "70", placeholder: "コメントを送りましょう！(50文字まで)" %>
+        <%= f.text_area :comment, rows: "3", cols: "70", placeholder: "コメントを送りましょう！(50文字まで)" %>
       </div>
       <div class="col-xs-3 article-show-comment_form-submit_button">
         <%= f.submit "　送信　", class: "form_submit, btn btn-lg btn-default" %>
@@ -84,7 +85,7 @@
 
   <!--コメント表示-->
   <div id="comment-index">
-    <%= render 'article_comments/comment_index', comments: @comments %>
+    <%= render 'article_comments/comment_index', article: @article %>
   </div>
 
 </div>

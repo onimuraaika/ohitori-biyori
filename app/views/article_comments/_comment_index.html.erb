@@ -1,14 +1,14 @@
-<!--コメント表示の部分テンプレート(article)-->
+<!--コメント表示(article)-->
 
-<% comments.each do |article_comment| %>
+<% article.article_comments.each do |article_comment| %>
   <% unless article_comment.user.is_deleted %>
     <div class="row article-show-comment">
-      <div class="col-sm-4 article-show-comment-image">
+      <div class="col-xs-4 article-show-comment-image">
         <%= link_to user_path(article_comment.user) do %>
           <%= attachment_image_tag article_comment.user, :profile_image, size: "120x120", fallback: "no_profile_image.jpg", size: "120x120" %>
         <% end %>
       </div>
-      <div class="col-sm-4 article-show-comment-info">
+      <div class="col-xs-4 article-show-comment-info">
         <div class="article-show-comment-nickname">
           <%= article_comment.user.nickname %>
         </div>
@@ -17,9 +17,9 @@
           <%= simple_format(article_comment.comment) %>
         </div>
       </div>
-      <div class="col-sm-4 article-show-comment-destroy_button">
+      <div class="col-xs-4 article-show-comment-destroy">
         <% if current_user == article_comment.user %>
-          <%= link_to article_article_comment_path(article_comment.article_id, article_comment.id), class: 'article-show-comment-button', method: :delete, remote: true do %>
+          <%= link_to article_article_comment_path(article_comment.article_id, article_comment.id), method: :delete, remote: true do %>
             <i class="fa fa-trash-o fa-2x" style="color: #BDB29D;" aria-hidden="true"></i>
           <% end %>
         <% end %>

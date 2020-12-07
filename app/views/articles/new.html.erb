@@ -16,47 +16,47 @@
     <div class="row new-article-row">
       <h3 class="new-article-subtitle">写真を選ぶ</h3></br>
       <% if @article.image.present? %>
-        <%= attachment_image_tag @article.image, id: :img_preview, size: "300x300", style: "border-radius:15px"  %>
+        <%= attachment_image_tag @article.image, size: "300x300", id: :img_preview, style: "border-radius: 15px"  %>
       <% else %>
-        <%= image_tag "no_article_image.jpg", size: "300x300", id: :img_preview, style: "border-radius:15px" %>
+        <%= image_tag "no_article_image.jpg", size: "300x300", id: :img_preview, style: "border-radius: 15px" %>
       <% end %>
       </br>
       <%= f.attachment_field :image, size: "300x300", class: "new-article-image", id: :change_img %>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #FAE8B1;", class="down-arrow"></i>
-    </div>
-    </br>
+    </div></br>
+
     <div class="row new-article-row">
       <h3 class="new-article-subtitle">タイトルをつける</h3>
       <div class="form-group">
         <%= f.text_field :title, class:"form-control input-lg", placeholder:"例：わたしの休日のすごしかた(20文字)" %>
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F8DD8A;", class="down-arrow"></i>
-    </div>
-    </br>
+    </div></br>
+
     <div class="row new-article-row">
       <h3 class="new-article-subtitle">ジャンルを選ぶ</h3>
       <div class="form-group input-lg">
         <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: "　ジャンルを選択してください　"  %>
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F6D263;", class="down-arrow"></i>
-    </div>
-    </br>
+    </div></br>
+
     <div class="row new-article-row">
       <h3 class="new-article-subtitle">タグをつける</h3>
       <div class="form-group">
         <%= f.text_field :tag_list, value: @article.tag_list.join(','), class:"form-control input-lg", placeholder:"例：休日,お散歩,公園" %>
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F4C63D;", class="down-arrow"></i>
-    </div>
-    </br>
+    </div></br>
+
     <div class="row new-article-row">
       <h3 class="new-article-subtitle">伝えたいこと</h3>
       <div class="form-group">
-        <%= f.text_area :body, class:"form-control", rows: "10", cols: "50", placeholder:"例：○○公園の中にある○○カフェでゆっくりするのが日課です。" %>
+        <%= f.text_area :body, rows: "10", cols: "50", class:"form-control", placeholder:"例：○○公園の中にある○○カフェでゆっくりするのが日課です。" %>
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #E8B10C;", class="down-arrow"></i>
-    </div>
-    </br>
+    </div></br>
+
     <div class="actions row new-article-row">
       <%= f.submit "投稿する", class:"btn btn-lg btn-default btn-block new-article-button" %>
     </div>

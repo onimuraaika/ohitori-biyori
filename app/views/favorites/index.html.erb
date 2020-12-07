@@ -1,8 +1,8 @@
-<!--お気に入り投稿一覧表示画面-->
+<!--お気に入り投稿一覧-->
 
 <div class="container favorite-article">
 
-  <!--ログインユーザーの部分テンプレート-->
+  <!--ログインユーザー情報-->
   <div class="row">
     <%= render 'users/current_user_show', user: @user %>
   </div>
@@ -13,7 +13,7 @@
     <hr class="border-line"/>
   </div>
 
-  <!--お気に入り投稿一覧表示-->
+  <!--お気に入り投稿一覧-->
   <div class="favorite-article-index">
     <%= render 'articles/article_index', articles: @articles %>
   </div>

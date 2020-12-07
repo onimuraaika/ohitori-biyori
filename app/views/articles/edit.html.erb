@@ -1,4 +1,4 @@
-<!--投稿編集画面-->
+<!--投稿編集-->
 
 <div class="container edit-article">
 
@@ -9,7 +9,9 @@
   <%= form_with model:@article, local:true do |f| %>
 
     <!--エラーメッセージ-->
-    <%= render 'layouts/error_message', model: @article %>
+    <div class="row edit-article-row">
+      <%= render 'layouts/error_message', model: @article %>
+    </div>
 
     <div class="row edit-article-row">
       <h3 class="edit-article-subtitle">写真を選ぶ</h3></br>
@@ -21,39 +23,39 @@
       </br>
       <%= f.attachment_field :image, size: "300x300", class: "edit-article-image", id: :change_img %>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #FAE8B1;", class="down-arrow"></i>
-    </div>
-    </br>
+    </div></br>
+    
     <div class="row edit-article-row">
       <h3 class="edit-article-subtitle">タイトルをつける</h3>
       <div class="form-group">
         <%= f.text_field :title, class:"form-control input-lg" %>
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F8DD8A;", class="down-arrow"></i>
-    </div>
-    </br>
+    </div></br>
+    
     <div class="row edit-article-row">
       <h3 class="edit-article-subtitle">ジャンルを選ぶ</h3>
       <div class="form-group input-lg">
         <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: "　ジャンルを選択してください　" %>
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F6D263;", class="down-arrow"></i>
-    </div>
-    </br>
+    </div></br>
+    
     <div class="row new-article-row">
       <h3 class="new-article-subtitle">タグをつける</h3>
       <div class="form-group">
         <%= f.text_field :tag_list, value: @article.tag_list.join(','), class:"form-control input-lg", placeholder:"例：cafe、休日、お散歩" %>
       </div>
-        <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F4C63D;", class="down-arrow"></i>
-    </div>
+      <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F4C63D;", class="down-arrow"></i>
+    </div></br>
+    
     <div class="row edit-article-row">
       <h3 class="edit-article-subtitle">伝えたいこと</h3>
       <div class="form-group">
         <%= f.text_area :body, class:"form-control", rows: "10", cols: "50" %>
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #E8B10C;", class="down-arrow"></i>
-    </div>
-    </br>
+    </div></br>
     <div class="actions row edit-article-row">
       <%= f.submit "更新する", class:"btn btn-lg btn-block btn-default edit-article-button" %>
     </div>
