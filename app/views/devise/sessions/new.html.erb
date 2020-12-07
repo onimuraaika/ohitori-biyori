@@ -22,7 +22,7 @@
         <%= content_tag :div, message, :id => "flash_#{name}", :class => "alert alert-warning error-message" if message.is_a?(String) %>
       <% end %>
 
-      <form class="form-horizontal">
+      <div class="form-horizontal">
         <div class="form-group">
           <label class="control-label login-label"><%= f.label "ニックネーム(必須)" %></label></br>
           <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "form-control input-lg" %>
@@ -41,7 +41,7 @@
             <% end %>
           </div>
         </div>
-      </form>
+      </div>
 
     <% end %>
 

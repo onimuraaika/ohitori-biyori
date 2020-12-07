@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :request do
+RSpec.describe "Users", type: :system do
   let!(:user) { create(:user) }
-  let(:sign_in) do
+  let!(:sign_in) do
     visit new_user_session_path
     fill_in 'user[nickname]', with: user.nickname
     fill_in 'user[password]', with: user.password
@@ -12,8 +12,7 @@ RSpec.describe "Users", type: :request do
   describe '/sign_in' do
     context 'ログインに成功' do
 
-      it '「successfully」という文言のメッセージが表示され' do
-        sign_in
+      it '投稿一覧画面に遷移する' do
         expect(current_path).to eq articles_path
       end
     end
@@ -24,14 +23,11 @@ RSpec.describe "Users", type: :request do
     end
   end
 
-  xdescribe 'ユーザー詳細(マイページ)画面' do
-    context "ユーザー詳細(マイページ)画面が正しく表示される" do
-      before do
-
-      end
+  describe 'ユーザー詳細(マイページ)画面' do
+    context "ログイン済み" do
       it 'リクエストは200 OKとなる' do
-        get root_path
-        expect(response.status).to eq 200
+        visit user_path(user)
+        expect(current_path).to eq user_path(user)
       end
     end
   end
