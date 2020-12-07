@@ -11,14 +11,6 @@
   <div class="row">
     <% notifications = @notifications %>
     <% if notifications.exists? %>
-      <div class="notification-delete_button text-center">
-        <%= link_to notification_path(@notifications), method: :delete do %>
-          <button type="button" class="btn btn-default btn-lg user-show-info-nav-favorite">
-            <i class="fa fa-trash-o fa-2x" style="color: #BDB29D; font-size: 25px;" aria-hidden="true"></i>
-            お知らせ削除
-          </button>
-        <% end %>
-      </div>
       <%= render notifications %>
     <% else %>
       <h3 class="text-center notification-nothing">お知らせはまだ届いていません。</h3>
