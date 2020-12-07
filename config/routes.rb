@@ -27,6 +27,6 @@ Rails.application.routes.draw do
         resources :article_comments, only: [:create, :destroy]
     end
     
-    resources :notifications, only: [:index]
+    resources :notifications, only: [:index, :destroy]
 
 end
