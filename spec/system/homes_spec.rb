@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Homes", type: :request do
   describe 'トップページ' do
-    context "トップページが正しく表示される" do
+    context 'トップページが正しく表示される' do
       before do
         get root_path
       end
@@ -11,8 +11,9 @@ RSpec.describe "Homes", type: :request do
       end
     end
   end
+  
   describe 'Aboutページ' do
-    context "Aboutページが正しく表示される" do
+    context 'Aboutページが正しく表示される' do
       before do
         get about_path
       end
