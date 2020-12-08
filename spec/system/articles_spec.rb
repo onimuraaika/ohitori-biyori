@@ -28,7 +28,7 @@ RSpec.describe "Articles", type: :system do
     let(:boby) { article.body }
     
     before do
-      attach_file "article[image]", "#{Rails.root}/spec/files/attachment.jpg"
+      attach_file 'article[image]', with: image
       fill_in 'article[title]', with: title
       fill_in 'article[genre]', with: genre
       fill_in 'article[body]', with: body
