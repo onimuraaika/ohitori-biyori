@@ -14,7 +14,7 @@
       <!--エラーメッセージ-->
       <%= render 'layouts/error_message', model: @user %>
 
-      <form class="form-horizontal">
+      <div class="form-horizontal">
         <div class="form-group">
           <label class="control-label signup-label"><%= f.label "新しいパスワード(必須)" %></label></br>
           <%= f.password_field :password, autocomplete: "new-password", class: "form-control input-lg", placeholder:"半角英数字6文字以上" %>
@@ -32,8 +32,8 @@
             <%= f.submit "パスワードを変更する", class: "btn btn-default btn-block btn-lg change-password-form-update_button" %>
            </div>
         </div>
-      </form>
-      
+      </div>
+
     <% end %>
 
   </div>

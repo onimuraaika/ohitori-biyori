@@ -20,7 +20,7 @@
       <!--エラーメッセージ-->
       <%= render 'layouts/error_message', model: @user %>
 
-      <form class="form-horizontal">
+      <div class="form-horizontal">
         <div class="form-group">
           <label class="control-label signup-label"><%= f.label "ニックネーム(必須)" %></label></br>
           <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "form-control input-lg", placeholder:"2〜20文字" %>
@@ -46,13 +46,13 @@
             <%= f.submit "新規会員登録する", class: "btn btn-block btn-default btn-lg signup-form-signup_button" %></br>
             <%= link_to user_session_path, style: "text-decoration: none;" do %>
               <button type="button" class="btn btn-block btn-default btn-lg signin-page-button">
-                すでに会員の方(ログイン)はこちら
+                ログインはこちら
               </button>
             <% end %>
            </div>
         </div>
-      </form>
-      
+      </div>
+
     <% end %>
 
   </div>
