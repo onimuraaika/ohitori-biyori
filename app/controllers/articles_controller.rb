@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
                                .pluck(:article_id))
         # おすすめ投稿
         @random_article = Article.where(user_id: user_ids)
-                                 .order("RANDOM()")
+                                 .order(Rails.env.production? ? "RAND()" : "RANDOM()")
                                  .limit(3)
         # ジャンル検索
         if    @genre = Genre.find_by(name: params[:name])
