@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Users", type: :system do
 
   describe '新規登録機能のテスト' do
-    let!(:user) { create(:user) }
+    let(:user) { build(:user) }
 
     before do
       visit new_user_registration_path
@@ -11,7 +11,7 @@ RSpec.describe "Users", type: :system do
       fill_in 'user[email]', with: user.email
       fill_in 'user[living_alone_month]', with: user.living_alone_month
       fill_in 'user[password]', with: user.password
-      fill_in 'user[password_confirmation]', with: user.password_confirmation
+      fill_in 'user[password_confirmation]', with: user.password
       click_button '新規会員登録する'
     end
 
@@ -21,10 +21,10 @@ RSpec.describe "Users", type: :system do
       end
     end
     context '新規会員登録に失敗する' do
-      let(:nickname) { nil }
+      let(:user) { build(:user, nickname: nil) }
 
       it '遷移されないこと' do
-        expect(current_path).to eq new_user_registration_path
+        expect(current_path).not_to eq articles_path
       end
     end
   end
