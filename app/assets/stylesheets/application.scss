@@ -251,3 +251,37 @@ header > :first-child {
   border: 2px solid #FFD865;
   color: #262626;
 }
+
+@media screen and (max-width:500px) {
+//ヘッダー
+header {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #FAF7EE;
+}
+
+header > :first-child {
+  margin: 0 20%;
+}
+
+.header-button {
+  margin: 3px;
+  height: 70px;
+  width: 100px;
+  line-height: 0px;
+  border-radius: 15%;
+}
+
+.header-button-my_page,
+.header-button-post,
+.header-button-favorite,
+.header-button-logout
+{
+  padding: 0 auto;
+  height: 70px;
+  width: 100px;
+  border-radius: 15%;
+}
+}
