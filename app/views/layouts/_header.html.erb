@@ -4,10 +4,12 @@
 
   <% if user_signed_in? %>
     <header>
-      <div class="header-logo">
-        <%= link_to articles_path do %>
-          <%= image_tag 'logo.jpg', class: "logo_image", :alt => 'ロゴ画像、みんなの投稿一覧ページに飛べます。' %>
-        <% end %>
+      <div class="logo">
+        <div class="header-logo">
+          <%= link_to articles_path do %>
+            <%= image_tag 'logo.jpg', class: "logo_image", :alt => 'ロゴ画像、みんなの投稿一覧ページに飛べます。' %>
+          <% end %>
+        </div>
       </div>
       <div class="header-buttons">
         <div class="header-button">

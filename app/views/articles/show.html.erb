@@ -75,10 +75,10 @@
   <div class="row article-show-comment_form">
     <%= form_with model:[@article, @comment] do |f| %>
       <div class="col-xs-8 article-show-comment_form-text_area">
-        <%= f.text_area :comment, rows: "3", cols: "70", placeholder: "コメントを送りましょう！(50文字まで)" %>
+        <%= f.text_area :comment, rows: "3", cols: "60", placeholder: "コメントを送りましょう！(50文字まで)" %>
       </div>
       <div class="col-xs-3 article-show-comment_form-submit_button">
-        <%= f.submit "　送信　", class: "form_submit, btn btn-lg btn-default" %>
+        <%= f.submit " 送信 ", class: "form_submit, btn btn-lg btn-default" %>
       </div>
     <% end %>
   </div>

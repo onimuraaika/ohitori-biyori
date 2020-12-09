@@ -17,7 +17,7 @@
           <%= simple_format(article_comment.comment) %>
         </div>
       </div>
-      <div class="col-xs-4 article-show-comment-destroy">
+      <div class="col-xs-1 article-show-comment-destroy">
         <% if current_user == article_comment.user %>
           <%= link_to article_article_comment_path(article_comment.article_id, article_comment.id), method: :delete, remote: true do %>
             <i class="fa fa-trash-o fa-2x" style="color: #BDB29D;" aria-hidden="true"></i>

@@ -187,3 +187,22 @@
   width: 250px;
   background-color: #FBD9C4!important;
 }
+
+//タブレット対応
+@media screen and (max-width: 768px) {
+//(ここから　ユーザー表示の部分テンプレート)
+.user-show-info-image,
+{
+  text-align: center;
+  margin-left: 3%;
+}
+
+.user-show-info-name {
+  padding-left: 10px;
+}
+
+.user-show-info-nav {
+  flex-wrap: wrap;
+}
+//(ここまで)
+}

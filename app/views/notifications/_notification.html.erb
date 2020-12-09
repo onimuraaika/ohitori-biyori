@@ -5,13 +5,13 @@
   <% visitor = notification.visitor %>
   <% visited = notification.visited %>
 
-  <div class="col-sm-4 notification-message-profile_image">
+  <div class="col-xs-3 col-md-4 notification-message-profile_image">
     <%= link_to user_path(visitor) do %>
       <%= attachment_image_tag visitor, :profile_image, size: "100x100", fallback: "no_profile_image.jpg", size: '100x100', style: "border-radius: 15px;" %>
     <% end %>
   </div>
 
-  <div class="col-sm-8 notification-message-details">
+  <div class="col-xs-7 col-md-8 notification-message-details">
     <div class="notification-messages">
       <strong><%= visitor.nickname %>さん</strong>が
 
