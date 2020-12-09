@@ -17,23 +17,23 @@ class User < ApplicationRecord
     has_many :article_comments,      dependent: :destroy
     has_many :favorites,             dependent: :destroy
     has_many :favorite_articles,     through:   :favorites, source: :article
-    
+
     has_many :active_notifications,  class_name: 'Notification', foreign_key: 'visitor_id', dependent: :destroy
     has_many :passive_notifications, class_name: 'Notification', foreign_key: 'visited_id', dependent: :destroy
-    
+
     # フォローしている
     has_many :relationships,         class_name: "Relationship", foreign_key: "following_id", dependent: :destroy
     # フォローされている
     has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id",  dependent: :destroy
     has_many :following,                                 through: :relationships,         source: :followed
     has_many :followers, -> { where is_deleted: false }, through: :passive_relationships, source: :following
-    
+
 
     validates :nickname,           presence: true, length: { minimum: 2 }
     validates :living_alone_month, presence: true
     validates :email,              presence: true
     validates :introduction,                       length: { maximum: 100 }
-    
+
     attachment :profile_image
     attachment :image
 
@@ -55,6 +55,11 @@ class User < ApplicationRecord
     # 退会後ログイン拒否
     def active_for_authentication?
         super && (self.is_deleted == false)
+    end
+    
+    # 退会後ログイン拒否のエラーメッセージ カスタマイズ
+    def inactive_message
+      self.is_deleted == false ? super : :is_deleted_true
     end
 
     # おひとり暮らし歴更新

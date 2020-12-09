@@ -13,6 +13,7 @@ ja:
     failure:
       unauthenticated: 'ログインしてください。'
       invalid: 'ニックネームまたはパスワードが違います。'
+      is_deleted_true: 'アカウントが有効ではありません。'
     sessions:
         signed_in: ''
         signed_out: ''
