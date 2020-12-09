@@ -2,10 +2,9 @@
 
 FactoryBot.define do
   factory :article do
-    # image { [ Rack::Test::UploadedFile.new(Rails.root.join( 'app/assets/images/test.png'))  ]}
-    
+    image { Rack::Test::UploadedFile.new(Rails.root.join( 'app/assets/images/test.png')) }
     title { Faker::Lorem.characters(number: 5) }
-    genre { 'おでかけ' }
+    genre { 1 }
     body { Faker::Lorem.characters(number: 20) }
     association :user
   end
