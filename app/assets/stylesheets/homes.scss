@@ -173,8 +173,8 @@
 }
 
 
-
-@media screen and (max-width:500px) {
+//タブレット対応
+@media screen and (max-width: 768px) {
 //トップページ
 .top-message-description,
 .top-message-description-title
