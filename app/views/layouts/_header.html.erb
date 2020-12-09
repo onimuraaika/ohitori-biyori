@@ -9,37 +9,39 @@
           <%= image_tag 'logo.jpg', class: "logo_image", :alt => 'ロゴ画像、みんなの投稿一覧ページに飛べます。' %>
         <% end %>
       </div>
-      <div class="header-button">
-        <%= link_to user_path(current_user) do %>
-          <button type="button" class="btn btn-default header-button-my_page">
-            <i class="fa fa-sun-o" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
-            マイページ
-          </button>
-        <% end %>
-      </div>
-      <div class="header-button">
-        <%= link_to new_article_path do %>
-          <button type="button" class="btn btn-default header-button-post">
-            <i class="fa fa-pencil" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
-            投稿する
-          </button>
-        <% end %>
-      </div>
-      <div class="header-button">
-        <%= link_to notifications_path do %>
-          <button type="button" class="btn btn-default header-button-favorite">
-            <i class="fa fa-bell-o" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
-            お知らせ
-          </button>
-        <% end %>
-      </div>
-      <div class="header-button">
-        <%= link_to destroy_user_session_path, method: :delete do %>
-          <button type="button" class="btn btn-default header-button-logout">
-            <i class="fa fa-sign-out" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
-            ログアウト
-          </button>
-        <% end %>
+      <div class="header-buttons">
+        <div class="header-button">
+          <%= link_to user_path(current_user) do %>
+            <button type="button" class="btn btn-default header-button-my_page">
+              <i class="fa fa-sun-o" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
+              マイページ
+            </button>
+          <% end %>
+        </div>
+        <div class="header-button">
+          <%= link_to new_article_path do %>
+            <button type="button" class="btn btn-default header-button-post">
+              <i class="fa fa-pencil" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
+              投稿する
+            </button>
+          <% end %>
+        </div>
+        <div class="header-button">
+          <%= link_to notifications_path do %>
+            <button type="button" class="btn btn-default header-button-favorite">
+              <i class="fa fa-bell-o" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
+              お知らせ
+            </button>
+          <% end %>
+        </div>
+        <div class="header-button">
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <button type="button" class="btn btn-default header-button-logout">
+              <i class="fa fa-sign-out" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
+              ログアウト
+            </button>
+          <% end %>
+        </div>
       </div>
     </header>
   <% end %>

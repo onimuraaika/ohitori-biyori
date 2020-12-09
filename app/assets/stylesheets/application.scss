@@ -65,6 +65,10 @@ header > :first-child {
   margin-right: auto;
 }
 
+.header-buttons {
+  display: flex;
+}
+
 .header-button {
   margin: 10px;
   padding: 0 auto;
