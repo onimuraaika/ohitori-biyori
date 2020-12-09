@@ -23,7 +23,7 @@ RSpec.describe "Users", type: :system do
     context '新規会員登録に失敗する' do
       let(:user) { build(:user, nickname: nil) }
 
-      it '遷移されないこと' do
+      it '投稿一覧画面に遷移しない' do
         expect(current_path).not_to eq articles_path
       end
     end
