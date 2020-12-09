@@ -23,7 +23,7 @@ RSpec.describe "Users", type: :system do
     context '新規会員登録に失敗する' do
       let(:user) { build(:user, nickname: nil) }
 
-      it '遷移されないこと' do
+      it '遷移しない' do
         expect(current_path).not_to eq articles_path
       end
     end
@@ -49,13 +49,13 @@ RSpec.describe "Users", type: :system do
       end
     end
     context 'ログインに失敗する' do
-      it '遷移されないこと' do
+      it '遷移しない' do
         expect(current_path).to eq new_user_session_path
       end
     end
   end
   
-  describe 'Userscontrollerの画面表示テスト' do
+  describe '画面表示確認テスト' do
     let!(:user) { create(:user) }
 
     let(:sign_in) do
@@ -79,11 +79,56 @@ RSpec.describe "Users", type: :system do
         expect(current_path).to eq edit_user_path(user)
       end
     end
+    context 'パスワード変更画面が表示される' do
+      it do
+        sign_in
+        visit edit_user_registration_path(user)
+        expect(current_path).to eq edit_user_registration_path(user)
+      end
+    end
     context '退会画面が表示される' do
       it do
         sign_in
         visit unsubscribe_path(user)
         expect(current_path).to eq unsubscribe_path(user)
+      end
+    end
+  end
+  
+  describe '会員情報編集機能のテスト' do
+    let!(:user) { create(:user) }
+
+    let(:sign_in) do
+      visit new_user_session_path
+      fill_in 'user[nickname]', with: user.nickname
+      fill_in 'user[password]', with: user.password
+      click_button 'ログインする'
+    end
+    
+    context '更新が成功する' do
+      before do
+        sign_in
+        visit edit_user_path(user)
+        fill_in 'user[nickname]', with: user.nickname
+        fill_in 'user[living_alone_month]', with: user.living_alone_month
+        click_button '更新する'
+        
+      end
+      it 'マイページに遷移する'do
+        expect(current_path).to eq user_path(user)
+      end
+    end
+    context '更新が失敗する' do
+      before do
+        sign_in
+        visit edit_user_path(user)
+        fill_in 'user[nickname]', with: nil
+        fill_in 'user[living_alone_month]', with: user.living_alone_month
+        click_button '更新する'
+        
+      end
+      it '遷移しない'do
+        expect(current_path).not_to eq user_path(user)
       end
     end
   end
