@@ -11,7 +11,7 @@
       </div>
       <div class="header-button">
         <%= link_to user_path(current_user) do %>
-          <button type="button" class="btn btn-default btn-lg header-button-my_page">
+          <button type="button" class="btn btn-default header-button-my_page">
             <i class="fa fa-sun-o" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
             マイページ
           </button>
@@ -19,7 +19,7 @@
       </div>
       <div class="header-button">
         <%= link_to new_article_path do %>
-          <button type="button" class="btn btn-default btn-lg header-button-post">
+          <button type="button" class="btn btn-default header-button-post">
             <i class="fa fa-pencil" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
             投稿する
           </button>
@@ -27,7 +27,7 @@
       </div>
       <div class="header-button">
         <%= link_to notifications_path do %>
-          <button type="button" class="btn btn-default btn-lg header-button-favorite">
+          <button type="button" class="btn btn-default header-button-favorite">
             <i class="fa fa-bell-o" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
             お知らせ
           </button>
@@ -35,7 +35,7 @@
       </div>
       <div class="header-button">
         <%= link_to destroy_user_session_path, method: :delete do %>
-          <button type="button" class="btn btn-default btn-lg header-button-logout">
+          <button type="button" class="btn btn-default header-button-logout">
             <i class="fa fa-sign-out" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i></br>
             ログアウト
           </button>
