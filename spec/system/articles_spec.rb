@@ -21,7 +21,7 @@ RSpec.describe "Articles", type: :system do
   end
   
   describe '投稿詳細画面のテスト' do
-    let(:article) { build(:article) }
+    let(:article) { create(:article) }
     let(:image) { article.image }
     let(:title) { article.title }
     let(:genre) { article.genre }
