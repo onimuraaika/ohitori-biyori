@@ -61,7 +61,7 @@ header {
   background-color: #FAF7EE;
 }
 
-.header-logo {
+.logo {
   margin-right: auto;
 }
 
@@ -256,6 +256,7 @@ header {
   color: #262626;
 }
 
+//タブレット対応
 @media screen and (max-width: 768px) {
 //ヘッダー
 header {
@@ -265,7 +266,14 @@ header {
   height: 250px;
 }
 
+.logo {
+  margin-right: 0;
+  text-align: center;
+}
+
 .header-buttons {
-  margin: 0 auto;
+  margin-right: 0;
+  padding: 0 auto;
+  justify-content: center;
 }
 }
