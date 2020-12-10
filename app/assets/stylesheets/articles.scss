@@ -118,7 +118,8 @@
 }
 
 .article-index-article-image {
-  padding-right: 20px;
+  padding-right: 10%;
+  padding-left: 20%;
   text-align: right;
 }
 
@@ -318,6 +319,12 @@
   display: none;
 }
 //(ここまで)
+
+//投稿一覧表示の部分テンプレート
+.article-index-article-image {
+  padding-right: 0;
+  padding-left: 10%;
+}
 
 //投稿詳細画面
 .article-show-article {
