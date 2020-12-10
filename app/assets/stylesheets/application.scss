@@ -89,6 +89,10 @@ header {
   border-radius: 15%;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 //フッター
 .footer {
   height: 250px;
@@ -263,7 +267,7 @@ header {
   margin: 0 auto;
   display: block;
   align-items: center;
-  height: 250px;
+  height: 150px;
 }
 
 .logo {
@@ -271,9 +275,46 @@ header {
   text-align: center;
 }
 
+//ハンバーガーメニュー
+.hamburger-menu {
+  display: block;
+}
+
 .header-buttons {
-  margin-right: 0;
-  padding: 0 auto;
+  display: none;
+}
+
+.hamburger-menu-image {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  z-index: 10;
+
+}
+
+.hamburger-menu-lists {
+  position: fixed;
+  right: -100%;
+  width: 100%;
+  height: 30vh;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  color: #7F7F7F;
+  background-color: #E7E6E3;
+  transition: .3s;
+}
+
+.hamburger-menu-list {
+  padding: 20px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  color: #7F7F7F;
+}
+
+.hamburger-menu-lists.open {
+  right: 0;
 }
 }

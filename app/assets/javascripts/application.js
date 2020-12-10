@@ -44,3 +44,9 @@ $(document).on('turbolinks:load', function() {
   });
 });
 
+//ハンバーガメニューの表示設定
+$(document).on('turbolinks:load', function() {
+  $('.hamburger-menu-image').on('click', function () {        // js-btnクラスをクリックすると、
+    $('.hamburger-menu-lists').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
+  })
+});
