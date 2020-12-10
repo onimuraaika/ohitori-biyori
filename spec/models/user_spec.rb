@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   let!(:user) { create(:user) }
 
+  subject { user.valid? }
+
   describe '会員情報編集のバリデーションチェックテスト' do
     context "自己紹介文以外全て入力されていれば保存される" do
       it { is_expected.to be_truthy }
