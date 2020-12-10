@@ -13,19 +13,23 @@
   padding-top: 100px;
 }
 
-//(ここから　ユーザー表示の部分テンプレート)
-.user-show-info {
+.user-show-info-box {
+  display: flex;
+  justify-content: center;
 }
 
+//(ここから　ユーザー表示の部分テンプレート)
 .user-show-info-image {
-  text-align: right;
+  padding: 0 3%;
+}
+
+.user-show-info-details {
+  padding-right: 3%;
 }
 
 .user-show-info-name {
   padding-top: 20px;
-  padding-left: 20px;
   font-size: 20px;
-  text-align: left;
 }
 
 .user-show-info-follower {
@@ -36,7 +40,7 @@
 }
 
 .user-show-info-nav {
-  margin-top: 100px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
@@ -193,8 +197,28 @@
 //タブレット対応
 @media screen and (max-width: 768px) {
 //マイページ(ユーザー詳細画面)
-.user-show-article-index {
+.user-show-info {
+  display: block;
+}
 
+.user-show-info-image {
+  padding: 0;
+}
+
+.user-show-info-details {
+  padding-right: 0;
+  line-height: 30px;
+   text-align: center;
+}
+
+.user-show-info-nickname {
+  padding-top: 0;
+  font-size: 20px;
+}
+
+.user-show-info-follow_button {
+  line-height: 50px;
+  text-align: center;
 }
 
 //(ここから　ユーザー表示の部分テンプレート)
