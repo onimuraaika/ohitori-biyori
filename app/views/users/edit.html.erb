@@ -50,7 +50,9 @@
 
     <div class="row user-edit-form user-edit-form-button">
       <% if current_user.nickname == 'ゲスト' %>
-        <%= f.submit "更新する", class: "btn btn-block btn-default btn-lg disabled user-edit-update_button" %>
+        <button class="btn btn-block btn-default btn-lg user-edit-update_button" disabled="disabled">
+          更新する
+        </button>
       <% else %>
         <%= f.submit "更新する", class: "btn btn-block btn-default btn-lg user-edit-update_button" %>
       <% end %>
