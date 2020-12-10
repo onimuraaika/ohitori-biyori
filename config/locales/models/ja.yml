@@ -8,7 +8,7 @@ ja:
         email: メールアドレス
         living_alone_month: おひとり暮らし歴
         password: パスワード
-        current_password: 現在のパスワード
+        current_password: パスワード
         password_confirmation: パスワード（確認用）
 
       article:

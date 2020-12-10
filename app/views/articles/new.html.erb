@@ -58,7 +58,13 @@
     </div></br>
 
     <div class="actions row new-article-row">
-      <%= f.submit "投稿する", class:"btn btn-lg btn-default btn-block new-article-button" %>
+      <% if current_user.nickname == 'ゲスト' %>
+        <button class="btn btn-lg btn-default btn-block new-article-button" disabled="disabled">
+          投稿する
+        </button>
+      <% else %>
+        <%= f.submit "投稿する", class:"btn btn-lg btn-default btn-block new-article-button" %>
+      <% end %>
     </div>
 
   <% end %>
