@@ -13,6 +13,11 @@
   padding-top: 100px;
 }
 
+.user-show-info-others {
+  display: flex;
+  justify-content: center;
+}
+
 .user-show-info-box {
   display: flex;
   justify-content: center;
@@ -222,14 +227,23 @@
 }
 
 //(ここから　ユーザー表示の部分テンプレート)
-.user-show-info-image,
-{
+.user-show-info-box {
+  display: block;
+  justify-content: center;
+}
+
+.user-show-info-image {
   text-align: center;
   margin-left: 3%;
 }
 
 .user-show-info-name {
   padding-left: 10px;
+  text-align: center;
+}
+
+.user-show-info-follower {
+  text-align: center;
 }
 
 .user-show-info-nav {
