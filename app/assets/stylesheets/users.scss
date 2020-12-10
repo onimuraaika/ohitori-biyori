@@ -78,9 +78,8 @@
 .user-show-article-index,
 .favorite-article-index
 {
-  margin: 0 auto;
   padding-top:100px;
-  width: 40%;
+  width: 90%;
 }
 
 .user-show-article-index-paginate,
@@ -193,6 +192,11 @@
 
 //タブレット対応
 @media screen and (max-width: 768px) {
+//マイページ(ユーザー詳細画面)
+.user-show-article-index {
+
+}
+
 //(ここから　ユーザー表示の部分テンプレート)
 .user-show-info-image,
 {
