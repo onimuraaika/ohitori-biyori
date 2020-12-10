@@ -7,12 +7,16 @@
       <!--マイページとして見ている時-->
       <%= render 'users/current_user_show', user: @user %>
     <% else %>
-      <!--ユーザー詳細として見ている時-->
-      <%= render 'users/show', user: @user %>
+    <div class="user-show-info-others">
+      <div>
+        <!--ユーザー詳細として見ている時-->
+        <%= render 'users/show', user: @user %>
+      </div>
       <!--フォローボタン-->
       <div id="relationship_<%= @user.id %>">
         <%= render 'relationships/follow_button', user: @user %>
       </div>
+    </div>
     <% end %>
   </div>
 
