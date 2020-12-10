@@ -278,6 +278,8 @@ header {
 //ハンバーガーメニュー
 .hamburger-menu {
   display: block;
+  position: fixed;
+  z-index: 10;
 }
 
 .header-buttons {
@@ -286,9 +288,9 @@ header {
 
 .hamburger-menu-image {
   position: fixed;
+  z-index: 10;
   top: 2%;
   right: 2%;
-  z-index: 10;
 
 }
 
