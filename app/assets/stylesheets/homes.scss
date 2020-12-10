@@ -226,33 +226,35 @@
 
 .about-how_to_enjoy_genre {
   background-image: image-url("how_to_enjoy_genre.jpg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 500px;
   height: 250px;
   margin: 10px auto;
 }
 
 .about-how_to_enjoy_post {
-  background-image: image-url("how_to_enjoy_post.jpg");
-  background-size: cover;
+  background-image: image-url("how_to_enjoy_post_phone.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 500px;
-  height: 350px;
   margin: 10px auto;
 }
 
 .about-how_to_enjoy_favorite {
-  background-image: image-url("how_to_enjoy_favorite.jpg");
-  background-size: cover;
+  background-image: image-url("how_to_enjoy_favorite_phone.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 500px;
-  height: 350px;
+  text-align: center;
   margin: 10px auto;
 }
 
 .about-how_to_enjoy_follow {
-  background-image: image-url("how_to_enjoy_following.jpg");
-  background-size: cover;
+  background-image: image-url("how_to_enjoy_following_phone.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 500px;
-  height: 350px;
   margin: 10px auto;
 }
 
