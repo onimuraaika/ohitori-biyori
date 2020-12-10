@@ -19,7 +19,7 @@ RSpec.describe "Articles", type: :system do
       end
     end
   end
-  
+
   describe '投稿詳細画面のテスト' do
     let!(:genre) { create(:genre)  }
     let!(:article) { create(:article, user_id: user.id, genre_id: genre.id) }
@@ -54,7 +54,7 @@ RSpec.describe "Articles", type: :system do
         expect(current_path).to eq article_path(id: article.id)
       end
     end
-    
+
     context '投稿に失敗する' do
       let!(:genre) { create(:genre)  }
       let!(:article) { build(:article, id: 1, user_id: user.id, genre_id: genre.id) }
@@ -75,11 +75,11 @@ RSpec.describe "Articles", type: :system do
     end
   end
 
-  
+
   describe '投稿編集機能のテスト' do
     let!(:genre) { create(:genre)  }
     let!(:article) { create(:article, id: 1, user_id: user.id, genre_id: genre.id) }
-    
+
     context '更新が成功する' do
       before do
         sign_in
@@ -90,7 +90,7 @@ RSpec.describe "Articles", type: :system do
         fill_in 'article[body]', with: article.body
         click_button '更新する'
       end
-      
+
       it '投稿詳細画面に遷移する' do
         expect(current_path).to eq article_path(article)
       end
@@ -99,15 +99,12 @@ RSpec.describe "Articles", type: :system do
       before do
         sign_in
         visit edit_article_path(article)
-        attach_file "article[image]", nil
-        fill_in 'article[title]', with: article.title
-        select article.genre.name, from: 'article[genre_id]'
-        fill_in 'article[body]', with: article.body
+        fill_in 'article[title]', with: nil
         click_button '更新する'
       end
-      
-      it '投稿詳細画面に遷移しない' do
-        expect(current_path).not_to eq article_path(article)
+
+      it 'エラーメッセージ が表示される' do
+        expect(page).to have_content 'タイトルを入力してください'
       end
     end
   end

@@ -54,7 +54,7 @@ RSpec.describe "Users", type: :system do
       end
     end
   end
-  
+
   describe '画面表示確認テスト' do
     let!(:user) { create(:user) }
 
@@ -64,7 +64,7 @@ RSpec.describe "Users", type: :system do
       fill_in 'user[password]', with: user.password
       click_button 'ログインする'
     end
-    
+
     context 'マイページ(ユーザー詳細)画面が表示される' do
       it do
         sign_in
@@ -94,7 +94,7 @@ RSpec.describe "Users", type: :system do
       end
     end
   end
-  
+
   describe '会員情報編集機能のテスト' do
     let!(:user) { create(:user) }
 
@@ -104,7 +104,7 @@ RSpec.describe "Users", type: :system do
       fill_in 'user[password]', with: user.password
       click_button 'ログインする'
     end
-    
+
     context '更新が成功する' do
       before do
         sign_in
@@ -112,7 +112,7 @@ RSpec.describe "Users", type: :system do
         fill_in 'user[nickname]', with: user.nickname
         fill_in 'user[living_alone_month]', with: user.living_alone_month
         click_button '更新する'
-        
+
       end
       it 'マイページに遷移する'do
         expect(current_path).to eq user_path(user)
@@ -125,10 +125,10 @@ RSpec.describe "Users", type: :system do
         fill_in 'user[nickname]', with: nil
         fill_in 'user[living_alone_month]', with: user.living_alone_month
         click_button '更新する'
-        
+
       end
-      it '遷移しない'do
-        expect(current_path).not_to eq user_path(user)
+      it 'エラーメッセージ が表示され'do
+        expect(page).to have_content 'ニックネームを入力してください'
       end
     end
   end
