@@ -45,6 +45,41 @@
           <% end %>
         </div>
       </div>
+
+      <!--ハンバーガーメニュー-->
+      <div class="hamburger-menu">
+        <div class="hamburger-menu-image">
+          <%= image_tag 'menu.jpg', size: "50x50", style: "border-radius: 15px;", class: "menu_image", :alt => 'メニューボタンです。' %>
+        </div>
+        <nav class="hamburger-menu-list-box">
+          <ul class="hamburger-menu-lists">
+            <%= link_to user_path(current_user) do %>
+              <li class="hamburger-menu-list">
+                <i class="fa fa-sun-o" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i>
+                マイページ
+              </li>
+            <% end %>
+            <%= link_to new_article_path do %>
+              <li class="hamburger-menu-list">
+                <i class="fa fa-pencil" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i>
+                投稿する
+              </li>
+            <% end %>
+            <%= link_to notifications_path do %>
+              <li class="hamburger-menu-list">
+                <i class="fa fa-bell-o" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i>
+                お知らせ
+              </li>
+            <% end %>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <li class="hamburger-menu-list">
+                <i class="fa fa-sign-out" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i>
+                ログアウト
+              </li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
     </header>
   <% end %>
 
