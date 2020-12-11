@@ -65,6 +65,12 @@
       <% else %>
         <%= f.submit "投稿する", class:"btn btn-lg btn-default btn-block new-article-button" %>
       <% end %>
+      <%= link_to :back, style: "text-decoration: none;" do %>
+        <button type="button" class="btn btn-default btn-block btn-lg new-articl-button-return">
+          <i class="fa fa-arrow-left" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
+          <span class="text-decoration: none;">戻る</span>
+        </button>
+      <% end %>
     </div>
 
   <% end %>

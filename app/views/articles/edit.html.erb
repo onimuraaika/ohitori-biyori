@@ -58,6 +58,12 @@
     </div></br>
     <div class="actions row edit-article-row">
       <%= f.submit "更新する", class:"btn btn-lg btn-block btn-default edit-article-button" %>
+      <%= link_to :back, style: "text-decoration: none;" do %>
+        <button type="button" class="btn btn-default btn-block btn-lg edit-articl-button-return">
+          <i class="fa fa-arrow-left" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
+          <span class="text-decoration: none;">戻る</span>
+        </button>
+      <% end %>
     </div>
 
   <% end %>
