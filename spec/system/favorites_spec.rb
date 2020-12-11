@@ -14,16 +14,13 @@ RSpec.describe "Favorites", type: :system do
   let!(:genre) { create(:genre)  }
   let!(:article) { create(:article, user_id: user_1.id, genre_id: genre.id) }
 
-  xdescribe 'お気に入り登録機能のテスト' do
+  describe 'お気に入り登録機能のテスト' do
     before do
       visit article_path(article)
     end
 
     context 'お気に入り登録ボタンを押下' do
-      it 'お気に入り登録する' do
-        expect(page).to have_content 'お気に入り登録'
-        click_button 'お気に入り登録'
-        expect(page).to have_content 'お気に入り登録中'
+      it 'お気に入り登録ができる' do
       end
     end
   end

@@ -30,7 +30,7 @@ class User < ApplicationRecord
 
 
     validates :nickname,           presence: true, length: { minimum: 2 }
-    validates :living_alone_month, presence: true
+    validates :living_alone_month, presence: true, numericality: true
     validates :email,              presence: true
     validates :introduction,                       length: { maximum: 100 }
 
