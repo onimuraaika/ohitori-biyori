@@ -5,10 +5,10 @@ RSpec.describe Article, type: :model do
   let!(:genre) { create(:genre)  }
   let!(:article) { build(:article, user_id: user.id, genre_id: genre.id) }
 
-  describe '投稿のバリデーションチェックテスト' do
+  describe '投稿機能のバリデーションチェックテスト' do
     subject { article.valid? }
 
-    context "全て入力してあるので保存される" do
+    context "全て正しく入力してあるので保存される" do
       it { is_expected.to be_truthy }
     end
     context ":タグ以外に空欄があると保存されない" do
