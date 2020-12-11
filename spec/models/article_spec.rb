@@ -11,37 +11,32 @@ RSpec.describe Article, type: :model do
     context "全て正しく入力してあるので保存される" do
       it { is_expected.to be_truthy }
     end
-    context ":タグ以外に空欄があると保存されない" do
-      before { article.title = nil }
-
-      it { is_expected.to be_falsey }
-    end
-    context ":画像を選択しないと保存されない" do
+    context "画像を選択しないと保存されない" do
       before { article.image = nil }
 
       it { is_expected.to be_falsey }
     end
-    context ":タイトルが入力されていないと保存されない" do
+    context "タイトルが入力されていないと保存されない" do
       before { article.title = nil }
 
       it { is_expected.to be_falsey }
     end
-    context ":タイトルが20文字以内だと保存される" do
+    context "タイトルが20文字以内だと保存される" do
       before { article.title = 'あ' * 20 }
 
       it { is_expected.to be_truthy }
     end
-    context ":タイトルが21文字以上だと保存されない" do
+    context "タイトルが21文字以上だと保存されない" do
       before { article.title = 'あ' * 21 }
 
       it { is_expected.to be_falsey }
     end
-    context ":ジャンルが選択されていないと保存されない" do
+    context "ジャンルが選択されていないと保存されない" do
       before { article.genre = nil }
 
       it { is_expected.to be_falsey }
     end
-    context ":伝えたいことが入力されていないと保存されない" do
+    context "伝えたいことが入力されていないと保存されない" do
       before { article.body = nil }
 
       it { is_expected.to be_falsey }

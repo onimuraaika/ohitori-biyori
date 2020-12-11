@@ -45,10 +45,10 @@ RSpec.describe User, type: :model do
 
       it { is_expected.to be_falsey }
     end
-    xcontext "パスワードとパスワード確認が一致しないので保存されない" do
+    context "パスワードとパスワード確認が一致しないので保存されない" do
       before do
-        { user.password => 'password' }
-        { user.password_confirmation => 'passwords' }
+        user.password = 'password'
+        user.password_confirmation = 'passwords'
       end
 
       it { is_expected.to be_falsey }
