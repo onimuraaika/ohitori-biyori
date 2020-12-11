@@ -32,9 +32,14 @@
   margin: 10px auto;
 }
 
-.new-article-button {
+.new-article-button, {
   height: 80px;
   background-color: #FCF6D8!important;
+}
+
+.new-articl-button-return {
+  margin-top: 30px;
+  height: 80px;
 }
 
 //投稿一覧画面
@@ -247,6 +252,11 @@
   padding: 0 30%;
   align-items: center;
   text-align: center;
+}
+
+.edit-articl-button-return {
+  margin-top: 30px;
+  height: 80px;
 }
 
 .edit-article-image {
