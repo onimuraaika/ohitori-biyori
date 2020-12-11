@@ -48,7 +48,7 @@ https://docs.google.com/spreadsheets/d/1RF2XLkZoFw_vR4MrM4Nd46LtIvuf8_I7OLgZrszj
 
 ## 開発環境
 * OS：Linux(CentOS)
-* 言語：HTML,CSS,JavaScript,Ruby,SQL
-* フレームワーク：Ruby on Rails, Bootstrap
+* 言語：HTML,CSS,JavaScript,Ruby
+* フレームワーク：Ruby on Rails
+* CSSライブラリ：Bootstrap
 * JSライブラリ：jQuery
-* 仮想環境：Vagrant,VirtualBox
