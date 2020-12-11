@@ -34,9 +34,9 @@
     </div></br>
 
     <div class="row edit-article-row">
-      <h3 class="edit-article-subtitle">カテゴリを選ぶ</h3>
+      <h3 class="edit-article-subtitle">ジャンルを選ぶ</h3>
       <div class="form-group input-lg">
-        <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: "　カテゴリを選択してください　" %>
+        <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: "　ジャンルを選択してください　" %>
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F6D263;", class="down-arrow"></i>
     </div></br>
