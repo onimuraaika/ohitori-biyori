@@ -64,7 +64,7 @@ https://docs.google.com/spreadsheets/d/1RF2XLkZoFw_vR4MrM4Nd46LtIvuf8_I7OLgZrszj
 
 ## :globe_with_meridians:開発環境
 * OS：Linux(CentOS)
-* 言語：HTML,CSS,Ruby,JavaScript
-* フレームワーク：Ruby on Rails
-* CSSライブラリ：Bootstrap
+* 言語：HTML,CSS,Ruby'2.6.3',JavaScript
+* フレームワーク：Ruby on Rails'5.2.4'
+* CSSライブラリ：Bootstrap'3.3.6'
 * JSライブラリ：jQuery
