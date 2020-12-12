@@ -13,7 +13,7 @@
 
       <!--エラーメッセージ-->
       <%= render 'layouts/error_message', model: @user %>
-      
+
       <!--パスワード変更フォーム-->
       <div class="form-horizontal">
         <div class="form-group">
@@ -30,7 +30,19 @@
         </div>
         <div class="form-group">
           <div class="actions change-password-form-button">
-            <%= f.submit "パスワードを変更する", class: "btn btn-default btn-block btn-lg change-password-form-update_button" %>
+            <% if current_user.nickname == 'ゲスト' %>
+              <button class="btn btn-default btn-block btn-lg change-password-form-update_button" disabled="disabled">
+                パスワードを変更する
+              </button>
+            <% else %>
+              <%= f.submit "パスワードを変更する", class: "btn btn-default btn-block btn-lg change-password-form-update_button" %>
+            <% end %>
+            <%= link_to edit_user_path(current_user), style: "text-decoration: none;" do %>
+              <button type="button" class="btn btn-default btn-block btn-lg new-articl-button-return">
+                <i class="fa fa-arrow-left" aria-hidden="true" style="color: #F5CC50; font-size: 25px;"></i>
+                <span class="text-decoration: none;">戻る</span>
+              </button>
+            <% end %>
            </div>
         </div>
       </div>
