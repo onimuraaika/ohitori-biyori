@@ -12,9 +12,10 @@
 .top-background {
   background-image: image-url("top_background_image.jpg");
   background-size: cover;
+  background-attachment: fixed;
   background-position: bottom;
-  height: 100vh;
-  width:auto;
+  // height: 100vh;
+  // width:auto;
   background-color: rgba( 255, 255, 255, 0.4);
   background-blend-mode: lighten;
 }
