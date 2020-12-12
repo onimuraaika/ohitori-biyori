@@ -10,7 +10,7 @@ class Article < ApplicationRecord
     validates :title, presence: true, length: { maximum: 20 }
     validates :body,  presence: true
     
-    attachment :image
+    attachment          :image
     acts_as_taggable_on :tags
 
     # キーワード検索

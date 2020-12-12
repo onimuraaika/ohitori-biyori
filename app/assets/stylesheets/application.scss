@@ -26,7 +26,7 @@
 //共通
 body {
   color: #7F7F7F;
-  font-family: 'Hannotate SC','MS UI Gothic',YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+  font-family: 'Hannotate SC', 'MS UI Gothic', YuGothic, 'Yu Gothic', 'ヒラギノ角ゴシック', 'Hiragino Sans', sans-serif;
 }
 
 //タイトルの区切り線
@@ -229,7 +229,7 @@ header {
   font-size: 20px;
 }
 
-//(kaminariのデザイン)
+//kaminariのデザイン
 .pagination > li > a {
   margin: 10px;
   border-radius: 5px;
@@ -275,7 +275,7 @@ header {
   text-align: center;
 }
 
-//ハンバーガーメニュー
+//(ハンバーガーメニュー)
 .hamburger-menu {
   display: block;
   position: fixed;
@@ -295,11 +295,11 @@ header {
 }
 
 .hamburger-menu-lists {
+  margin-left: auto;
   position: fixed;
   right: -100%;
-  width: 100%;
   height: 43vh;
-  margin-left: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   font-size: 30px;

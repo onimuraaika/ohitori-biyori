@@ -59,7 +59,7 @@ class User < ApplicationRecord
     
     # 退会後ログイン拒否のエラーメッセージ カスタマイズ
     def inactive_message
-      self.is_deleted == false ? super : :is_deleted_true
+        self.is_deleted == false ? super : :is_deleted_true
     end
 
     # おひとり暮らし歴更新

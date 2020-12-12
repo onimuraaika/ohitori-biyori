@@ -1,5 +1,6 @@
 <!--新規登録-->
 
+<!--ヘッダー-->
 <div class="container-fluid signup-header">
   <div class="logo-image">
     <%= link_to root_path do %>
@@ -20,6 +21,7 @@
       <!--エラーメッセージ-->
       <%= render 'layouts/error_message', model: @user %>
 
+      <!--新規投稿フォーム-->
       <div class="form-horizontal">
         <div class="form-group">
           <label class="control-label signup-label"><%= f.label "ニックネーム(必須)" %></label></br>
@@ -58,4 +60,5 @@
   </div>
 </div>
 
+<!--フッター-->
 <div class="container-fluid signup-footer"></div>

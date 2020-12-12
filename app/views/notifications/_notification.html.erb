@@ -1,4 +1,4 @@
-<!--お知らせメッセージ-->
+<!--お知らせメッセージ表示-->
 
 <div class="row notification-message">
 
@@ -14,7 +14,6 @@
   <div class="col-xs-7 col-md-8 notification-message-details">
     <div class="notification-messages">
       <strong><%= visitor.nickname %>さん</strong>が
-
       <% case notification.action %>
       <% when 'follow' then %>
         <%= 'あなたのファンになりました' %>
@@ -28,6 +27,7 @@
         <% end %>
       <% end %>
     </div>
+    
     <div class="notification-time">
       <%= time_ago_in_words(notification.created_at).upcase %>前
     </div>

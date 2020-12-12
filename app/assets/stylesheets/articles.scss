@@ -112,7 +112,6 @@
 //(ここまで)
 
 .article-index-main {
-  padding-left: 80px;
   width: 70%;
 }
 
@@ -123,8 +122,8 @@
 }
 
 .article-index-article-image {
-  padding-right: 10%;
-  padding-left: 20%;
+  padding-right: 5%;
+  padding-left: 15%;
   text-align: right;
 }
 
@@ -278,8 +277,8 @@
 }
 
 .article-index-body {
-  display: block;
   margin: 0 auto;
+  display: block;
 }
 
 .article-index-side_bar {
@@ -288,8 +287,8 @@
 }
 
 .article-index-side_bar-title {
-  width: 60%;
   margin: 0 auto;
+  width: 60%;
 }
 
 //(ここから　ジャンル検索)
@@ -308,7 +307,6 @@
 .article-index-ranking,
 .article-index-recommend
 {
-  // display: block;
   padding-left: 0;
 }
 
@@ -330,7 +328,12 @@
 }
 //(ここまで)
 
-//投稿一覧表示の部分テンプレート
+//(投稿一覧表示の部分テンプレート)
+.article-index-main {
+  padding-left: 30px;
+  width: 90%;
+}
+
 .article-index-article-image {
   padding-right: 0;
   padding-left: 10%;

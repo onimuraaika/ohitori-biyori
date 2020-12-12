@@ -1,6 +1,8 @@
 <!--ログインユーザー表示(user)-->
 
+<!--ログインユーザー情報-->
 <div class="row user-show-info-box">
+  
   <div class="user-show-info-my-image">
     <%= attachment_image_tag user, :profile_image, size: '150x150', style: "border-radius: 15px;", fallback: "no_profile_image.jpg" %>
   </div>
@@ -12,9 +14,12 @@
       あなたのファン：<%= current_user.followers.count %>人
     </div>
   </div>
+  
 </div>
 
+<!--ナビゲーションボタン-->
 <div class="row user-show-info-nav">
+  
   <div class="user-show-info-nav-button">
     <%= link_to user_path(current_user) do %>
       <button type="button" class="btn btn-default btn-lg user-show-info-nav-my_article">
@@ -23,6 +28,7 @@
       </button>
     <% end %>
   </div>
+  
   <div class="user-show-info-nav-button">
     <%= link_to article_favorites_path(user) do %>
       <button type="button" class="btn btn-default btn-lg user-show-info-nav-favorite">
@@ -31,6 +37,7 @@
       </button>
     <% end %>
   </div>
+  
   <div class="user-show-info-nav-button">
     <%= link_to user_followings_path(user) do %>
       <button type="button" class="btn btn-default btn-lg user-show-info-nav-following">
@@ -39,6 +46,7 @@
       </button>
     <% end %>
   </div>
+  
   <div class="user-show-info-nav-button">
     <%= link_to user_followed_path(user) do %>
       <button type="button" class="btn btn-default btn-lg user-show-info-nav-followed">
@@ -47,6 +55,7 @@
       </button>
     <% end %>
   </div>
+  
   <div class="user-show-info-nav-button">
     <%= link_to edit_user_path(current_user) do %>
       <button type="button" class="btn btn-default btn-lg user-show-info-nav-setting">
