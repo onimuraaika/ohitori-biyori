@@ -29,7 +29,7 @@ class User < ApplicationRecord
     has_many :followers, -> { where is_deleted: false }, through: :passive_relationships, source: :following
 
 
-    validates :nickname,           presence: true, length: { minimum: 2 }
+    validates :nickname,           presence: true, length: { minimum: 2 }, uniqueness: true
     validates :living_alone_month, presence: true, numericality: true
     validates :email,              presence: true
     validates :introduction,                       length: { maximum: 100 }
@@ -56,7 +56,7 @@ class User < ApplicationRecord
     def active_for_authentication?
         super && (self.is_deleted == false)
     end
-    
+
     # 退会後ログイン拒否のエラーメッセージ カスタマイズ
     def inactive_message
         self.is_deleted == false ? super : :is_deleted_true
