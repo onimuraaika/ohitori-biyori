@@ -78,7 +78,13 @@
         <%= f.text_area :comment, placeholder: "コメントを送りましょう！(50文字以内)", class: "article-show-comment_form-text_area-size" %>
       </div>
       <div class="col-xs-3 article-show-comment_form-submit_button">
-        <%= f.submit " 送信 ", class: "form_submit, btn btn-lg btn-default" %>
+        <% if current_user.nickname == 'ゲスト' %>
+          <button class="btn btn-lg btn-default" disabled="disabled">
+            送信
+          </button>
+        <% else %>
+          <%= f.submit " 送信 ", class: "form_submit, btn btn-lg btn-default" %>
+        <% end %>
       </div>
     <% end %>
   </div>
