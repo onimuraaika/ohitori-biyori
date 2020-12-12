@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Articles", type: :system do
+  
   let!(:user) { create(:user) }
 
   let(:sign_in) do
@@ -21,10 +22,10 @@ RSpec.describe "Articles", type: :system do
   end
 
   describe '投稿詳細画面のテスト' do
-    let!(:genre) { create(:genre)  }
+    let!(:genre)   { create(:genre)  }
     let!(:article) { create(:article, user_id: user.id, genre_id: genre.id) }
-    let(:title) { article.title }
-    let(:body) { article.body }
+    let (:title)   { article.title }
+    let (:body)    { article.body }
 
     context '投稿詳細画面が表示される' do
       it do
@@ -37,7 +38,7 @@ RSpec.describe "Articles", type: :system do
 
   describe '投稿機能のテスト' do
     context '投稿に成功する' do
-      let!(:genre) { create(:genre)  }
+      let!(:genre)   { create(:genre)  }
       let!(:article) { build(:article, id: 1, user_id: user.id, genre_id: genre.id) }
 
       before do
@@ -56,7 +57,7 @@ RSpec.describe "Articles", type: :system do
     end
 
     context '投稿に失敗する' do
-      let!(:genre) { create(:genre)  }
+      let!(:genre)   { create(:genre)  }
       let!(:article) { build(:article, id: 1, user_id: user.id, genre_id: genre.id) }
 
       before do
@@ -77,7 +78,7 @@ RSpec.describe "Articles", type: :system do
 
 
   describe '投稿編集機能のテスト' do
-    let!(:genre) { create(:genre)  }
+    let!(:genre)   { create(:genre)  }
     let!(:article) { create(:article, id: 1, user_id: user.id, genre_id: genre.id) }
 
     context '更新が成功する' do

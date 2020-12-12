@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   describe '新規会員登録機能のバリデーションチェックテスト' do
+    
     let!(:user) { build(:user) }
 
     subject { user.valid? }
@@ -16,11 +17,11 @@ RSpec.describe User, type: :model do
       it { is_expected.to be_falsey }
     end
     context "ニックネームが2文字以上なので保存される" do
-      before { user.nickname = 'あ'*2 }
+      before { user.nickname = 'あ' * 2 }
 
       it { is_expected.to be_truthy }
     end
-    context "ニックネームが2の字未満なので保存されない" do
+    context "ニックネームが2文字未満なので保存されない" do
       before { user.nickname = 'あ' }
 
       it { is_expected.to be_falsey }
@@ -31,7 +32,7 @@ RSpec.describe User, type: :model do
       it { is_expected.to be_falsey }
     end
     context "メールアドレスが半角英数字でないので保存されない" do
-      before { user.email = '＠' }
+      before { user.email = 'あ' }
 
       it { is_expected.to be_falsey }
     end
@@ -75,7 +76,7 @@ RSpec.describe User, type: :model do
 
     subject { user.valid? }
 
-    context "自己紹介文以外全て入力されていれば保存される" do
+    context "自己紹介文以外が全て正しく入力されていれば保存される" do
       it { is_expected.to be_truthy }
     end
     context "ニックネームが空欄なので保存されない" do
@@ -88,7 +89,7 @@ RSpec.describe User, type: :model do
 
       it { is_expected.to be_truthy }
     end
-    context "ニックネームが2の字未満なので保存されない" do
+    context "ニックネームが2文字未満なので保存されない" do
       before { user.nickname = 'あ' }
 
       it { is_expected.to be_falsey }
@@ -114,4 +115,5 @@ RSpec.describe User, type: :model do
       it { is_expected.to be_falsey }
     end
   end
+  
 end

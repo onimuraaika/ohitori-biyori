@@ -1,9 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe ArticleComment, type: :model do
-  let!(:user) { create(:user) }
-  let!(:genre) { create(:genre)  }
-  let!(:article) { create(:article, user_id: user.id, genre_id: genre.id) }
+  
+  let!(:user)            { create(:user) }
+  let!(:genre)           { create(:genre)  }
+  let!(:article)         { create(:article, user_id: user.id, genre_id: genre.id) }
   let!(:article_comment) { build(:article_comment, user_id: user.id, article_id: article.id) }
 
   describe 'コメント送信機能のバリデーションチェックテスト' do
@@ -20,4 +21,5 @@ RSpec.describe ArticleComment, type: :model do
       it { is_expected.to be_falsey }
     end
   end
+  
 end
