@@ -8,7 +8,7 @@
 
 おひとり日和サイトはこちら　→　https://ohitori-biyori.work/  
 ※お試しログインでサイトを閲覧できます。
-<img width="1662" alt="トップ画面" src="https://user-images.githubusercontent.com/69783418/101981905-8dc14c00-3cb3-11eb-9412-c27b8b10559f.png">
+![Uploading soBHyhHmGlcv9HOSPKYk1607779024-1607779530 (1).gif…]()
 ## ☀️サイトテーマ
 「女性のひとり暮らしを楽しく素敵に。」
 
