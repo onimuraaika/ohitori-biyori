@@ -85,9 +85,9 @@
 //(ここまで)
 
 .user-show-article-index,
-.favorite-article-index
-{
+.favorite-article-index {
   padding-top:100px;
+  padding-left: 10%;
   width: 90%;
 }
 
@@ -204,6 +204,11 @@
 //マイページ(ユーザー詳細画面)
 .user-show-info {
   display: block;
+}
+
+.user-show-article-index,
+.favorite-article-index {
+  padding-left: 5%;
 }
 
 .user-show-info-image {
