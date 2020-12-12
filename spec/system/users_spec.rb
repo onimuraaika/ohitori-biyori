@@ -2,15 +2,15 @@ require 'rails_helper'
 
 RSpec.describe "Users", type: :system do
 
-  describe '新規登録機能のテスト' do
+  describe '新規登録機能の画面遷移テスト' do
     let(:user) { build(:user) }
 
     before do
       visit new_user_registration_path
-      fill_in 'user[nickname]', with: user.nickname
-      fill_in 'user[email]', with: user.email
-      fill_in 'user[living_alone_month]', with: user.living_alone_month
-      fill_in 'user[password]', with: user.password
+      fill_in 'user[nickname]',              with: user.nickname
+      fill_in 'user[email]',                 with: user.email
+      fill_in 'user[living_alone_month]',    with: user.living_alone_month
+      fill_in 'user[password]',              with: user.password
       fill_in 'user[password_confirmation]', with: user.password
       click_button '新規会員登録する'
     end
@@ -30,9 +30,9 @@ RSpec.describe "Users", type: :system do
   end
 
   describe 'ログイン機能のテスト' do
-    let!(:user) { create(:user) }
-    let(:nickname) { nil }
-    let(:password) { nil }
+    let!(:user)    { create(:user) }
+    let (:nickname) { nil }
+    let (:password) { nil }
 
     before do
       visit new_user_session_path
@@ -44,6 +44,7 @@ RSpec.describe "Users", type: :system do
     context 'ログインに成功する' do
       let(:nickname) { user.nickname }
       let(:password) { user.password }
+      
       it '投稿一覧画面に遷移する' do
         expect(current_path).to eq articles_path
       end
@@ -55,7 +56,7 @@ RSpec.describe "Users", type: :system do
     end
   end
 
-  describe '画面表示確認テスト' do
+  describe '会員情報編集機能の画面遷移テスト' do
     let!(:user) { create(:user) }
 
     let(:sign_in) do
@@ -65,71 +66,32 @@ RSpec.describe "Users", type: :system do
       click_button 'ログインする'
     end
 
-    context 'マイページ(ユーザー詳細)画面が表示される' do
-      it do
-        sign_in
-        visit user_path(user)
-        expect(current_path).to eq user_path(user)
-      end
-    end
-    context '会員情報編集画面が表示される' do
-      it do
-        sign_in
-        visit edit_user_path(user)
-        expect(current_path).to eq edit_user_path(user)
-      end
-    end
-    context 'パスワード変更画面が表示される' do
-      it do
-        sign_in
-        visit edit_user_registration_path(user)
-        expect(current_path).to eq edit_user_registration_path(user)
-      end
-    end
-    context '退会画面が表示される' do
-      it do
-        sign_in
-        visit unsubscribe_path(user)
-        expect(current_path).to eq unsubscribe_path(user)
-      end
-    end
-  end
-
-  describe '会員情報編集機能のテスト' do
-    let!(:user) { create(:user) }
-
-    let(:sign_in) do
-      visit new_user_session_path
-      fill_in 'user[nickname]', with: user.nickname
-      fill_in 'user[password]', with: user.password
-      click_button 'ログインする'
-    end
-
-    context '更新が成功する' do
+    context '更新に成功する' do
       before do
         sign_in
         visit edit_user_path(user)
-        fill_in 'user[nickname]', with: user.nickname
+        fill_in 'user[nickname]',           with: user.nickname
         fill_in 'user[living_alone_month]', with: user.living_alone_month
         click_button '更新する'
-
       end
+      
       it 'マイページに遷移する'do
         expect(current_path).to eq user_path(user)
       end
     end
-    context '更新が失敗する' do
+    context '更新に失敗する' do
       before do
         sign_in
         visit edit_user_path(user)
-        fill_in 'user[nickname]', with: nil
+        fill_in 'user[nickname]',with: nil
         fill_in 'user[living_alone_month]', with: user.living_alone_month
         click_button '更新する'
-
       end
-      it 'エラーメッセージ が表示され'do
+      
+      it 'エラーメッセージが表示される'do
         expect(page).to have_content 'ニックネームを入力してください'
       end
     end
   end
+  
 end

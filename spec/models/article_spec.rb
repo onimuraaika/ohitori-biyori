@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-  let!(:user) { create(:user) }
-  let!(:genre) { create(:genre)  }
+  
+  let!(:user)    { create(:user) }
+  let!(:genre)   { create(:genre)  }
   let!(:article) { build(:article, user_id: user.id, genre_id: genre.id) }
 
   describe '投稿機能のバリデーションチェックテスト' do
@@ -11,12 +12,12 @@ RSpec.describe Article, type: :model do
     context "全て正しく入力してあるので保存される" do
       it { is_expected.to be_truthy }
     end
-    context "画像を選択しないと保存されない" do
+    context "画像を選択していないので保存されない" do
       before { article.image = nil }
 
       it { is_expected.to be_falsey }
     end
-    context "タイトルが入力されていないと保存されない" do
+    context "タイトルが入力されていないので保存されない" do
       before { article.title = nil }
 
       it { is_expected.to be_falsey }
@@ -31,15 +32,16 @@ RSpec.describe Article, type: :model do
 
       it { is_expected.to be_falsey }
     end
-    context "ジャンルが選択されていないと保存されない" do
+    context "ジャンルが選択されていないので保存されない" do
       before { article.genre = nil }
 
       it { is_expected.to be_falsey }
     end
-    context "伝えたいことが入力されていないと保存されない" do
+    context "伝えたいことが入力されていないので保存されない" do
       before { article.body = nil }
 
       it { is_expected.to be_falsey }
     end
   end
+  
 end
