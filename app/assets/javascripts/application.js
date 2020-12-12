@@ -28,7 +28,7 @@ $(document).on('turbolinks:load', function() {
   });
 });
 
-//新規投稿の画像プレビュー
+//新規投稿・投稿編集・会員情報編集の画像プレビュー
 $(document).on('turbolinks:load', function() {
   function readURL(input) {
     if (input.files && input.files[0]) {
@@ -46,7 +46,7 @@ $(document).on('turbolinks:load', function() {
 
 //ハンバーガメニューの表示設定
 $(document).on('turbolinks:load', function() {
-  $('.hamburger-menu-image').on('click', function () {        // js-btnクラスをクリックすると、
-    $('.hamburger-menu-lists').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
+  $('.hamburger-menu-image').on('click', function () {
+    $('.hamburger-menu-lists').toggleClass('open');
   })
 });

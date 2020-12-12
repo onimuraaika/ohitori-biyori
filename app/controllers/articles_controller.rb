@@ -1,12 +1,12 @@
 class ArticlesController < ApplicationController
 
     def new # 新規投稿
-        @user = current_user # ヘッダー
+        @user    = current_user # ヘッダー
         @article = Article.new
     end
 
     def create # 投稿処理
-        @article = Article.new(article_params)
+        @article         = Article.new(article_params)
         @article.user_id = current_user.id
         if  @article.save
             redirect_to article_path(@article)
@@ -17,9 +17,9 @@ class ArticlesController < ApplicationController
     end
 
     def index # 投稿一覧
-        @user = current_user # ヘッダー
+        @user    = current_user # ヘッダー
         user_ids = User.where(is_deleted: false).pluck("id") # 退会済は非表示
-        @genres = Genre.all
+        @genres  = Genre.all
         # 人気投稿
         @all_rankings = Article.find(Favorite.where(user_id: user_ids)
                                .group(:article_id)
@@ -31,14 +31,14 @@ class ArticlesController < ApplicationController
                                  .order(Rails.env.production? ? "RAND()" : "RANDOM()")
                                  .limit(3)
         # ジャンル検索
-        if    @genre = Genre.find_by(name: params[:name])
+        if    @genre    = Genre.find_by(name: params[:name])
               @articles = @genre.articles
                                 .where(user_id: user_ids)
                                 .page(params[:page])
                                 .per(10)
                                 .order("id DESC")
         # タグ検索表示
-        elsif @tag = params[:tag_name]
+        elsif @tag      = params[:tag_name]
               @articles = Article.where(user_id: user_ids)
                                  .tagged_with("#{params[:tag_name]}")
                                  .page(params[:page])
@@ -51,7 +51,7 @@ class ArticlesController < ApplicationController
                                  .page(params[:page])
                                  .per(10)
                                  .order("id DESC")
-              @keyword = params[:search]
+              @keyword  = params[:search]
         else
               @articles = Article.where(user_id: user_ids)
                                  .page(params[:page])
@@ -61,14 +61,14 @@ class ArticlesController < ApplicationController
     end
 
     def show # 投稿詳細
-        @article = Article.find(params[:id])
-        @user = @article.user # ユーザー表示
+        @article  = Article.find(params[:id])
+        @user     = @article.user # ユーザー表示
         @favorite = Favorite.find_by(user_id: current_user, article_id: @article)
-        @comment = ArticleComment.new
+        @comment  = ArticleComment.new
     end
 
     def edit # 投稿編集
-        @user = current_user # ヘッダー
+        @user    = current_user # ヘッダー
         @article = Article.find(params[:id])
         if  @article.user == current_user
             render "edit"
@@ -78,7 +78,7 @@ class ArticlesController < ApplicationController
     end
 
     def update # 投稿更新
-        @article = Article.find(params[:id])
+        @article         = Article.find(params[:id])
         @article.user_id = current_user.id
         if  @article.update(article_params)
             redirect_to article_path(@article)

@@ -1,21 +1,23 @@
 <!--他人のユーザー表示(user)-->
+
 <div class="col-sm-7 user-show-info-box">
+  
   <div class="user-show-info-image">
     <%= link_to user_path(user) do %>
       <%= attachment_image_tag user, :profile_image, size: "150x150", style: "border-radius: 15px;", fallback: "no_profile_image.jpg" %>
     <% end %>
   </div>
+  
   <div class="user-show-info-details">
     <div class="user-show-info-nickname">
       <%= user.nickname %>
-    </div>
-    </br>
+    </div></br>
     <div class="user-show-info-living_alone_month">
       ひとり暮らし歴：<%= user.living_alone_month %>ヶ月
-    </div>
-    </br>
+    </div></br>
     <p class="user-show-info-introduction">
       <%= simple_format(user.introduction) %>
     </p>
   </div>
+  
 </div>

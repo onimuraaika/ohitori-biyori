@@ -5,12 +5,14 @@
   <% if user_signed_in? %>
     <header>
       <div class="logo">
+        
         <div class="header-logo">
           <%= link_to articles_path do %>
             <%= image_tag 'logo.jpg', class: "logo_image", :alt => 'ロゴ画像、みんなの投稿一覧ページに飛べます。' %>
           <% end %>
         </div>
       </div>
+      
       <div class="header-buttons">
         <div class="header-button">
           <%= link_to user_path(current_user) do %>
@@ -20,6 +22,7 @@
             </button>
           <% end %>
         </div>
+        
         <div class="header-button">
           <%= link_to new_article_path do %>
             <button type="button" class="btn btn-default header-button-post">
@@ -28,6 +31,7 @@
             </button>
           <% end %>
         </div>
+        
         <div class="header-button">
           <%= link_to notifications_path do %>
             <button type="button" class="btn btn-default header-button-favorite">
@@ -36,6 +40,7 @@
             </button>
           <% end %>
         </div>
+        
         <div class="header-button">
           <%= link_to destroy_user_session_path, method: :delete do %>
             <button type="button" class="btn btn-default header-button-logout">
@@ -44,6 +49,7 @@
             </button>
           <% end %>
         </div>
+        
       </div>
 
       <!--ハンバーガーメニュー-->
@@ -53,33 +59,39 @@
         </div>
         <nav class="hamburger-menu-list-box">
           <ul class="hamburger-menu-lists">
+            
             <%= link_to user_path(current_user) do %>
               <li class="hamburger-menu-list">
                 <i class="fa fa-sun-o" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i>
                 マイページ
               </li>
             <% end %>
+            
             <%= link_to new_article_path do %>
               <li class="hamburger-menu-list">
                 <i class="fa fa-pencil" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i>
                 投稿する
               </li>
             <% end %>
+            
             <%= link_to notifications_path do %>
               <li class="hamburger-menu-list">
                 <i class="fa fa-bell-o" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i>
                 お知らせ
               </li>
             <% end %>
+            
             <%= link_to destroy_user_session_path, method: :delete do %>
               <li class="hamburger-menu-list">
                 <i class="fa fa-sign-out" aria-hidden="true" style="color: #F5CC50; font-size: 30px;"></i>
                 ログアウト
               </li>
             <% end %>
+            
           </ul>
         </nav>
       </div>
+      
     </header>
   <% end %>
 

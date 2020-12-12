@@ -18,6 +18,7 @@
 
   <div class="row unsubscribe-buttons">
     <div class="unsubscribe-button">
+      
       <% if current_user.email == 'guest@user.com' %>
         <div>
           <%= link_to edit_user_path(current_user) do %>
@@ -47,6 +48,7 @@
           <% end %>
         </div>
       <% end %>
+      
     </div>
   </div>
 

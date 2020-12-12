@@ -14,7 +14,7 @@
     <% else %>
       <h2>みんなの投稿</h2>
     <% end %>
-  <hr class="border-line" />
+  <hr class="border-line"/>
   </div>
 
   <div class="row article-index-body">
@@ -29,7 +29,8 @@
             <%= submit_tag '　検索　' %>
           <% end %>
         </div>
-      </div>
+      </div></br>
+      
       <!--ジャンル検索-->
       <div class="article-index-genre">
         <h4 class="article-index-side_bar-title">ジャンルで検索</h4></br>
@@ -45,8 +46,8 @@
             </div>
           <% end %>
         </div>
-      </div>
-      </br>
+      </div></br>
+      
       <!--ランキング投稿-->
       <h4 class="article-index-side_bar-title">人気の投稿</h4></br>
       <div class="article-index-side_bar-flex">
@@ -63,6 +64,7 @@
           </div>
         <% end %>
       </div></br>
+      
       <!--おすすめ投稿-->
       <h4 class="article-index-side_bar-title">おすすめの投稿</h4></br>
       <div class="article-index-side_bar-flex">
@@ -81,7 +83,7 @@
       </div>
     </div>
 
-    <!--投稿一覧-->
+    <!--投稿一覧表示-->
     <div class="article-index-main">
       <%= render 'articles/article_index', articles: @articles %>
     </div>

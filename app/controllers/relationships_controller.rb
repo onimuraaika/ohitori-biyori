@@ -12,14 +12,14 @@ class RelationshipsController < ApplicationController
     end
 
     def following # フォローユーザー一覧
-        @user = current_user # ヘッダー
+        @user  = current_user # ヘッダー
         @users = @user.following
                       .where(is_deleted: false)
                       .page(params[:page]).per(5)
     end
 
     def followed # フォロワー一覧
-        @user = current_user # ヘッダー
+        @user  = current_user # ヘッダー
         @users = @user.followers.page(params[:page]).per(5)
     end
 

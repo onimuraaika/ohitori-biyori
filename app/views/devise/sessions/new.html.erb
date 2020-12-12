@@ -1,5 +1,6 @@
 <!--ログイン画面-->
 
+<!--ヘッダー-->
 <div class="container-fluid signin-header">
   <div class="logo-image">
   <%= link_to root_path do %>
@@ -22,6 +23,7 @@
         <%= content_tag :div, message, :id => "flash_#{name}", :class => "alert alert-warning error-message" if message.is_a?(String) %>
       <% end %>
 
+      <!--ログインフォーム-->
       <div class="form-horizontal">
         <div class="form-group">
           <label class="control-label login-label"><%= f.label "ニックネーム(必須)" %></label></br>
@@ -48,4 +50,5 @@
   </div>
 </div>
 
+<!--フッター-->
 <div class="container-fluid signin-footer"></div>

@@ -1,6 +1,7 @@
 <!--新規登録・ログイン・トップページ ボタン-->
  
 <div class="row access-buttons">
+  
   <div class="access-button">
     <%= link_to root_path do %>
       <button type="button" class="btn btn-default btn-lg access-button-top">
@@ -9,6 +10,7 @@
       </button>
     <% end %>
   </div>
+  
   <div class="access-button">
     <%= link_to new_user_registration_path do %>
       <button type="button" class="btn btn-default btn-lg access-button-signup">
@@ -17,9 +19,11 @@
       </button>
     <% end %>
   </div>
+  
 </div>
 
 <div class="row access-buttons">
+  
   <div class="access-button">
     <%= link_to user_session_path do %>
       <button type="button" class="btn btn-default btn-lg access-button-signin">
@@ -28,6 +32,7 @@
       </button>
     <% end %>
   </div>
+  
   <div class="access-button">
     <%= link_to users_guest_sign_in_path, method: :post do %>
       <button type="button" class="btn btn-default btn-lg access-button-guest">
@@ -36,4 +41,5 @@
       </button>
     <% end %>
   </div>
+  
 </div>
