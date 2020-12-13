@@ -22,6 +22,7 @@
         <%= image_tag "no_profile_image.jpg", size: "250x250", id: :img_preview, style: "border-radius: 15px;" %>
       <% end %></br>
       <%= f.attachment_field :profile_image, size: "250x250", class: "user-edit-form-profile_image", id: :change_img %>
+      <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #FAE8B1;", class="down-arrow"></i>
     </div>
 
     <div class="row user-edit-form">
@@ -29,13 +30,13 @@
         <h3 class="user-edit-form-label">ニックネーム</h3>
         <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "form-control input-lg" %>
       </div>
-      <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #FAE8B1;", class="down-arrow"></i>
+      <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F8DD8A;", class="down-arrow"></i>
     </div>
 
     <div class="row user-edit-form">
       <div class="form-group">
         <h3 class="user-edit-form-label">自己紹介文</h3>
-        <%= f.text_area :introduction, rows: "6", autofocus: true, autocomplete: "introduction", class: "form-control input-lg", placeholder:"例：東京でひとり暮らしを始めたばかりの社会人です。(100文字まで)" %>
+        <%= f.text_area :introduction, rows: "6", autofocus: true, autocomplete: "introduction", class: "form-control input-lg", placeholder:"例：東京でひとり暮らしを始めたばかりの社会人です。(100文字以内)" %>
       </div>
       <i class="fa fa-caret-down fa-4x" aria-hidden="true" style="color: #F6D263;", class="down-arrow"></i>
     </div>

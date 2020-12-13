@@ -5,7 +5,7 @@
 
     <div class="row change-password-form-title">
       <hr class="border-line"/>
-      <h2 class="text-center">パスワード変更</h2>
+      <h2 class="text-center">パスワードを変更する</h2>
       <hr class="border-line"/>
     </div>
 
@@ -32,10 +32,10 @@
           <div class="actions change-password-form-button">
             <% if current_user.nickname == 'ゲスト' %>
               <button class="btn btn-default btn-block btn-lg change-password-form-update_button" disabled="disabled">
-                パスワードを変更する
+                変更する
               </button>
             <% else %>
-              <%= f.submit "パスワードを変更する", class: "btn btn-default btn-block btn-lg change-password-form-update_button" %>
+              <%= f.submit "変更する", class: "btn btn-default btn-block btn-lg change-password-form-update_button" %>
             <% end %>
             <%= link_to edit_user_path(current_user), style: "text-decoration: none;" do %>
               <button type="button" class="btn btn-default btn-block btn-lg new-articl-button-return">
