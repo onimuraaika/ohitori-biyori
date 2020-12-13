@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+    before_action :ensure_correct_user, only: [:edit, :update, :unsubscribe, :withdraw]
+
     def show # マイページ(ユーザー詳細)
         @user     = User.find(params[:id])
         @articles = @user.articles.page(params[:page]).reverse_order
@@ -39,5 +41,13 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:profile_image, :nickname, :introduction, :living_alone_month)
     end
+
+    def ensure_correct_user
+        @user = User.find(params[:id])
+        unless @user == current_user
+            redirect_to user_path(current_user)
+        end
+    end
+
 
 end
