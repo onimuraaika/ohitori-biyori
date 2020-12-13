@@ -55,15 +55,6 @@ https://docs.google.com/spreadsheets/d/1fFdHXg-D27azZRg0GS8lUH4ksh0eg07RF1wfQJPR
 
 ## :paperclip:機能一覧
 https://docs.google.com/spreadsheets/d/1RF2XLkZoFw_vR4MrM4Nd46LtIvuf8_I7OLgZrszj4zQ/edit?usp=sharing
-* ログイン機能(devise)
-* 投稿機能(画像アップロード)
-* コメント機能(非同期)
-* お気に入り保存機能(非同期)
-* フォロー機能(非同期)
-* タグ付け機能
-* 検索機能（キーワード/タグ/ジャンル）
-* バッチ処理
-* 通知機能
 
 ## :globe_with_meridians:開発環境
 * OS：Linux(CentOS)
