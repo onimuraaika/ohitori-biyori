@@ -53,6 +53,9 @@ https://docs.google.com/spreadsheets/d/1StMi5XKPNnyye3H8NMhQqE0h1OcpVp31BAV7Q6Kh
 * アプリケーション詳細設計  
 https://docs.google.com/spreadsheets/d/1fFdHXg-D27azZRg0GS8lUH4ksh0eg07RF1wfQJPRcYk/edit?usp=sharing
 
+* テスト仕様書  
+https://docs.google.com/spreadsheets/d/1TuGoZnD4G6BtVlt0R6D7hGAilqpDzvR3zKxSZCRson4/edit?usp=sharing
+
 ## :paperclip:機能一覧
 https://docs.google.com/spreadsheets/d/1RF2XLkZoFw_vR4MrM4Nd46LtIvuf8_I7OLgZrszj4zQ/edit?usp=sharing
 
