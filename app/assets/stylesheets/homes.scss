@@ -9,9 +9,16 @@
 }
 
 //トップページ
-.top_title {
-  padding-top: 150px;
-  text-align: center;
+.top-background {
+  background-image: image-url("top_background_image.jpg");
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: bottom;
+  background-color: rgba( 255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  background-attachment: fixed;
 }
 
 .top {
