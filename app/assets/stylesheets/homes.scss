@@ -9,22 +9,21 @@
 }
 
 //トップページ
-.top-background {
-  background-image: image-url("top_background_image.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: bottom;
-  background-color: rgba( 255, 255, 255, 0.4);
-  background-blend-mode: lighten;
-  height: 100vh;
-}
-
 .top_title {
   padding-top: 150px;
   text-align: center;
 }
 
 .top {
+  background-image: image-url("top_background_image.jpg");
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: bottom;
+  background-color: rgba( 255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  background-attachment: fixed;
   padding-top: 100px;
   padding-bottom: 100px;
   align-items: center;
