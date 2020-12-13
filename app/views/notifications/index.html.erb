@@ -8,12 +8,14 @@
     <hr class="border-line notification-border"/>
   </div>
 
-  <div class="row">
+  <div class="">
     <% notifications = @notifications %>
     <% if notifications.exists? %>
       <%= render notifications %>
     <% else %>
-      <h3 class="text-center notification-nothing">お知らせはまだ届いていません。</h3>
+      <div>
+        <%= image_tag 'notification.jpg', class: "notification-nothing" %>
+      </div>
     <% end %>
   </div>
 
