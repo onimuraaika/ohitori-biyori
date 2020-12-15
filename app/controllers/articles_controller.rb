@@ -31,14 +31,14 @@ class ArticlesController < ApplicationController
                                  .order(Rails.env.production? ? "RAND()" : "RANDOM()")
                                  .limit(3)
         # ジャンル検索
-        if    @genre    = Genre.find_by(name: params[:name])
+        if    @genre = Genre.find_by(name: params[:name])
               @articles = @genre.articles
                                 .where(user_id: user_ids)
                                 .page(params[:page])
                                 .per(10)
                                 .order("id DESC")
         # タグ検索表示
-        elsif @tag      = params[:tag_name]
+        elsif @tag = params[:tag_name]
               @articles = Article.where(user_id: user_ids)
                                  .tagged_with("#{params[:tag_name]}")
                                  .page(params[:page])
