@@ -94,4 +94,44 @@ RSpec.describe "Users", type: :system do
     end
   end
   
+  describe '画面表示確認テスト' do
+    let!(:user) { create(:user) }
+
+    let(:sign_in) do
+      visit new_user_session_path
+      fill_in 'user[nickname]', with: user.nickname
+      fill_in 'user[password]', with: user.password
+      click_button 'ログインする'
+    end
+
+    context 'マイページ(ユーザー詳細)画面が表示される' do
+      it do
+        sign_in
+        visit user_path(user)
+        expect(current_path).to eq user_path(user)
+      end
+    end
+    context '会員情報編集画面が表示される' do
+      it do
+        sign_in
+        visit edit_user_path(user)
+        expect(current_path).to eq edit_user_path(user)
+      end
+    end
+    context 'パスワード変更画面が表示される' do
+      it do
+        sign_in
+        visit edit_user_registration_path(user)
+        expect(current_path).to eq edit_user_registration_path(user)
+      end
+    end
+    context '退会画面が表示される' do
+      it do
+        sign_in
+        visit unsubscribe_path(user)
+        expect(current_path).to eq unsubscribe_path(user)
+      end
+    end
+  end
+
 end
