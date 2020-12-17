@@ -320,3 +320,12 @@ header {
   right: 0;
 }
 }
+
+//スマートフォン対応
+@media screen and (max-width: 480px) {
+//ページトップへの移動ボタン
+.top-arrow-button {
+  height: 50px;
+  width: 50px;
+}
+}
