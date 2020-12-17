@@ -24,7 +24,7 @@
 .top {
   background-image: image-url("top_background_image.jpg");
   position: relative;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   background-size: cover;
   background-position: bottom;
@@ -37,7 +37,7 @@
   text-align: center;
 }
 
-//(ここから　サイトの説明部分テンプレート)
+//(ここから　トップメッセージ部分テンプレート)
 .top-message-subtitle {
   padding-top: 60px;
 }
@@ -98,15 +98,6 @@
 .top-how_to_enjoy-description {
   padding-top: 20px;
   font-size: 16px;
-}
-
-//ここは写真を入れたら削除する
-.top-how_to_enjoy-image {
-  margin: 0 auto;
-  padding-top: 10px;
-  height: 250px;
-  width: 400px;
-  background-color: #CCC;
 }
 
 //Aboutページ
@@ -263,4 +254,59 @@
   background-repeat: no-repeat;
   width: 500px;
 }
+}
+
+//スマートフォン対応
+@media screen and (max-width: 480px) {
+//トップページ
+.top {
+  padding-top: 50px;
+}
+//(ここから　トップメッセージテンプレート)
+.top-message-title {
+  font-size: 30px;
+}
+
+.top-message-description,
+.top-message-description-title,
+.top-message-title_description
+{
+  font-size: 12px;
+}
+
+.top-message-subtitle {
+  font-size: 17px;
+  padding-top: 20px;
+}
+
+.top-message-title_description {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.top-message-description-title {
+  padding-top: 20px;
+}
+// (ここまで)
+
+//(ここから　ログイン・新規登録ボタンの部分テンプレート)
+.access-buttons {
+  padding-bottom: 0;
+  display: block;
+}
+
+.access-button {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.access-button-top,
+.access-button-about,
+.access-button-signup,
+.access-button-signin,
+.access-button-guest
+{
+  width: 220px;
+}
+//(ここまで)
 }
