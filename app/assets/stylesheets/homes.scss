@@ -222,8 +222,6 @@
 }
 
 .about-how_to_enjoy_genre {
-  margin: 10px auto;
-  background-image: image-url("how_to_enjoy_genre.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 250px;
@@ -232,7 +230,7 @@
 
 .about-how_to_enjoy_post {
   margin: 10px auto;
-  background-image: image-url("how_to_enjoy_post_phone.jpg");
+  background-image: image-url("how_to_enjoy_post_tablet.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 500px;
@@ -240,7 +238,7 @@
 
 .about-how_to_enjoy_favorite {
   margin: 10px auto;
-  background-image: image-url("how_to_enjoy_favorite_phone.jpg");
+  background-image: image-url("how_to_enjoy_favorite_tablet.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   text-align: center;
@@ -249,7 +247,7 @@
 
 .about-how_to_enjoy_follow {
   margin: 10px auto;
-  background-image: image-url("how_to_enjoy_following_phone.jpg");
+  background-image: image-url("how_to_enjoy_following_tablet.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 500px;
@@ -309,4 +307,63 @@
   width: 220px;
 }
 //(ここまで)
+
+//Aboutページ
+.about {
+  padding-bottom: 50px;
+}
+
+.about-site {
+  padding-top: 0px;
+}
+
+.about-how_to_enjoy-title {
+  font-size: 20px;
+}
+
+.about-how_to_enjoy-subtitle {
+  padding-top: 30px;
+  font-size: 16px;
+}
+
+.about-how_to_enjoy-description {
+  font-size: 12px;
+}
+
+.about-how_to_enjoy_genre {
+  margin: 0 auto;
+  background-image: image-url("how_to_enjoy_genre_phone.jpg");
+  background-size: contain, contain, contain;
+  background-repeat: no-repeat;
+  height: 1060px;
+  width: 350px;
+}
+
+.about-how_to_enjoy_post {
+  margin: 0 auto;
+  background-image: image-url("how_to_enjoy_post_tablet.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 350px;
+}
+
+.about-how_to_enjoy_favorite {
+  margin: 0 auto;
+  background-image: image-url("how_to_enjoy_favorite_tablet.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 400px;
+  width: 350px;
+}
+
+.about-how_to_enjoy_follow {
+  margin: 0 auto;
+  background-image: image-url("how_to_enjoy_following_tablet.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 350px;
+}
 }
