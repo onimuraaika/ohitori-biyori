@@ -1,7 +1,7 @@
 <!--ログイン画面-->
 
 <!--ヘッダー-->
-<div class="container-fluid signin-header">
+<div class="container-fluid login-header">
   <div class="logo-image">
   <%= link_to root_path do %>
     <%= image_tag 'logo.jpg', :alt => 'ロゴ画像、みんなの投稿一覧ページに飛べます。' %>
@@ -13,7 +13,7 @@
   <div class="row login-form">
 
     <hr class="border-line"/>
-    <h2 class="text-center">ログイン</h2>
+    <h2 class="login-title text-center">ログイン</h2>
     <hr class="border-line login-form-border"/>
 
     <%= form_with model: @user, url: user_session_path, local: true do |f| %>
@@ -51,4 +51,4 @@
 </div>
 
 <!--フッター-->
-<div class="container-fluid signin-footer"></div>
+<div class="container-fluid login-footer"></div>

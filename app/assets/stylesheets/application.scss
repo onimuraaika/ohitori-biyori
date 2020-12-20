@@ -156,14 +156,14 @@ header {
   background-color: #FCF6D8!important;
 }
 
-.signin-page-button {
+.login-page-button {
   height: 80px;
   background-color: #D8F1FC!important;
 }
 
 //ログイン画面
-.signin-header,
-.signin-footer
+.login-header,
+.login-footer
 {
   height: 150px;
   background-color: #FAF7EE;
@@ -343,5 +343,18 @@ header {
 
 .signup-label {
   font-size: 12px;
+}
+
+//ログイン画面
+.login {
+  padding-bottom: 50px;
+}
+
+.login-form {
+  padding: 0 20%;
+}
+
+.login-title {
+  font-size: 25px;
 }
 }
