@@ -221,6 +221,10 @@ header {
   padding-bottom: 50px;
 }
 
+.change-password-title {
+  text-align: center;
+}
+
 .change-password-form-button {
   padding-top: 50px;
   text-align: center;
@@ -299,7 +303,6 @@ header {
   z-index: 10;
   top: 2%;
   right: 2%;
-
 }
 
 .hamburger-menu-lists {
@@ -331,10 +334,23 @@ header {
 
 //スマートフォン対応
 @media screen and (max-width: 480px) {
+//ヘッダー
+header {
+  height: 100px;
+}
+
+.header-logo {
+  margin: 0 auto;
+}
+
+.header-logo-image {
+  width: 240px;
+}
+
 //ページトップへの移動ボタン
 .top-arrow-button {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 }
 //新規会員登録画面
 .signup-form {
@@ -366,8 +382,27 @@ header {
   font-size: 25px;
 }
 
+//パスワード変更画面
+.change-password {
+  padding-bottom: 50px;
+}
+
+.change-password-form {
+  padding: 0 20%;
+}
+
+.change-password-title {
+  font-size: 25px;
+}
+
 //エラーメッセージ
 .error-message {
   font-size: 11px;
+}
+
+//(ハンバーガーメニュー)
+.menu-image {
+  height: 40px;
+  width: 40px;
 }
 }
