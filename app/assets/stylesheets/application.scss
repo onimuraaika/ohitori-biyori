@@ -303,7 +303,6 @@ header {
   z-index: 10;
   top: 2%;
   right: 2%;
-
 }
 
 .hamburger-menu-lists {
@@ -335,6 +334,19 @@ header {
 
 //スマートフォン対応
 @media screen and (max-width: 480px) {
+//ヘッダー
+header {
+  height: 100px;
+}
+
+.header-logo {
+  margin: 0 auto;
+}
+
+.header-logo-image {
+  width: 240px;
+}
+
 //ページトップへの移動ボタン
 .top-arrow-button {
   height: 50px;
@@ -383,9 +395,14 @@ header {
   font-size: 25px;
 }
 
-
 //エラーメッセージ
 .error-message {
   font-size: 11px;
+}
+
+//(ハンバーガーメニュー)
+.menu-image {
+  height: 40px;
+  width: 40px;
 }
 }
