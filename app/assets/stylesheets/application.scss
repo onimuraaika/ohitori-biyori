@@ -221,6 +221,10 @@ header {
   padding-bottom: 50px;
 }
 
+.change-password-title {
+  text-align: center;
+}
+
 .change-password-form-button {
   padding-top: 50px;
   text-align: center;
@@ -365,6 +369,32 @@ header {
 .login-title {
   font-size: 25px;
 }
+
+//パスワード変更画面
+.change-password {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.change-password-form {
+  padding: 0 30%;
+  align-items: center;
+}
+
+.change-password-form-title {
+  padding-bottom: 50px;
+}
+
+.change-password-form-button {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.change-password-form-update_button {
+  height: 80px;
+  background-color: #FCF6D8!important;
+}
+
 
 //エラーメッセージ
 .error-message {
