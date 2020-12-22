@@ -309,7 +309,7 @@ header {
   margin-left: auto;
   position: fixed;
   right: -100%;
-  height: 34vh;
+  height: 40vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -404,5 +404,10 @@ header {
 .menu-image {
   height: 40px;
   width: 40px;
+}
+
+.hamburger-menu-lists {
+  height: 34vh;
+  font-size: 20px;
 }
 }
