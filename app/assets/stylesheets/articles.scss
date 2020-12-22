@@ -28,7 +28,7 @@
   text-align: center;
 }
 
-.new-article-image {
+.select-article-image {
   margin: 10px auto;
 }
 
@@ -369,4 +369,31 @@
   height: 55px;
   width: 200px;
 }
+}
+
+//スマートフォン対応
+@media screen and (max-width: 480px) {
+  //新規投稿画面
+.new-article {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.new-article-title {
+  font-size: 30px;
+}
+
+.new-article-row {
+  padding: 0 20%;
+}
+
+.new-article-image {
+  height: 250px;
+  width: 250px;
+}
+
+.new-article-subtitle {
+  font-size: 20px;
+}
+
 }
