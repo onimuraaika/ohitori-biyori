@@ -18,7 +18,6 @@
   </div>
 
   <div class="row article-index-body">
-
     <div class="article-index-side_bar">
       <!--キーワード検索-->
       <div class="article-index-search">
@@ -87,10 +86,9 @@
     <div class="article-index-main">
       <%= render 'articles/article_index', articles: @articles %>
     </div>
-
   </div>
 
   <!--ページング-->
   <div class="text-center"><%= paginate @articles %></div>
-
+  
 </div>
