@@ -6,19 +6,18 @@
   <div class="row article-index-title">
   <hr class="border-line"/>
     <% if @keyword %>
-      <h2>「<%= @keyword %>」に関する投稿</h2>
+      <h2 class="article-index-title-title">「<%= @keyword %>」に関する投稿</h2>
     <% elsif @genre %>
-      <h2>「<%= @genre.name %>」に関する投稿</h2>
+      <h2 class="article-index-title-title">「<%= @genre.name %>」に関する投稿</h2>
     <% elsif @tag %>
-      <h2>「<%= @tag %>」に関する投稿</h2>
+      <h2 class="article-index-title-title">「<%= @tag %>」に関する投稿</h2>
     <% else %>
-      <h2>みんなの投稿</h2>
+      <h2 class="article-index-title-title">みんなの投稿</h2>
     <% end %>
   <hr class="border-line"/>
   </div>
 
   <div class="row article-index-body">
-
     <div class="article-index-side_bar">
       <!--キーワード検索-->
       <div class="article-index-search">
@@ -87,10 +86,9 @@
     <div class="article-index-main">
       <%= render 'articles/article_index', articles: @articles %>
     </div>
-
   </div>
 
   <!--ページング-->
   <div class="text-center"><%= paginate @articles %></div>
-
+  
 </div>
