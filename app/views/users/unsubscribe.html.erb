@@ -41,7 +41,7 @@
           <% end %>
         </div>
         <div>
-          <%= link_to users_withdraw_path(current_user.id), method: :patch, data: {confirm: "本当に退会してもよろしいですか？"} do  %>
+          <%= link_to users_withdraw_path(current_user), method: :patch, data: {confirm: "本当に退会してもよろしいですか？"} do  %>
             <button class="btn btn-default btn-lg unsubscribe-button-confirm">
               はい、退会します
             </button>
