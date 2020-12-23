@@ -127,7 +127,7 @@
   text-align: right;
 }
 
-.article-index-article-title_body {
+.article-index-article-title-body {
   padding-top: 20px;
   padding-left: 20px;
   text-align: left;
@@ -408,5 +408,36 @@
 
 .article-index-title-title {
   font-size: 25px;
+}
+
+//投稿一覧表示の部分テンプレート
+.article-index-article {
+  padding-bottom: 5px;
+}
+
+.article-index-article-image {
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.article-index-article-image-size {
+  height: 100px;
+  width: 100px;
+}
+
+.article-index-article-title-body {
+  padding-top: 1px;
+  padding-left: 0;
+  font-size: 13px;
+}
+
+.article-index-article-title {
+  margin-bottom: 0;
+}
+
+.article-index-article-body,
+.article-index-article-tag
+{
+  padding-top: 3px;
 }
 }
