@@ -35,7 +35,6 @@ class User < ApplicationRecord
     validates :introduction,                       length: { maximum: 100 }
 
     attachment :profile_image
-    attachment :image
 
     # フォロー確認
     def followed_by?(user)
