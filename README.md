@@ -61,12 +61,12 @@ https://docs.google.com/spreadsheets/d/1RF2XLkZoFw_vR4MrM4Nd46LtIvuf8_I7OLgZrszj
 
 ## :globe_with_meridians: 開発環境
 * OS：Linux(CentOS)
-* 言語：HTML,CSS,Ruby'2.6.3',JavaScript
+* 言語：HTML,CSS,Ruby'2.6.3',JavaScript,SQL
 * フレームワーク：Ruby on Rails'5.2.4'
 * CSSライブラリ：Bootstrap'3.3.6'
 * JSライブラリ：jQuery
 
 ## :memo: 使用素材  
-* ロゴ作成（Canva）
-* 画像素材(Canva)
-* ドメイン取得（お名前.com）
+* ロゴ作成：Canva（https://www.canva.com/ja_jp/）
+* 画像素材：Canva(https://www.canva.com/ja_jp/)
+* ドメイン取得：お名前.com(https://www.onamae.com/?btn_id=onamae_header_logo)
