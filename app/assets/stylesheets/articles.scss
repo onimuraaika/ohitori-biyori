@@ -373,7 +373,7 @@
 
 //スマートフォン対応
 @media screen and (max-width: 480px) {
-  //新規投稿画面
+//新規投稿画面
 .new-article {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -396,4 +396,17 @@
   font-size: 20px;
 }
 
+//投稿一覧画面
+.article-index {
+  padding-bottom: 50px;
+}
+
+.article-index-title {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.article-index-title-title {
+  font-size: 25px;
+}
 }
