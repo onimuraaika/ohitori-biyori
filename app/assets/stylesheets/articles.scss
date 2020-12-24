@@ -212,6 +212,11 @@
   text-align: right;
 }
 
+.article-show-comment-image-size {
+  height: 120px;
+  width: 120px;
+  border-radius: 15px;
+}
 
 .article-show-comment-info {
   text-align: left;
@@ -440,4 +445,65 @@
 {
   padding-top: 3px;
 }
+
+//投稿詳細画面
+.article-show-button {
+  display: block;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.article-show-button-return,
+.article-show-button-edit,
+.article-show-button-delete,
+.article-show-button-favorite
+{
+  margin: 15px 30%;
+  width: 210px;
+}
+
+.article-show-comment_form {
+  padding-top: 50px;
+  display: block;
+}
+
+.article-show-comment_form-text_area-size {
+  height: 100px;
+  width: 230px;
+}
+
+.article-show-comment_form-submit_button {
+  margin: 30px 0 0 0;
+}
+
+//(ここから　コメント表示の部分テンプレート)
+.article-show-comment {
+  padding-bottom: 5px;
+  width: 100vw;
+}
+
+// .article-show-comment-image {
+//   text-align: right;
+// }
+
+.article-show-comment-image-size {
+  height: 80px;
+  width: 80px;
+  border-radius: 15px;
+}
+
+.article-show-comment-nickname {
+  padding-top: 0;
+  font-size: 15px;
+}
+
+.article-show-comment-comment {
+  padding-top: 0;
+  font-size: 12px;
+}
+
+.article-show-comment-destroy {
+  padding: 30px 0 0 0;
+}
+//(ここまで)
 }
