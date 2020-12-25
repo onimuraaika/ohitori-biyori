@@ -14,14 +14,14 @@
   <!--投稿内容-->
   <div class="row article-show-article">
     <div class="article-show-article-image">
-      <%= attachment_image_tag @article, :image, size: "250x250", style: "border-radius:15px" %>
+      <%= attachment_image_tag @article, :image, class: "article-show-article-image-size" %>
     </div>
     <div class="article-show-article-title_tag_body">
       <p class="article-show-article-title">
         <%= @article.title %>
       </p>
-      <p class="article-show-article-body">
-        <%= simple_format(@article.body) %>
+      <p>
+        <%= simple_format(@article.body, class: "article-show-article-body") %>
       </p>
       <p class="article-show-article-tag">
         <% @article.tag_list.each do |tag| %>
