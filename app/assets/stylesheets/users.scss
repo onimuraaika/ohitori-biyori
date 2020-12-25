@@ -264,3 +264,25 @@
 }
 //(ここまで)
 }
+
+//スマートフォン対応
+@media screen and (max-width: 480px) {
+.user-show-info-details {
+  line-height: 10px;
+}
+
+.user-show-info-nickname {
+  padding-top: 10px;
+}
+
+.user-show-info-living_alone_month {
+  padding-top: 20px;
+  font-size: 13px;
+}
+
+.user-show-info-introduction
+{
+  padding-top: 5px;
+  font-size: 13px;
+}
+}
