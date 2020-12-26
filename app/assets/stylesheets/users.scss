@@ -226,6 +226,7 @@
   font-size: 20px;
 }
 
+//フォローボタン
 .user-show-info-follow_button {
   line-height: 50px;
   text-align: center;
@@ -268,7 +269,7 @@
 //スマートフォン対応
 @media screen and (max-width: 480px) {
 .user-show-info-details {
-  line-height: 10px;
+  line-height: 15px;
 }
 
 .user-show-info-nickname {
@@ -284,5 +285,11 @@
 {
   padding-top: 5px;
   font-size: 13px;
+}
+
+//フォローボタン
+.user-show-info-follow_button {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 }
