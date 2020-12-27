@@ -29,7 +29,7 @@
           <% end %>
         </div>
       </div></br>
-      
+
       <!--ジャンル検索-->
       <div class="article-index-genre">
         <h4 class="article-index-side_bar-title">ジャンルで検索</h4></br>
@@ -46,7 +46,7 @@
           <% end %>
         </div>
       </div></br>
-      
+
       <!--ランキング投稿-->
       <h4 class="article-index-side_bar-title">人気の投稿</h4></br>
       <div class="article-index-side_bar-flex">
@@ -63,7 +63,7 @@
           </div>
         <% end %>
       </div></br>
-      
+
       <!--おすすめ投稿-->
       <h4 class="article-index-side_bar-title">おすすめの投稿</h4></br>
       <div class="article-index-side_bar-flex">
@@ -89,6 +89,6 @@
   </div>
 
   <!--ページング-->
-  <div class="text-center"><%= paginate @articles %></div>
-  
+  <div class="article-index-pagination"><%= paginate @articles %></div>
+
 </div>
