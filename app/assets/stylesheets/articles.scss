@@ -14,6 +14,16 @@
   padding-bottom: 100px;
 }
 
+.new-article-image {
+  border-radius: 15px;
+  height: 300px;
+  width: 300px;
+}
+
+.select-article-image {
+  margin: 10px auto;
+}
+
 .new-article-title {
   text-align: center;
 }
@@ -26,10 +36,6 @@
   padding: 0 30%;
   align-items: center;
   text-align: center;
-}
-
-.select-article-image {
-  margin: 10px auto;
 }
 
 .new-article-button, {
@@ -275,7 +281,9 @@
 }
 
 .edit-article-image {
-  margin: 10px auto;
+  border-radius: 15px;
+  height: 300px;
+  width: 300px;
 }
 
 .edit-article-button {
@@ -404,6 +412,7 @@
 }
 
 .new-article-image {
+  border-radius: 15px;
   height: 250px;
   width: 250px;
 }
@@ -543,4 +552,37 @@
   padding: 30px 0 0 0;
 }
 //(ここまで)
+
+// 投稿編集画面
+.edit-article {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.edit-article-title {
+  font-size: 30px;
+}
+
+// .edit-article-border {
+//   padding-bottom: 50px;
+// }
+
+.edit-article-row {
+  padding: 0 20%;
+}
+
+.edit-article-subtitle {
+  font-size: 20px;
+}
+
+// .edit-articl-button-return {
+//   margin-top: 30px;
+//   height: 80px;
+// }
+
+.edit-article-image {
+  // margin: 10px auto;
+  height: 250px;
+  width: 250px;
+}
 }
