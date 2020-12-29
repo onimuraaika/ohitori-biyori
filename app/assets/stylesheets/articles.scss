@@ -435,7 +435,7 @@
   font-size: 25px;
 }
 
-//投稿一覧表示の部分テンプレート
+//(ここから　投稿一覧表示の部分テンプレート)
 .article-index-article {
   padding-bottom: 5px;
 }
@@ -465,6 +465,11 @@
 {
   padding-top: 3px;
 }
+
+.article-index-article-tag-button {
+  margin-top: 3px;
+}
+//(ここまで)
 
 //投稿詳細画面
 .article-show {

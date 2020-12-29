@@ -54,7 +54,7 @@
   margin: 5px;
 }
 
-.user-show-info-nav-my_article,
+.user-show-info-nav-my-article,
 .user-show-info-nav-favorite,
 .user-show-info-nav-following,
 .user-show-info-nav-followed,
@@ -91,7 +91,7 @@
   width: 90%;
 }
 
-.user-show-article-index-paginate,
+.user-show-article-index-pagination,
 .favorite-article-index-paginate
 {
   padding-bottom: 100px;
@@ -268,6 +268,7 @@
 
 //スマートフォン対応
 @media screen and (max-width: 480px) {
+
 .user-show-info-details {
   line-height: 15px;
 }
@@ -292,4 +293,27 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+//マイページ・ユーザー詳細画面
+.user-show {
+  padding-top: 50px;
+}
+
+//(ここから　ユーザー表示の部分テンプレート)
+.user-show-info-nav-my-article,
+.user-show-info-nav-favorite,
+.user-show-info-nav-following,
+.user-show-info-nav-followed,
+.user-show-info-nav-setting
+{
+  height: 60px;
+  width: 160px;
+}
+
+.user-show-article-index-pagination,
+.favorite-article-index-paginate
+{
+  padding-bottom: 50px;
+}
+//(ここまで)
 }
