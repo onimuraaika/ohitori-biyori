@@ -36,7 +36,7 @@
 }
 
 .following-index-user-nickname,
-.following-index-user-living_alone_month
+.following-index-user-living-alone-month
 {
   padding-top: 20px;
   padding-left: 20px;
@@ -48,7 +48,7 @@
   font-size: 16px;
 }
 
-.following-index-user-living_alone_month {
+.following-index-user-living-alone-month {
   padding-top: 20px;
   padding-left: 20px;
   text-align: left;
@@ -59,7 +59,58 @@
   padding-top: 50px;
 }
 
-.following-article-index-paginate {
+.following-article-index-pagination {
+  padding-bottom: 100px;
+}
+
+//フォローワー一覧表示画面
+.followed-index {
+  margin-top: 100px;
+}
+
+.followed-index-user {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.followed-index-title {
+  padding: 100px 20%;
+  text-align: center;
+}
+
+.followed-index-user-image {
+  margin-right: 20px;
+  text-align: right;
+}
+
+.followed-index-user-image-size {
+  height: 150px;
+  width: 150px;
+  border-radius:15px;
+}
+
+.followed-index-user-nickname,
+.followed-index-user-living-alone-month
+{
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.followed-index-user-nickname-san {
+  font-size: 16px;
+}
+
+.followed-index-user-living-alone-month {
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.followed-article-index-pagination {
   padding-bottom: 100px;
 }
 
@@ -84,7 +135,7 @@
 }
 
 .following-index-user-nickname,
-.following-index-user-living_alone_month
+.following-index-user-living-alone-month
 {
   padding-top: 5px;
   padding-left: 0;
@@ -92,6 +143,36 @@
 }
 
 .following-index-user-nickname-san {
+  font-size: 12px;
+}
+
+//フォロワー一覧表示画面
+.followed-index-title {
+  padding: 50px 20%;
+}
+
+.followed-index-title-title {
+  font-size: 25px;
+}
+
+.followed-index-user-image {
+  margin: 0;
+}
+
+.followed-index-user-image-size {
+  height: 100px;
+  width: 100px;
+}
+
+.followed-index-user-nickname,
+.followed-index-user-living-alone-month
+{
+  padding-top: 5px;
+  padding-left: 0;
+  font-size: 15px;
+}
+
+.followed-index-user-nickname-san {
   font-size: 12px;
 }
 }
