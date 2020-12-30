@@ -27,7 +27,7 @@
         <div class="following-index-user-nickname">
           <%= user.nickname %> <span class="following-index-user-nickname-san">さん</span>
         </div></br>
-        <div class="following-index-user-living_alone_month">
+        <div class="following-index-user-living-alone-month">
           ひとり暮らし歴：<%= user.living_alone_month %>ヶ月目
         </div>
       </div>
@@ -36,6 +36,6 @@
   <% end %>
 
   <!--ページング-->
-  <div class="text-center following-article-index-paginate"><%= paginate @users %></div>
+  <div class="text-center following-article-index-pagination"><%= paginate @users %></div>
 
 </div>

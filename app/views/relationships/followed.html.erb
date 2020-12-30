@@ -1,13 +1,13 @@
 <!--フォロワー一覧-->
 
-<div class="container following-index">
+<div class="container followed-index">
 
   <!--ログインユーザー表示-->
   <div class="row">
     <%= render 'users/current_user_show', user: @user %>
   </div>
 
-  <div class="row following-index-title">
+  <div class="row followed-index-title">
     <hr class="border-line"/>
     <h2>わたしのファン</h2>
     <hr class="border-line"/>
@@ -15,19 +15,19 @@
 
   <!--フォロワー一覧表示-->
   <% @users.each do |user| %>
-    <div class="row following-index-user">
+    <div class="row followed-index-user">
       
-      <div class="col-sm-4 following-index-user-image">
+      <div class="col-sm-4 followed-index-user-image">
         <%= link_to user_path(user) do %>
-          <%= attachment_image_tag user, :profile_image, size: "150x150", style: "border-radius:15px", fallback: "no_profile_image.jpg" %>
+          <%= attachment_image_tag user, :profile_image, fallback: "no_profile_image.jpg", class: "followed-index-user-image-size" %>
         <% end %>
       </div>
       
-      <div class="col-sm-5 following-index-user-details">
-        <div class="following-index-user-nickname">
-          <%= user.nickname %> <span class="follow-index-user-nickname-san">さん</span>
+      <div class="col-sm-5 followed-index-user-details">
+        <div class="followed-index-user-nickname">
+          <%= user.nickname %> <span class="followed-index-user-nickname-san">さん</span>
         </div></br>
-        <div class="following-index-user-living_alone_month">
+        <div class="following-index-user-living-alone-month">
           ひとり暮らし歴：<%= user.living_alone_month %>ヶ月目
         </div>
       </div>
@@ -36,6 +36,6 @@
   <% end %>
 
   <!--ページング-->
-  <div class="text-center following-article-index-paginate"><%= paginate @users %></div>
+  <div class="text-center followed-article-index-pagination"><%= paginate @users %></div>
 
 </div>
