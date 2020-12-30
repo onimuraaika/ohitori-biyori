@@ -9,29 +9,29 @@
 
   <div class="row following-index-title">
     <hr class="border-line"/>
-    <h2>フォローしている人</h2>
+    <h2 class="following-index-title-title">フォローしている人</h2>
     <hr class="border-line"/>
   </div>
 
   <!--フォローユーザー一覧-->
   <% @users.each do |user| %>
     <div class="row following-index-user">
-      
+
       <div class="col-sm-4 following-index-user-image">
         <%= link_to user_path(user) do %>
-          <%= attachment_image_tag user, :profile_image, size: "150x150", style: "border-radius:15px", fallback: "no_profile_image.jpg" %>
+          <%= attachment_image_tag user, :profile_image, fallback: "no_profile_image.jpg", class: "following-index-user-image-size" %>
         <% end %>
       </div>
-      
+
       <div class="col-sm-5 following-index-user-details">
         <div class="following-index-user-nickname">
-          <%= user.nickname %> <span class="follow-index-user-nickname-san">さん</span>
+          <%= user.nickname %> <span class="following-index-user-nickname-san">さん</span>
         </div></br>
         <div class="following-index-user-living_alone_month">
           ひとり暮らし歴：<%= user.living_alone_month %>ヶ月目
         </div>
       </div>
-      
+
     </div>
   <% end %>
 

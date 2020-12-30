@@ -29,6 +29,12 @@
   text-align: right;
 }
 
+.following-index-user-image-size {
+  height: 150px;
+  width: 150px;
+  border-radius:15px;
+}
+
 .following-index-user-nickname,
 .following-index-user-living_alone_month
 {
@@ -55,4 +61,37 @@
 
 .following-article-index-paginate {
   padding-bottom: 100px;
+}
+
+//スマートフォン対応
+@media screen and (max-width: 480px) {
+//フォローユーザー一覧表示画面
+.following-index-title {
+  padding: 50px 20%;
+}
+
+.following-index-title-title {
+  font-size: 25px;
+}
+
+.following-index-user-image {
+  margin: 0;
+}
+
+.following-index-user-image-size {
+  height: 100px;
+  width: 100px;
+}
+
+.following-index-user-nickname,
+.following-index-user-living_alone_month
+{
+  padding-top: 5px;
+  padding-left: 0;
+  font-size: 15px;
+}
+
+.following-index-user-nickname-san {
+  font-size: 12px;
+}
 }
