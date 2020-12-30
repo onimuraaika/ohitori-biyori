@@ -18,3 +18,23 @@
   padding: 100px 20% 0;
   text-align: center;
 }
+
+.favorite-article-index-pagination {
+  text-align: center;
+}
+
+//スマートフォン対応
+@media screen and (max-width: 480px) {
+//お気に入り投稿一覧表示画面
+.favorite-article-title {
+  padding: 50px 20% 0;
+}
+
+.favorite-article-title-title {
+  font-size: 25px;
+}
+
+.favorite-article-index-main {
+  width: 90%;
+}
+}
