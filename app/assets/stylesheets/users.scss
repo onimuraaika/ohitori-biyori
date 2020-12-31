@@ -320,7 +320,6 @@
   padding-bottom: 50px;
 }
 //(ここまで)
-}
 
 //会員情報編集画面
 .user-edit {
@@ -341,39 +340,6 @@
 }
 
 .user-edit-form-label {
-  padding-top: 20px;
   font-size: 20px;
 }
-
-.user-edit-form-profile_image {
-  margin: 10px auto;
-}
-
-.user-edit-form-button {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.user-edit-border {
-  border-width: 2px 0 0 0;
-	border-style: solid;
-	border-color: #E7E6E3;
-}
-
-.user-edit-password {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.user-edit-update_button {
-  height: 80px;
-  background-color: #FCF6D8!important;
-}
-
-.user-edit-password-button {
-  height: 80px;
-}
-
-.user-edit-unsubscribe-button {
-  height: 80px;
 }
