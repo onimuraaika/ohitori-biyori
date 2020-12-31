@@ -320,4 +320,26 @@
   padding-bottom: 50px;
 }
 //(ここまで)
+
+//会員情報編集画面
+.user-edit {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.user-edit-title {
+  font-size: 25px;
+}
+
+.user-edit-error,
+.user-edit-form,
+.user-edit-password,
+.user-edit-unsubscribe
+{
+  padding: 0 10%;
+}
+
+.user-edit-form-label {
+  font-size: 20px;
+}
 }
