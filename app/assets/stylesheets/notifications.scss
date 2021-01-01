@@ -14,6 +14,10 @@
   padding-bottom: 100px;
 }
 
+.notification-title-title {
+  text-align: center;
+}
+
 .notification-border {
   padding-bottom: 100px;
 }
@@ -29,8 +33,12 @@
   margin: 20px;
 }
 
-.notification-message-profile_image {
+.notification-message-profile-image {
   text-align: right;
+}
+
+.notification-message-profile-image-size {
+  border-radius: 15px;
 }
 
 .notification-message-details {
@@ -50,7 +58,48 @@
 
 //タブレット対応
 @media screen and (max-width: 768px) {
-.notification-message-profile_image {
+//(お知らせメッセージの部分テンプレート)
+.notification-message-profile-image {
   margin-left: 3%;
 }
+}
+
+//スマートフォン対応
+@media screen and (max-width: 480px) {
+//お知らせ一覧画面
+.notification {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.notification-title-title {
+  font-size: 25px;
+}
+
+.notification-border {
+  padding-bottom: 50px;
+}
+
+.notification-nothing {
+  padding-bottom: 50px;
+}
+
+//(ここから　お知らせメッセージの部分テンプレート)
+.notification-message {
+  margin: 5px;
+}
+
+.notification-message-details {
+  margin-left: 30px;
+}
+
+.notification-messages {
+  padding-top: 10px;
+  font-size: 15px;
+}
+
+.notification-time {
+  font-size: 15px;
+}
+//(ここまで)
 }
