@@ -5,9 +5,9 @@
   <% visitor = notification.visitor %>
   <% visited = notification.visited %>
 
-  <div class="col-xs-3 col-md-4 notification-message-profile_image">
+  <div class="col-xs-3 col-md-4 notification-message-profile-image">
     <%= link_to user_path(visitor) do %>
-      <%= attachment_image_tag visitor, :profile_image, size: "100x100", fallback: "no_profile_image.jpg", size: '100x100', style: "border-radius: 15px;" %>
+      <%= attachment_image_tag visitor, :profile_image, size: "100x100",class: "notification-message-profile-image-size", fallback: "no_profile_image.jpg", size: '100x100' %>
     <% end %>
   </div>
 
