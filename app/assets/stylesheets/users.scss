@@ -150,17 +150,17 @@
   height: 80px;
 }
 
-.user-edit-unsubscribe-button {
-  height: 80px;
-}
-
-//退会確認画面
 .user-edit-unsubscribe {
   margin-top: 30px;
   margin-bottom: 50px;
   text-align: center;
 }
 
+.user-edit-unsubscribe-button {
+  height: 80px;
+}
+
+//退会確認画面
 .unsubscribe {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -341,5 +341,38 @@
 
 .user-edit-form-label {
   font-size: 20px;
+}
+
+//退会確認画面
+.unsubscribe {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.unsubscribe-title {
+  padding: 0 5% 50px 5%;
+}
+
+.unsubscribe-title-title {
+  font-size: 25px;
+}
+
+.unsubscribe-message {
+  padding-bottom: 20px;
+  font-size: 15px;
+}
+
+.unsubscribe-button {
+  padding-top: 30px;
+  display: block;
+}
+
+.unsubscribe-button-back {
+  margin-right: 0;
+}
+
+.unsubscribe-button-confirm {
+  margin-left: 0;
+  margin-top: 10px;
 }
 }
