@@ -335,10 +335,6 @@ header {
 //スマートフォン対応
 @media screen and (max-width: 480px) {
 //ヘッダー
-header {
-  height: 100px;
-}
-
 .header-logo {
   margin: 0 auto;
 }
@@ -353,6 +349,20 @@ header {
   width: 40px;
 }
 //新規会員登録画面
+.signup-header,
+.signup-footer
+{
+  height: 100px;
+}
+
+.logo-image {
+  height: 100px;
+}
+
+.signup-header-image {
+  width: 240px;
+}
+
 .signup-form {
   padding: 0 20%;
 }
@@ -370,6 +380,20 @@ header {
 }
 
 //ログイン画面
+.login-header,
+.login-footer
+{
+  height: 100px;
+}
+
+.logo-image {
+  line-height: 100px;
+}
+
+.login-header-image {
+  width: 240px;
+}
+
 .login {
   padding-bottom: 50px;
 }
