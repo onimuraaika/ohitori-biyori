@@ -335,6 +335,10 @@ header {
 //スマートフォン対応
 @media screen and (max-width: 480px) {
 //ヘッダー
+header {
+  height: 100px;
+}
+
 .header-logo {
   margin: 0 auto;
 }
@@ -348,6 +352,27 @@ header {
   height: 40px;
   width: 40px;
 }
+
+//フッター
+.footer {
+  height: 180px;
+}
+
+.footer-title {
+  padding-top: 15px ;
+  font-size: 15px;
+}
+
+.footer-description {
+  padding-top: 10px ;
+  font-size: 10px;
+}
+
+.copyright {
+  padding-top: 15px;
+  font-size: 10px;
+}
+
 //新規会員登録画面
 .signup-header,
 .signup-footer
