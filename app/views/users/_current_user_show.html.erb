@@ -2,9 +2,8 @@
 
 <!--ログインユーザー情報-->
 <div class="row user-show-info-box">
-  
   <div class="user-show-info-my-image">
-    <%= attachment_image_tag user, :profile_image, size: '150x150', style: "border-radius: 15px;", fallback: "no_profile_image.jpg" %>
+    <%= attachment_image_tag user, :profile_image, class: "user-show-info-my-image-size", fallback: "no_profile_image.jpg" %>
   </div>
   <div class="user-show-info-name_follwer">
     <div class="user-show-info-name">
@@ -14,12 +13,10 @@
       あなたのファン：<%= current_user.followers.count %>人
     </div>
   </div>
-  
 </div>
 
 <!--ナビゲーションボタン-->
 <div class="row user-show-info-nav">
-  
   <div class="user-show-info-nav-button">
     <%= link_to user_path(current_user) do %>
       <button type="button" class="btn btn-default btn-lg user-show-info-nav-my-article">
@@ -64,5 +61,4 @@
       </button>
     <% end %>
   </div>
-  
 </div>

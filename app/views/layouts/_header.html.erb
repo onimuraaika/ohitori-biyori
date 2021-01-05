@@ -5,7 +5,6 @@
   <% if user_signed_in? %>
     <header>
       <div class="logo">
-        
         <div class="header-logo">
           <%= link_to articles_path do %>
             <%= image_tag 'logo.jpg', class: "header-logo-image", :alt => 'ロゴ画像、みんなの投稿一覧ページに飛べます。' %>
@@ -49,7 +48,6 @@
             </button>
           <% end %>
         </div>
-        
       </div>
 
       <!--ハンバーガーメニュー-->
@@ -87,11 +85,9 @@
                 ログアウト
               </li>
             <% end %>
-            
           </ul>
         </nav>
       </div>
-      
     </header>
   <% end %>
 

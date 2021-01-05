@@ -7,7 +7,6 @@
   <hr class="border-line edit-article-border"/>
 
   <%= form_with model:@article, local:true do |f| %>
-
     <!--エラーメッセージ-->
     <div class="row edit-article-row">
       <%= render 'layouts/error_message', model: @article %>
@@ -66,7 +65,6 @@
         </button>
       <% end %>
     </div>
-
   <% end %>
 
 </div>
